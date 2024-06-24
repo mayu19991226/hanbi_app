@@ -1,0 +1,27 @@
+<%# パスワード再設定画面 %>
+
+<%# カスタムファイルの読み込み %>
+<%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="w-1/2 m-auto mt-32">
+  <h2 class="text-3xl font-bold text-center">パスワードの再設定</h2>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="w-full h-24 relative mt-24">
+      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-rose-400">
+        <!-- フォームの開始 -->
+        <%= f.email_field :email, placeholder: "メールアドレスを入力してください", autofocus: true, autocomplete: "email", class: "w-full h-full bg-transparent text-black text-lg font-thin font-['Inter'] focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
+        <button type="submit" class="hidden">Submit</button> <!-- 隠し送信ボタン -->
+      </div>
+      <div class="left-0 top-0 absolute text-black text-lg font-bold font-['Inter']">ご登録のメールアドレス</div>
+    </div>
+
+    <!-- 送信ボタン -->
+    <div class="w-full h-12 relative mt-4">
+      <%= f.submit "送信", class: "w-full h-12 left-0 top-0 absolute rounded-3xl focus:outline-none btn-custom font-bold text-lg", style: "color: white;" %>
+    </div>
+  <% end %>
+
+</div>

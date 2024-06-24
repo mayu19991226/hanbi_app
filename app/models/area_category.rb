@@ -1,0 +1,2 @@
+class AreaCategory < ApplicationRecord
+end
