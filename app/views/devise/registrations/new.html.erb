@@ -1,0 +1,58 @@
+<%# 会員登録・サインアップ画面 %>
+
+<%# カスタムファイルの読み込み %>
+<%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="w-1/2 m-auto mt-32">
+    <!-- ユーザー名入力フォーム -->
+    <div class="w-full h-24 relative mt-10">
+      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
+        <!-- フォームの開始 -->
+        <%= f.text_field :name, placeholder: "ユーザー名を入力してください", autofocus: true, autocomplete: "name", class: "w-full h-full bg-transparent text-black text-lg font-thin font-['Inter'] focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
+        <button type="submit" class="hidden">Submit</button> <!-- 隠し送信ボタン -->
+      </div>
+      <div class="left-0 top-0 absolute text-black text-lg font-bold font-['Inter']">ユーザー名</div>
+    </div>
+
+    <!-- メールアドレス入力フォーム -->
+    <div class="w-full h-24 relative mt-4">
+      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
+        <!-- フォームの開始 -->
+        <%= f.email_field :email, placeholder: "メールアドレスを入力してください", autofocus: true, autocomplete: "email", class: "w-full h-full bg-transparent text-black text-lg font-thin font-['Inter'] focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
+        <button type="submit" class="hidden">Submit</button> <!-- 隠し送信ボタン -->
+      </div>
+      <div class="left-0 top- absolute text-black text-lg font-bold font-['Inter']">メールアドレス</div>
+    </div>
+
+    <!-- パスワード入力フォーム -->
+    <div class="w-full h-24 relative mt-4">
+      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
+        <%= f.password_field :password, placeholder: "パスワードを入力してください", autocomplete: "new-password", class: "w-full h-full bg-transparent text-black text-lg font-thin font-['Inter'] focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
+      </div>
+      <div class="left-0 top-0 absolute text-black text-lg font-bold font-['Inter']">パスワード</div>
+    </div>
+
+    <!-- パスワード確認入力フォーム -->
+    <div class="w-full h-24 relative mt-4">
+      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
+        <%= f.password_field :password_confirmation, placeholder: "パスワードを入力してください", autocomplete: "new-password", class: "w-full h-full bg-transparent text-black text-lg font-thin font-['Inter'] focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
+      </div>
+      <div class="left-0 top-0 absolute text-black text-lg font-bold font-['Inter']">パスワード（確認）</div>
+    </div>
+
+    <!-- 登録ボタン -->
+    <div class="w-full h-12 relative mt-4">
+      <%= f.submit "登録", class: "w-full h-12 left-0 top-0 absolute rounded-3xl focus:outline-none btn-custom font-bold text-lg", style: "color: white;" %>
+    </div>
+
+    <div class="text-black text-base text-center font-bold font-['Inter'] mt-20">アカウントをお持ちの方はこちら</div>
+
+    <!-- ログインボタン -->
+    <div class="w-full h-12 relative mt-3 mb-10">
+      <%= link_to "ログイン", new_user_session_path, class: "w-full h-12 left-0 top-0 absolute rounded-3xl focus:outline-none login-btn-custom font-bold btn-custom text-lg text-white text-center flex items-center justify-center" %>
+    </div>
+  </div>
+<% end %>

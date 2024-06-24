@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <!-- CDNでSlickを読み込む -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  
+  <!-- カスタムCSS -->
+  <style>
+    .your-class img {
+      height: 200px;         /* 高さを200pxに固定 */
+      width: auto;           /* アスペクト比を維持 */
+      object-fit: cover;     /* 画像のアスペクト比を維持しつつ要素全体に収める */
+    }
+    
+    .slick-slide {
+      text-align: center;    /* スライド内の要素を中央揃え */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- トップページのコンテンツ部分にスライダーを追加 -->
+  <div class="container mx-auto">
+    <div class="your-class">
+      <div><img src="/assets/slider1.png" alt="Slide 1"></div>
+      <div><img src="/assets/slider2.jpg" alt="Slide 2"></div>
+      <div><img src="/assets/slider3.jpg" alt="Slide 3"></div>
+      <!-- 追加のスライド -->
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <!-- Slick JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Slick初期化スクリプト -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        autoplay: true,          // 自動再生を有効化
+        autoplaySpeed: 3000,     // スライドが切り替わる間隔（ミリ秒）
+        dots: true,              // ドットナビゲーションを表示
+        infinite: true,          // 無限ループ
+        speed: 500,              // スライドが切り替わる速度（ミリ秒）
+        slidesToShow: 1,         // 一度に表示するスライド数
+        slidesToScroll: 1        // スクロール時に切り替わるスライド数
+      });
+    });
+  </script>
+</body>
+</html>
