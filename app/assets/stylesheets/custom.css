@@ -17,3 +17,7 @@
 .login-btn-custom:active {
   background-color: rgb(157,137,74);
 }
+
+.color-custom {
+  color: rgb(171,154,102);
+}
