@@ -9,18 +9,18 @@
     <div class="w-full h-24 relative mt-10">
       <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
         <!-- フォームの開始 -->
-        <%= f.email_field :email, placeholder: "メールアドレスを入力してください", autofocus: true, autocomplete: "email", class: "w-full h-full bg-transparent text-black text-lg font-thin font-['Inter'] focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
+        <%= f.email_field :email, placeholder: "メールアドレスを入力してください", autofocus: true, autocomplete: "email", class: "w-full h-full bg-transparent text-black text-lg font-thin  focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
         <button type="submit" class="hidden">Submit</button> <!-- 隠し送信ボタン -->
       </div>
-      <div class="left-0 top-0 absolute text-black text-lg font-bold font-['Inter']">メールアドレス</div>
+      <div class="left-0 top-0 absolute text-black text-lg ">メールアドレス</div>
     </div>
 
     <!-- パスワード入力フォーム -->
     <div class="w-full h-24 relative mt-10">
       <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
-        <%= f.password_field :password, placeholder: "パスワードを入力してください", autocomplete: "current-password", class: "w-full h-full bg-transparent text-black text-lg font-thin font-['Inter'] focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
+        <%= f.password_field :password, placeholder: "パスワードを入力してください", autocomplete: "current-password", class: "w-full h-full bg-transparent text-black text-lg font-thin  focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
       </div>
-      <div class="left-0 top-0 absolute text-black text-lg font-bold font-['Inter']">パスワード</div>
+      <div class="left-0 top-0 absolute text-black text-lg ">パスワード</div>
     </div>
 
     <!-- ログインボタン -->
@@ -30,10 +30,10 @@
 
     <div class="w-1/2 m-auto text-center">
       <div class="mt-10">
-        <%= link_to '新規登録はこちら', new_user_registration_path, class: 'hover:text-rose-400 hover:underline text-black text-lg font-bold font-["Inter"]' %><br>
+        <%= link_to '新規登録はこちら', new_user_registration_path, class: 'hover:text-rose-400 hover:underline text-black text-lg' %><br>
       </div>
       <div class="mt-1">
-        <a href="/users/password/new" class="hover:text-rose-400 hover:underline text-black text-lg font-bold font-['Inter']">パスワードを忘れた方はこちら</a>
+        <a href="/users/password/new" class="hover:text-rose-400 hover:underline text-black text-lg ">パスワードを忘れた方はこちら</a>
       </div>
     </div>
   </div>
