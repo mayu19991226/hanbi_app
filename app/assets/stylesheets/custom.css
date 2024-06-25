@@ -17,3 +17,13 @@
 .login-btn-custom:active {
   background-color: rgb(157,137,74);
 }
+
+/* 基本の文字色 */
+.color-custom {
+  color: rgb(171,154,102);
+}
+
+/* 基本の背景色 薄め */
+.back-color-custom {
+  background-color: rgb(246,244,234)
+}
