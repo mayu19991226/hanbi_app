@@ -7,16 +7,9 @@
         <a class="text-3xl font-bold tracking-tighter color-custom transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="/"> HanBi </a>
         <!-- 検索フォーム -->
           <div class="hidden sm:block">
-            <form onsubmit="return false;">
-              <div class="relative">
-                <input
-                  class="block w-72 border border-gray-300 py-2 pe-10 text-sm leading-5 focus:border-rose-500 focus:ring focus:ring-rose-500/50 dark:border-gray-700 dark:placeholder:text-gray-400 dark:focus:border-rose-400 dark:focus:ring-rose-400"
-                  type="text"
-                  id="search"
-                  name="search"
-                  placeholder="施術名・悩み・アイテムなどで検索"/>
-                <div
-                  class="pointer-events-none absolute inset-y-0 end-0 my-px me-px flex w-10 items-center justify-center rounded-r text-gray-300">
+            <form class="w-full" onsubmit="return false;">
+              <div class="relative w-full">
+                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center text-neutral-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -28,6 +21,12 @@
                       clip-rule="evenodd"/>
                   </svg>
                 </div>
+                <input
+                  class="block w-full rounded border-none py-4 pl-10 pr-4 leading-5 focus:border-neutral-600 focus:ring focus:ring-neutral-600/25"
+                  type="text"
+                  id="search"
+                  name="search"
+                  placeholder="Search.."/>
               </div>
             </form>
           </div>
