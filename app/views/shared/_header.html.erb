@@ -3,8 +3,11 @@
     <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl p-5 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
       <div class="flex flex-row items-center justify-between lg:justify-start">
         <%# ロゴアイコン %>
-        <%= image_tag 'logo2.png', alt: 'MyApp Logo', class: 'h-10 mr-4' %>
-        <a class="text-3xl font-bold tracking-tighter color-custom transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="/"> HanBi </a>
+        <div class="flex items-center justify-center md:justify-between w-full">
+          <a href="/">
+            <%= image_tag 'logo.PNG', alt: 'MyApp Logo', class: 'h-14 mr-4' %>
+          </a>
+        </div>
         <!-- 検索フォーム -->
           <div class="hidden sm:block">
             <form class="w-full" onsubmit="return false;">
