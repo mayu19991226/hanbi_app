@@ -3,25 +3,49 @@
 <%# カスタムファイルの読み込み %>
 <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<div class="w-1/2 m-auto mt-32">
-  <h2 class="text-3xl font-bold text-center">パスワードの再設定</h2>
-
-  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-
-    <div class="w-full h-24 relative mt-24">
-      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-rose-400">
-        <!-- フォームの開始 -->
-        <%= f.email_field :email, placeholder: "メールアドレスを入力してください", autofocus: true, autocomplete: "email", class: "w-full h-full bg-transparent text-black text-lg font-thin  focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
-        <button type="submit" class="hidden">Submit</button> <!-- 隠し送信ボタン -->
+<div class="bg-gray-50 flex items-center justify-center min-h-screen">
+  <div class="bg-white mt-7 rounded-lg shadow-xl w-full max-w-xl">
+    <div class="p-4 sm:p-7">
+      <div class="text-center">
+        <h1 class="block text-4xl font-bold text-neutral-600">Forgot password?</h1>
+        <p class="mt-2 text-sm text-gray-500">
+          Remember your password?
+          <a class="text-gray-500 hover:text-neutral-600 focus:text-yellow-600 font-medium" href="/users/sign_in">
+            Sign in here
+          </a>
+        </p>
       </div>
-      <div class="left-0 top-0 absolute text-black text-lg ">ご登録のメールアドレス</div>
-    </div>
 
-    <!-- 送信ボタン -->
-    <div class="w-full h-12 relative mt-4">
-      <%= f.submit "送信", class: "w-full h-12 left-0 top-0 absolute rounded-3xl focus:outline-none btn-custom font-bold text-lg", style: "color: white;" %>
-    </div>
-  <% end %>
+      <div class="mt-5">
+        <!-- Devise Form -->
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
 
+          <div class="grid gap-y-4">
+            <!-- Email Field -->
+            <div>
+              <%= f.label :email, class: "block text-md mb-2 text-gray-500" %>
+              <div class="relative">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "block w-full py-2 pl-2 mt-1 text-sm text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300", placeholder: "Enter your email", required: true %>
+                <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                  <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                </div>
+              </div>
+              <%= content_tag :p, "Please include a valid email address so we can get back to you", class: "hidden text-xs text-red-600 mt-2", id: "email-error" %>
+            </div>
+            <!-- End Email Field -->
+
+            <!-- Submit Button -->
+            <div class="flex justify-center">
+              <%= f.submit "送信", class: "h-10 w-32 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white disabled:opacity-50 disabled:pointer-events-none btn-custom" %>
+            </div>
+            <!-- End Submit Button -->
+          </div>
+        <% end %>
+        <!-- End Devise Form -->
+      </div>
+    </div>
+  </div>
 </div>
