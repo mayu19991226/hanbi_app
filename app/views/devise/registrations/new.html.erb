@@ -5,11 +5,11 @@
 
 <div class="w-full">
   <div class="flex min-h-screen flex-col items-center pt-24 sm:justify-center sm:pt-0">
-    <div class="w-full overflow-hidden bg-white p-8 shadow-sm sm:max-w-md sm:rounded-lg shadow-lg">
+    <div class="w-full overflow-hidden bg-white shadow-sm sm:max-w-md sm:rounded-lg shadow-lg">
       <div class="flex items-center justify-center">
-        <a href="#">
-          <div class="flex h-40 w-96 items-center justify-center overflow-hidden rounded-md">
-            <img src="<%= asset_path('flower3.jpg') %>" alt="Flower" class="object-cover h-full w-full">
+        <a href="#" class="flex items-center justify-center w-full">
+          <div class="flex items-center justify-center overflow-hidden">
+            <img src="<%= asset_path('flower3.jpg') %>" alt="Flower" class="object-cover">
           </div>
         </a>
       </div>
@@ -17,27 +17,28 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
-        <div class="mt-4">
+        <div class="mt-4 px-8">
           <label class="block text-md font-medium text-neutral-600" for="name"> Name </label>
-          <%= f.text_field :name, placeholder: "Enter your display name", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+          <%= f.text_field :name, required: true, autofocus: true, class: "block w-full py-2 pl-2 mt-1 text-sm text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300", placeholder: "Enter your display name" %>
+
         </div>
 
-        <div class="mt-4">
+        <div class="mt-4 px-8">
           <label class="block text-md font-medium text-neutral-600" for="email"> Email </label>
-          <%= f.email_field :email, placeholder: "Enter your email", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+          <%= f.email_field :email, required: true, autofocus: true, class: "block w-full py-2 pl-2 mt-1 text-sm text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300", placeholder: "Enter your email" %>
         </div>
 
-        <div class="mt-4">
+        <div class="mt-4 px-8">
           <label class="block text-md font-medium text-neutral-600" for="password"> Password </label>
-          <%= f.password_field :password, placeholder: "Enter your password", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+          <%= f.password_field :password, required: true, autofocus: true, class: "block w-full py-2 pl-2 mt-1 text-sm text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300", placeholder: "Enter your password" %>
         </div>
 
-        <div class="mt-4">
+        <div class="mt-4 px-8">
           <label class="block text-md font-medium text-neutral-600" for="password_confirmation"> Confirm Password </label>
-          <%= f.password_field :password_confirmation, placeholder: "Enter repeat your password", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+          <%= f.password_field :password_confirmation, required: true, autofocus: true, class: "block w-full py-2 pl-2 mt-1 text-sm text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300", placeholder: "Enter repeat your password" %>
         </div>
 
-        <div class="mt-4 flex items-center justify-end">
+        <div class="mt-4  pb-8 pr-8 flex items-center justify-end">
           <a class="text-sm text-gray-500 hover:text-neutral-600 focus:text-yellow-600" href="<%= new_session_path(resource_name) %>"> アカウントをお持ちの方 </a>
           <%= f.submit "登録する", class: "ml-4 inline-flex items-center rounded-lg bg-gray-200 p-2 text-sm  text-white btn-custom w-1/4" %>
         </div>
