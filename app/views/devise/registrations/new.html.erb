@@ -3,56 +3,45 @@
 <%# カスタムファイルの読み込み %>
 <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="w-1/2 m-auto mt-32">
-    <!-- ユーザー名入力フォーム -->
-    <div class="w-full h-24 relative mt-10">
-      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
-        <!-- フォームの開始 -->
-        <%= f.text_field :name, placeholder: "ユーザー名を入力してください", autofocus: true, autocomplete: "name", class: "w-full h-full bg-transparent text-black text-lg font-thin  focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
-        <button type="submit" class="hidden">Submit</button> <!-- 隠し送信ボタン -->
+<div class="w-full">
+  <div class="flex min-h-screen flex-col items-center pt-24 sm:justify-center sm:pt-0">
+    <div class="w-full overflow-hidden bg-white p-8 shadow-sm sm:max-w-md sm:rounded-lg shadow-lg">
+      <div class="flex items-center justify-center">
+        <a href="#">
+          <div class="flex h-40 w-96 items-center justify-center overflow-hidden rounded-md">
+            <img src="<%= asset_path('flower3.jpg') %>" alt="Flower" class="object-cover h-full w-full">
+          </div>
+        </a>
       </div>
-      <div class="left-0 top-0 absolute text-black text-lg ">ユーザー名</div>
-    </div>
 
-    <!-- メールアドレス入力フォーム -->
-    <div class="w-full h-24 relative mt-4">
-      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
-        <!-- フォームの開始 -->
-        <%= f.email_field :email, placeholder: "メールアドレスを入力してください", autofocus: true, autocomplete: "email", class: "w-full h-full bg-transparent text-black text-lg font-thin  focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
-        <button type="submit" class="hidden">Submit</button> <!-- 隠し送信ボタン -->
-      </div>
-      <div class="left-0 top- absolute text-black text-lg ">メールアドレス</div>
-    </div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-    <!-- パスワード入力フォーム -->
-    <div class="w-full h-24 relative mt-4">
-      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
-        <%= f.password_field :password, placeholder: "パスワードを入力してください", autocomplete: "new-password", class: "w-full h-full bg-transparent text-black text-lg font-thin  focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
-      </div>
-      <div class="left-0 top-0 absolute text-black text-lg ">パスワード</div>
-    </div>
+        <div class="mt-4">
+          <label class="block text-md font-medium text-neutral-600" for="name"> Name </label>
+          <%= f.text_field :name, placeholder: "Enter your display name", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+        </div>
 
-    <!-- パスワード確認入力フォーム -->
-    <div class="w-full h-24 relative mt-4">
-      <div class="w-full h-14 left-0 top-[34px] absolute bg-neutral-50 rounded-lg border-2 border-yellow-400">
-        <%= f.password_field :password_confirmation, placeholder: "パスワードを入力してください", autocomplete: "new-password", class: "w-full h-full bg-transparent text-black text-lg font-thin  focus:outline-none focus:ring focus:border-blue-400 placeholder:text-zinc-400 pl-3" %>
-      </div>
-      <div class="left-0 top-0 absolute text-black text-lg ">パスワード（確認）</div>
-    </div>
+        <div class="mt-4">
+          <label class="block text-md font-medium text-neutral-600" for="email"> Email </label>
+          <%= f.email_field :email, placeholder: "Enter your email", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+        </div>
 
-    <!-- 登録ボタン -->
-    <div class="w-full h-12 relative mt-4">
-      <%= f.submit "登録", class: "w-full h-12 left-0 top-0 absolute rounded-3xl focus:outline-none btn-custom font-bold text-lg", style: "color: white;" %>
-    </div>
+        <div class="mt-4">
+          <label class="block text-md font-medium text-neutral-600" for="password"> Password </label>
+          <%= f.password_field :password, placeholder: "Enter your password", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+        </div>
 
-    <div class="text-black text-base text-center  mt-20">アカウントをお持ちの方はこちら</div>
+        <div class="mt-4">
+          <label class="block text-md font-medium text-neutral-600" for="password_confirmation"> Confirm Password </label>
+          <%= f.password_field :password_confirmation, placeholder: "Enter repeat your password", required: true, autofocus: true, class: "inline-block w-full py-2 pl-2 rounded-md text-gray-800 bg-gray-50 border-transparent hover:border-gray-300 focus:border-gray-300 focus:ring-0 text-sm mt-1 block placeholder-opacity-75" %>
+        </div>
 
-    <!-- ログインボタン -->
-    <div class="w-full h-12 relative mt-3 mb-10">
-      <%= link_to "ログイン", new_user_session_path, class: "w-full h-12 left-0 top-0 absolute rounded-3xl focus:outline-none login-btn-custom font-bold btn-custom text-lg text-white text-center flex items-center justify-center" %>
+        <div class="mt-4 flex items-center justify-end">
+          <a class="text-sm text-gray-500 hover:text-neutral-600 focus:text-yellow-600" href="<%= new_session_path(resource_name) %>"> アカウントをお持ちの方 </a>
+          <%= f.submit "登録する", class: "ml-4 inline-flex items-center rounded-lg bg-gray-200 p-2 text-sm  text-white btn-custom w-1/4" %>
+        </div>
+      <% end %>
     </div>
   </div>
-<% end %>
+</div>
