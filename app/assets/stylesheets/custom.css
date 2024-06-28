@@ -1,6 +1,6 @@
 /* ログイン画面のログインボタンと会員登録画面の登録ボタン */
 .btn-custom {
-  background-color: rgb(171,154,102);
+  background-color: rgb(203,190,154);
   transition: background-color 0.2s ease;
 }
 
