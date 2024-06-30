@@ -1,16 +1,6 @@
 <h1><%= @area_category.title %></h1>
 <%= raw @area_category.body %>
 
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-
-    .font-family-karla {
-        font-family: karla;
-    }
-</style>
-
-<body class="bg-white font-family-karla">
-
 <!-- Topic Nav -->
 <nav class="w-full py-4 border-t border-b show-color" x-data="{ open: false }">
   <div class="block sm:hidden">
@@ -35,96 +25,192 @@
   </div>
 </nav>
 
-<!-- Text Header -->
+<!-- ページのタイトル -->
 <div class="w-full container mx-auto">
-  <div class="flex flex-col items-center py-12">
+  <div class="flex flex-col items-center pt-8">
     <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-4xl" href="#">
-      目元の整形におすすめアイテム５選！
+      ダウンタイムを乗り切ろう！〜目元整形編〜
     </a>
   </div>
 </div>
 
 <div class="container mx-auto flex flex-wrap py-6">
-
   <!-- Post Section -->
   <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+    <article class="flex flex-col shadow my-4">
+      <!-- トップ画像 -->
+      <a href="#" class="hover:opacity-75">
+        <img src="/assets/eye_body.jpg">
+      </a>
+      <div class="bg-white flex flex-col justify-start p-6">
+        <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">ダウンタイムを快適に過ごす方法</a>
+        <p href="#" class="text-sm pb-8">
+          Published on April 25th, 2020
+        </p>
+        <h1 class="text-2xl font-bold pb-2">目元の整形一覧</h1>
+        <hr class="border-t-1 border-gray-300 pb-3">
+        <ul class="list-disc pl-5">
+          <li>二重埋没</li>
+          <li>二重全切開</li>
+          <li>眉下リフト</li>
+          <li>タレ目形成（グラマラス）</li>
+          <li>目尻・目頭切開</li>
+          <li>蒙古ひだ形成</li>
+          <li>くまとり</li>
+          <li>瞼の脂肪とり</li>
+          <li>たるみとり</li>
+        </ul>
 
-      <article class="flex flex-col shadow my-4">
-          <!-- Article Image -->
-          <a href="#" class="hover:opacity-75">
-            <img src="/assets/eye_body.jpg">
-          </a>
-          <div class="bg-white flex flex-col justify-start p-6">
-              <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
-              <p href="#" class="text-sm pb-8">
-                Published on April 25th, 2020
-              </p>
-              <h1 class="text-2xl font-bold pb-3">Introduction</h1>
-              <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero suscipit suscipit eu eu urna. Proin bibendum urna mattis ante malesuada ultrices. Etiam in turpis vitae elit dictum aliquet. Donec mattis risus in turpis dapibus, eget tempus sem tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In est enim, imperdiet sed ornare quis, pellentesque vel risus. Nunc vitae vestibulum turpis. Quisque eget eleifend urna. Etiam et vulputate purus, ut egestas sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis quis neque non urna venenatis mollis et at massa. Pellentesque sem lacus, malesuada vel hendrerit molestie, mollis vel elit.</p>
-              <h1 class="text-2xl font-bold pb-3">Heading</h1>
-              <p class="pb-3">Vivamus nec facilisis elit, quis congue justo. In non augue ex. Aenean pretium facilisis hendrerit. Sed sed imperdiet dui. Etiam faucibus a diam sed vehicula. Nullam commodo lacus tincidunt, tincidunt orci sed, dapibus leo. Vivamus vulputate quis risus a ultricies. Aliquam luctus id tellus non condimentum. Aenean maximus viverra ipsum eget vestibulum. Morbi ut tincidunt sem, efficitur volutpat tortor. Donec scelerisque, ipsum eu efficitur semper, neque turpis sodales quam, in aliquam elit lacus varius lorem. Ut ut diam id leo efficitur malesuada eget in velit. Pellentesque tristique orci nunc, vitae fermentum nibh luctus eu. Mauris condimentum justo sed ipsum egestas varius.</p>
-              <p class="pb-3">Sed sagittis odio a volutpat feugiat. Cras aliquam varius justo, a rhoncus ante bibendum id. Nulla maximus nisl sed enim maximus, ut dictum lectus hendrerit. Fusce venenatis tincidunt eros. Phasellus quis augue vulputate ipsum pellentesque fringilla. Morbi nec tempor felis. Maecenas sollicitudin pellentesque dui, sit amet scelerisque mauris elementum nec. Cras ante metus, mattis in malesuada in, fermentum a nunc. Suspendisse potenti. Sed tempor lacus sed commodo dignissim. Quisque dictum, dolor auctor iaculis cursus, ipsum urna porttitor ex, sed consequat nisi tellus eget ante. Duis molestie mollis eros, eu sollicitudin mauris lobortis quis.</p>
-              <p class="pb-3">Vivamus sed neque nec massa scelerisque imperdiet eget id sapien. Fusce elementum mi id malesuada luctus. Proin quis lorem id leo porta interdum non ac nisl. Integer nulla sem, ultrices sed neque eget, blandit condimentum metus. Aliquam eget malesuada sapien. Curabitur aliquet orci sit amet ex tincidunt convallis. Mauris urna mi, consequat mattis mollis a, dignissim eget sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam facilisis sem diam, viverra consequat metus consequat vel. Cras a mi eu ex luctus malesuada quis eu ante. Aliquam erat volutpat.</p>
-              <h1 class="text-2xl font-bold pb-3">Conclusion</h1>
-              <p class="pb-3">Donec vulputate auctor leo lobortis congue. Sed elementum pharetra turpis. Nulla at condimentum odio. Vestibulum ullamcorper enim eget porttitor bibendum. Proin eros nibh, maximus vitae nisi a, blandit ultricies lectus. Vivamus eu maximus lacus. Maecenas imperdiet iaculis neque, vitae efficitur felis vestibulum sagittis. Nunc a eros aliquet, egestas tortor hendrerit, posuere diam. Proin laoreet, ligula non eleifend bibendum, orci nulla luctus ipsum, dignissim convallis quam dolor et nulla.</p>
-          </div>
-      </article>
+        <%# 正しい過ごし方 %>
+        <h1 class="text-2xl font-bold pb-2 pt-10">正しい過ごし方</h1>
+        <hr class="border-t-1 border-gray-300 pb-3">
 
+        <%# １ %>
+        <h3 class="text-xl font-bold pb-3">頭を高くする</h3>
+        <p class="pb-3">寝る際には、クッションを使用するか、タオルを枕に重ねて高さを調節するなど、目元を心臓よりも高い位置に持っていきましょう。これは、血液の流れをスムーズにし、目元の腫れを軽減するための対策です。</p>
+        <p class="pb-3">また、日中の時間帯も、可能な限り横になることを避け、座った状態を保つことをおすすめします。この姿勢は、血液の流れを適切に保ちます。</p>
+        <p class="pb-3">横になると、目と心臓が同じ位置となるため、目の周囲に血液が溜まりやすくなります。血液が目の周囲に溜まると、腫れや内出血が引きにくくなる可能性があります。そのため、頭をなるべく高い位置に保ちましょう。</p>
+        
+        <%# ２ %>
+        <h1 class="text-xl font-bold pb-3 pt-5">運動や飲酒・長風呂を避ける</h1>
+        <p class="pb-3">手術後、体への負担を軽減するためには安静に過ごすことが何よりも大切です。</p>
+        <p class="pb-3">無理に体を動かすと、血行が活発になり結果的に腫れや痛みが引きにくくなる可能性があるため、適度な休息と安静が必要です。</p>
+        <p class="pb-3">そのため、特に手術直後の10日間は、体の回復を最優先に考え、無理をせずゆったりと過ごすことをオススメします。10日以降も身体の状態に応じて、無理をせず自分の体調を第一に考えることが大切です。</p>
+
+        <%# ３ %>
+        <h1 class="text-xl font-bold pb-3 pt-5">目周りを冷やす（術後72時間）</h1>
+        <p class="pb-3">炎症のピークは48〜72時間前後とされているため、手術の大きさに関わらず、最初の72時間は冷やすことが大切です。</p>
+        <p class="pb-3">特に目の周りは腫れや内出血が起こりやすい部位のため、これらを早く引かせるためには冷やすことがおすすめです。</p>
+        <p class="pb-3">術後最初の3日間はしっかりと患部を冷やし続けることが必要ですが、その後は冷やす必要はありません。過度に目を冷やしすぎるとむくみが残りやすくなる可能性があるため、適度な冷却が大切です。</p>
+        
+        <%# ４ %>
+        <h1 class="text-xl font-bold pb-3 pt-5">目周りを軽く温める（術後72時間以降）</h1>
+        <p class="pb-3">72時間冷やした後は「正しく」温めましょう。</p>
+        <p class="pb-3">「温める」というよりは、手術から72時間以降「冷やさない」ことが最も大切です。</p>
+        <p class="pb-3">ホットアイマスクやホットタオルなどで、適度に目元を温めると効果的です。</p>
+        <p class="pb-3">熱すぎたり、長時間温めていると火傷の原因となるため、ほんのり温めるだけで十分です。</p>
+
+        <%# ５ %>
+        <h1 class="text-xl font-bold pb-3 pt-5">傷口の乾燥を防ぐ</h1>
+        <p class="pb-3">傷跡をきれいに治すためには、しっかりと保湿しましょう。保湿は皮膚が再生するのを助け、傷跡がきれいに改善します。</p>
+        <p class="pb-3">保湿用品は、敏感肌用のものや、クリニックで指定された製品を使用すると安心です。これらの製品は、肌に必要な水分を補給し、傷跡が目立たなくなるのを助けます。</p>
+
+        <%# ６ %>
+        <h1 class="text-xl font-bold pb-3 pt-5">紫外線を防ぐ</h1>
+        <p class="pb-3">紫外線を受けると傷跡が色素沈着になってしまう可能性があるため、紫外線対策は大切です。特に、日中の強い日差しを受けると傷跡が目立つようになってしまう可能性があります。</p>
+        <p class="pb-3">傷口に日焼け止めを塗布するタイミングについては、クリニックに相談して適切なアドバイスを得ていただくと良いでしょう。</p>
+        <p class="pb-3">また、帽子やサングラス、日傘などのアイテムを使用して紫外線から身を守ることも大切です。これらのアイテムは、直接紫外線を遮断するだけでなく、反射した紫外線からも皮膚を守る効果があります。</p>
+
+        <%# アイテム %>
+        <h1 class="text-2xl font-bold pb-2 pt-10">アイテム</h1>
+        <hr class="border-t-1 border-gray-300 pb-3">
+        <h1 class="text-xl font-bold pb-3">ビーズクッション</h1>
+        <h1 class="text-xl font-bold pb-3 pt-5">アイマスク（温冷両用）</h1>
+
+        <%# 服装 %>
+        <h1 class="text-2xl font-bold pb-2 pt-10">服装</h1>
+        <hr class="border-t-1 border-gray-300 pb-3">
+        <ul class="list-disc pl-5">
+          <li>縁が太いメガネやサングラス</li>
+          <li>帽子</li>
+        </ul>
+        <img src="<%= asset_path 'cap.jpg' %>" alt="Potassium Rich Foods" class="mt-5 w-1/2">
+
+        <%# 季節 %>
+        <h1 class="text-2xl font-bold pb-2 pt-10">季節</h1>
+        <hr class="border-t-1 border-gray-300 pb-3">
+        <p class="pb-3">春は進学や就職などで環境が新しくなり、手術を行いやすい季節です。人生の大きな節目である春は、新たな環境への適応や、新たな人々との出会いがあり、自分自身をリセットし、新たな自分を作り出す絶好のチャンスとなります。</p>
+        <p class="pb-3">また、春から夏にかけては日差しが強くなるため、サングラスや帽子、日傘を用いても周囲に不自然に思われにくいです。できるだけ手術を秘密にしたい人にとっても、春から夏はおすすめです。</p>
+
+        <%# 食べ物 %>
+        <h1 class="text-2xl font-bold pb-2 pt-10">食べ物</h1>
+        <hr class="border-t-1 border-gray-300 pb-3">
+        <p class="pb-3">ダウンタイム中は、体の回復を促進するために食生活に配慮しましょう。</p>
+        <p class="pb-3">辛い食べ物はNGです。体内の炎症を引き起こし、腫れや痛みを悪化させる可能性があります。</p>
+        <p class="pb-3">さらに、むくみ解消のためにカリウムが豊富に含まれる食材を摂取することがお勧めです。カリウムは体内の余分な塩分を排出し、むくみを軽減する効果があります。</p>
+        <p class="pb-3">バランスよく摂取することで回復を早めることができます。</p>
+        <h3 class="text-lg font-bold pb-3">＜カリウムが多く含まれている食べ物＞</h3>
+        <ul class="list-disc pl-5">
+          <li>バナナ</li>
+          <li>アボカド</li>
+          <li>ほうれん草</li>
+          <li>海藻</li>
+        </ul>
+        <%# カリウムの画像 %>
+        <img src="<%= asset_path 'potassium.png' %>" alt="Potassium Rich Foods" class="mt-5 w-1/2">
+
+        <%# NGな食事 %>
+        <h3 class="text-lg font-bold pb-2 pt-5">＜NGな食事＞</h3>
+        <ul class="list-disc pl-5">
+          <li>塩分の多いもの</li>
+          <li>辛いもの</li>
+          <li>お酒</li>
+        </ul>
+
+        <%# サプリ %>
+        <h1 class="text-2xl font-bold pb-2 pt-10">サプリ</h1>
+        <hr class="border-t-1 border-gray-300 pb-3">
+        <p class="pb-3">腫れを極力抑えたい場合は、サプリメントの服用をクリニックに相談してみましょう。</p>
+        <p class="pb-3">クリニックによっては、腫れや内出血を抑えるためのサプリメントを出してくれるところがあります。</p>
+        <p class="pb-3">例えば「SINECCH（シンエック）」は、アメリカで認可を受けた術後回復用のサプリメントです。主成分はナチュラルハーブで、埋没法の施術を受けた後の腫れや内出血を抑えたいときにも有益とされます。</p>
+        <p class="pb-3">バランスの良い食事を摂れば、基本的にサプリメントの服用は不要です。</p>
+      </div>
+    </article>
   </section>
 
   <!-- Sidebar Section -->
   <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
 
-      <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-          <p class="text-xl font-semibold pb-5">About Us</p>
-          <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
-          <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
-              Get to know us
-          </a>
-      </div>
+    <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+      <p class="text-xl font-semibold pb-5">About Us</p>
+      <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
+      <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+          Get to know us
+      </a>
+    </div>
 
-      <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-          <p class="text-xl font-semibold pb-5">Instagram</p>
-          <div class="grid grid-cols-3 gap-3">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=2">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=3">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=4">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=5">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=6">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=7">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8">
-              <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9">
-          </div>
-          <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
-              <i class="fab fa-instagram mr-2"></i> Follow @dgrzyb
-          </a>
+    <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+      <p class="text-xl font-semibold pb-5">Instagram</p>
+      <div class="grid grid-cols-3 gap-3">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=2">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=3">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=4">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=5">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=6">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=7">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8">
+        <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9">
       </div>
+      <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
+        <i class="fab fa-instagram mr-2"></i> Follow @dgrzyb
+      </a>
+    </div>
 
   </aside>
 </div>
 
 <script>
-    function getCarouselData() {
-        return {
-            currentIndex: 0,
-            images: [
-                'https://source.unsplash.com/collection/1346951/800x800?sig=1',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=2',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=3',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=4',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=5',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=6',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=7',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=8',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=9',
-            ],
-            increment() {
-                this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex + 1;
-            },
-            decrement() {
-                this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex - 1;
-            },
-        }
+  function getCarouselData() {
+    return {
+      currentIndex: 0,
+      images: [
+        'https://source.unsplash.com/collection/1346951/800x800?sig=1',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=2',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=3',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=4',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=5',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=6',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=7',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=8',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=9',
+      ],
+      increment() {
+        this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex + 1;
+      },
+      decrement() {
+        this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex - 1;
+      },
     }
+  }
 </script>
