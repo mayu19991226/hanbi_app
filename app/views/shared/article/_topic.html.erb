@@ -1,0 +1,26 @@
+<nav class="w-full p-2 border-t border-b back-color-custom mt-24" x-data="{ open: false }">
+  <div class="border border-yellow-800">
+    <nav class="w-full py-4 back-color-custom" x-data="{ open: false }">
+      <div class="block sm:hidden">
+        <a
+            href="#"
+            class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+            @click="open = !open">
+            Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+        </a>
+      </div>
+      <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+        <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">目</a>
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">鼻</a>
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">リフトアップ</a>
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">バスト</a>
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">肌</a>
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">フィラー</a>
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">脂肪</a>
+          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">その他</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</nav>

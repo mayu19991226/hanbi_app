@@ -1,0 +1,54 @@
+<%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+  <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+    <p class="text-xl font-semibold pb-5">coming soon..</p>
+    <p class="pb-2">coming soon..</p>
+    <a href="#" class="w-full btn-custom text-white font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-4">
+        button
+    </a>
+  </div>
+
+  <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+    <p class="text-xl font-semibold pb-5">POST</p>
+    <div class="grid grid-cols-3 gap-3">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=2">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=3">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=4">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=5">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=6">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=7">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8">
+      <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9">
+    </div>
+    <a href="#" class="w-full btn-custom text-white font-bold text-sm uppercase rounded  flex items-center justify-center px-2 py-3 mt-6">
+      <i class="fab fa-instagram mr-2"></i> more..
+    </a>
+  </div>
+</aside>
+
+<script>
+  function getCarouselData() {
+    return {
+      currentIndex: 0,
+      images: [
+        'https://source.unsplash.com/collection/1346951/800x800?sig=1',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=2',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=3',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=4',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=5',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=6',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=7',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=8',
+        'https://source.unsplash.com/collection/1346951/800x800?sig=9',
+      ],
+      increment() {
+        this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex + 1;
+      },
+      decrement() {
+        this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex - 1;
+      },
+    }
+  }
+</script>
