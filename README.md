@@ -220,6 +220,7 @@ erDiagram
       string title "部位の名前"
       string area_image "部位の画像"
       string body_image "詳細の画像"
+      string body_title "投稿のタイトル"
       text body "投稿内容"
       timestamp created_at "作成日"
       timestamp updated_at "更新日"
