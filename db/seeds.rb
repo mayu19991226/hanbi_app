@@ -8,7 +8,7 @@
 
 # ヒアドキュメントを使用して長い説明文を記述
 eye_description = <<-BODY.strip_heredoc
-  <div class="bg-white flex flex-col justify-start p-6">
+  <div class="flex flex-col justify-start p-6 text-gray-600">
     <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">ダウンタイムを快適に過ごす方法</a>
     <p href="#" class="text-sm pb-8">
       Published on April 25th, 2020
