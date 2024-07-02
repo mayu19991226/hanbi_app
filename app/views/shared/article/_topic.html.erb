@@ -11,14 +11,9 @@
       </div>
       <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
         <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">目</a>
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">鼻</a>
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">リフトアップ</a>
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">バスト</a>
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">肌</a>
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">フィラー</a>
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">脂肪</a>
-          <a href="#" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2">その他</a>
+          <% @area_categories.each do |area_category| %>
+            <a href="<%= area_category_path(area_category) %>" class="hover:bg-yellow-700 hover:bg-opacity-15 rounded py-2 px-4 mx-2"><%= area_category.title %></a>
+          <% end %>
         </div>
       </div>
     </nav>
