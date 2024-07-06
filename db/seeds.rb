@@ -124,144 +124,144 @@ AreaCategory.create!(
   )
 
 
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # 鼻の記事
-  nose_description = <<-BODY.strip_heredoc
-    <div class="flex flex-col justify-start p-6 text-gray-700">
-      <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">鼻整形ガイド！ダウンタイムを快適に過ごす方法</a>
-      <p href="#" class="text-sm pb-8">
-        Published on April 25th, 2024
-      </p>
-      <h1 class="text-2xl font-bold pb-2">鼻の整形一覧</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <ul class="list-disc pl-5">
-        <li>鼻尖形成</li>
-        <li>小鼻縮小</li>
-        <li>ワシ鼻修正、ハンプ切除</li>
-        <li>斜鼻修正</li>
-        <li>骨切り幅寄せ</li>
-        <li>隆鼻術（プロテーゼ、自家組織：軟骨移植）</li>
-        <li>鼻中隔延長</li>
-        <li>鼻孔縁挙上・下降</li>
-        <li>猫手術・Cカール形成（鼻唇角形成術）</li>
-        <li>鼻柱下降・挙上</li>
-        <li>ヒアルロン酸注入</li>
-      </ul>
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# 鼻の記事
+nose_description = <<-BODY.strip_heredoc
+  <div class="flex flex-col justify-start p-6 text-gray-700">
+    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">鼻整形ガイド！ダウンタイムを快適に過ごす方法</a>
+    <p href="#" class="text-sm pb-8">
+      Published on April 25th, 2024
+    </p>
+    <h1 class="text-2xl font-bold pb-2">鼻の整形一覧</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <ul class="list-disc pl-5">
+      <li>鼻尖形成</li>
+      <li>小鼻縮小</li>
+      <li>ワシ鼻修正、ハンプ切除</li>
+      <li>斜鼻修正</li>
+      <li>骨切り幅寄せ</li>
+      <li>隆鼻術（プロテーゼ、自家組織：軟骨移植）</li>
+      <li>鼻中隔延長</li>
+      <li>鼻孔縁挙上・下降</li>
+      <li>猫手術・Cカール形成（鼻唇角形成術）</li>
+      <li>鼻柱下降・挙上</li>
+      <li>ヒアルロン酸注入</li>
+    </ul>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">正しい過ごし方</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-2xl font-bold pb-2 pt-10">正しい過ごし方</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
 
-      <h3 class="text-xl font-bold pb-3">仰向けで寝る</h3>
-      <p class="pb-3">傷口の圧迫を避けるために、寝るときはうつ伏せを避け、仰向けで寝ることをおすすめします。</p>
-      <p class="pb-3">うつ伏せで寝る習慣がある方は注意が必要です。鼻が枕や布団に直接当たることで、傷の治りが遅くなる可能性があります。さらに、うつ伏せで寝ると鼻の形が変わってしまうリスクもあります。</p>
-      <p class="pb-3">心配な方は、ネックピローを活用するのが効果的です。また、横向きに寝ることを防ぐために体をサポートするクッションや抱き枕を使うのも良いでしょう。</p>
-      <p class="pb-3">さらに、ダウンタイム中は寝る環境にも気を配ることが大切です。寝室の温度や湿度を適切に保ち、リラックスできる環境を整えましょう。睡眠の質を向上させるために、アロマオイルやヒーリングミュージックを取り入れるのもおすすめです。</p>
+    <h3 class="text-xl font-bold pb-3">仰向けで寝る</h3>
+    <p class="pb-3">傷口の圧迫を避けるために、寝るときはうつ伏せを避け、仰向けで寝ることをおすすめします。</p>
+    <p class="pb-3">うつ伏せで寝る習慣がある方は注意が必要です。鼻が枕や布団に直接当たることで、傷の治りが遅くなる可能性があります。さらに、うつ伏せで寝ると鼻の形が変わってしまうリスクもあります。</p>
+    <p class="pb-3">心配な方は、ネックピローを活用するのが効果的です。また、横向きに寝ることを防ぐために体をサポートするクッションや抱き枕を使うのも良いでしょう。</p>
+    <p class="pb-3">さらに、ダウンタイム中は寝る環境にも気を配ることが大切です。寝室の温度や湿度を適切に保ち、リラックスできる環境を整えましょう。睡眠の質を向上させるために、アロマオイルやヒーリングミュージックを取り入れるのもおすすめです。</p>
 
-      <h1 class="text-xl font-bold pb-3 pt-5">メガネを控える</h1>
-      <p class="pb-3">メガネは鼻に負担がかかりやすいアイテムの一つですので、注意が必要です。長時間の着用は控えるようにしましょう。</p>
-      <p class="pb-3">プロテーゼを挿入した場合、少なくとも1か月間はメガネを避けてください。プロテーゼが完全に安定するまで、メガネに限らず、鼻根部や鼻筋を圧迫するものは避けるべきです。この期間は、メガネの代わりにコンタクトレンズの使用を検討すると良いでしょう。</p>
-      <p class="pb-3">どうしてもメガネを使用しなければならない場合、鼻パッドが鼻に直接当たらないように工夫された「鼻整形専用」のメガネを使用することをおすすめします。</p>
+    <h1 class="text-xl font-bold pb-3 pt-5">メガネを控える</h1>
+    <p class="pb-3">メガネは鼻に負担がかかりやすいアイテムの一つですので、注意が必要です。長時間の着用は控えるようにしましょう。</p>
+    <p class="pb-3">プロテーゼを挿入した場合、少なくとも1か月間はメガネを避けてください。プロテーゼが完全に安定するまで、メガネに限らず、鼻根部や鼻筋を圧迫するものは避けるべきです。この期間は、メガネの代わりにコンタクトレンズの使用を検討すると良いでしょう。</p>
+    <p class="pb-3">どうしてもメガネを使用しなければならない場合、鼻パッドが鼻に直接当たらないように工夫された「鼻整形専用」のメガネを使用することをおすすめします。</p>
 
-      <h1 class="text-xl font-bold pb-3 pt-5">口腔内の乾燥対策</h1>
-      <p class="pb-3">オープン法での手術後は、出血を防ぐために数日鼻栓（スポンジ）を挿れることがあるため、口呼吸になります。</p>
-      <p class="pb-3">また、手術直後は、鼻の内部が腫れたり、詰まったりしているため、鼻呼吸が難しくなります。</p>
-      <p class="pb-3">口呼吸が続くと、口腔内が乾燥しやすくなり、喉に炎症を引き起こすリスクが高まり、この状態が続くと、喉の痛みや不快感、さらには感染症のリスクも増加する可能性があります。</p>
-      <p class="pb-3">喉に直接塗るスプレータイプの薬を使用したり、加湿器を使用することもおすすめです。</p>
-      <p class="pb-3">また、マスクを使用することも乾燥防止に役立ちます。マスクを着用することで、呼吸する空気が湿度を含み、喉や鼻の乾燥を軽減することができます。マスクの素材や形状に注意し、快適に着用できるものを選ぶことが重要です。</p>
-      <p class="pb-3">さらに、十分に水分補給をしましょう。鼻ギプスを着用していると、ギプスにコップやペットボトルが当たって飲みづらいため、ストローの使用がおすすめです。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">禁煙</h1>
-      <p class="pb-3">タバコには血管を収縮させる作用があります。血管が収縮すると酸素や栄養素の循環が妨げられ、傷口の治りが遅れる可能性があります。さらに、細菌による感染症のリスクも高まります。</p>
-      <p class="pb-3">これらの理由から、できる限り禁煙しましょう。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">シャワーを利用する</h1>
-      <p class="pb-3">術後は傷口がまだ安定していないため、わずかな刺激でも出血のリスクがあります。これは外的な刺激だけでなく、血流の増加によっても引き起こされる可能性があります。入浴は血流が増加するため、術後1週間程度はシャワーだけで済ませましょう。</p>
-      <p class="pb-3">シャンプーは、シャンプーハットを使用するか、誰かに手伝ってもらうことで鼻を濡らさずにできます。美容院でシャンプーだけしてもらうのもおすすめです。これにより、鼻への刺激を最小限に抑えることができます。</p>
+    <h1 class="text-xl font-bold pb-3 pt-5">口腔内の乾燥対策</h1>
+    <p class="pb-3">オープン法での手術後は、出血を防ぐために数日鼻栓（スポンジ）を挿れることがあるため、口呼吸になります。</p>
+    <p class="pb-3">また、手術直後は、鼻の内部が腫れたり、詰まったりしているため、鼻呼吸が難しくなります。</p>
+    <p class="pb-3">口呼吸が続くと、口腔内が乾燥しやすくなり、喉に炎症を引き起こすリスクが高まり、この状態が続くと、喉の痛みや不快感、さらには感染症のリスクも増加する可能性があります。</p>
+    <p class="pb-3">喉に直接塗るスプレータイプの薬を使用したり、加湿器を使用することもおすすめです。</p>
+    <p class="pb-3">また、マスクを使用することも乾燥防止に役立ちます。マスクを着用することで、呼吸する空気が湿度を含み、喉や鼻の乾燥を軽減することができます。マスクの素材や形状に注意し、快適に着用できるものを選ぶことが重要です。</p>
+    <p class="pb-3">さらに、十分に水分補給をしましょう。鼻ギプスを着用していると、ギプスにコップやペットボトルが当たって飲みづらいため、ストローの使用がおすすめです。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">禁煙</h1>
+    <p class="pb-3">タバコには血管を収縮させる作用があります。血管が収縮すると酸素や栄養素の循環が妨げられ、傷口の治りが遅れる可能性があります。さらに、細菌による感染症のリスクも高まります。</p>
+    <p class="pb-3">これらの理由から、できる限り禁煙しましょう。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">シャワーを利用する</h1>
+    <p class="pb-3">術後は傷口がまだ安定していないため、わずかな刺激でも出血のリスクがあります。これは外的な刺激だけでなく、血流の増加によっても引き起こされる可能性があります。入浴は血流が増加するため、術後1週間程度はシャワーだけで済ませましょう。</p>
+    <p class="pb-3">シャンプーは、シャンプーハットを使用するか、誰かに手伝ってもらうことで鼻を濡らさずにできます。美容院でシャンプーだけしてもらうのもおすすめです。これにより、鼻への刺激を最小限に抑えることができます。</p>
 
-      <h1 class="text-xl font-bold pb-3 pt-5">洗顔は慎重に</h1>
-      <p class="pb-3">テープで固定している期間の洗顔は注意が必要です。患部を濡らさないようにし、鼻を洗う際は優しくおこなってください。</p>
-      <p class="pb-3">濡れタオルや拭き取りタイプのウォータークレンジングを使って工夫しましょう。</p>
-      <img src="/assets/face_wash.png" alt="face wash" class="mt-5 w-1/2">
+    <h1 class="text-xl font-bold pb-3 pt-5">洗顔は慎重に</h1>
+    <p class="pb-3">テープで固定している期間の洗顔は注意が必要です。患部を濡らさないようにし、鼻を洗う際は優しくおこなってください。</p>
+    <p class="pb-3">濡れタオルや拭き取りタイプのウォータークレンジングを使って工夫しましょう。</p>
+    <img src="/assets/face_wash.png" alt="face wash" class="mt-5 w-1/2">
 
-      <h1 class="text-xl font-bold pb-3 pt-5">安静に過ごす</h1>
-      <p class="pb-3">手術後、体への負担を軽減するためには安静に過ごすことが何よりも大切です。</p>
-      <p class="pb-3">無理に体を動かすと、血行が活発になり結果的に腫れや痛みが引きにくくなる可能性があるため、適度な休息と安静が必要です。</p>
-      <p class="pb-3">そのため、特に手術直後の10日間は、体の回復を最優先に考え、無理をせずゆったりと過ごすことをオススメします。10日以降も身体の状態に応じて、無理をせず自分の体調を第一に考えることが大切です。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">目周りを冷やす（術後72時間）</h1>
-      <p class="pb-3">プロテーゼ挿入後は、鼻ではなく眉間や上まぶたに腫れが生じ、内出血となる場合もあります。それらの症状は数日で落ち着きますが、手術後72時間は冷やすことが大切です。</p>
-      <p class="pb-3">特に目の周りは腫れや内出血が起こりやすい部位のため、これらを早く引かせるためには冷やすことがおすすめです。</p>
-      <p class="pb-3">術後最初の3日間はしっかりと患部を冷やし続けることが必要ですが、その後は冷やす必要はありません。過度に目を冷やしすぎるとむくみが残りやすくなる可能性があるため、適度な冷却が大切です。</p>
+    <h1 class="text-xl font-bold pb-3 pt-5">安静に過ごす</h1>
+    <p class="pb-3">手術後、体への負担を軽減するためには安静に過ごすことが何よりも大切です。</p>
+    <p class="pb-3">無理に体を動かすと、血行が活発になり結果的に腫れや痛みが引きにくくなる可能性があるため、適度な休息と安静が必要です。</p>
+    <p class="pb-3">そのため、特に手術直後の10日間は、体の回復を最優先に考え、無理をせずゆったりと過ごすことをオススメします。10日以降も身体の状態に応じて、無理をせず自分の体調を第一に考えることが大切です。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">目周りを冷やす（術後72時間）</h1>
+    <p class="pb-3">プロテーゼ挿入後は、鼻ではなく眉間や上まぶたに腫れが生じ、内出血となる場合もあります。それらの症状は数日で落ち着きますが、手術後72時間は冷やすことが大切です。</p>
+    <p class="pb-3">特に目の周りは腫れや内出血が起こりやすい部位のため、これらを早く引かせるためには冷やすことがおすすめです。</p>
+    <p class="pb-3">術後最初の3日間はしっかりと患部を冷やし続けることが必要ですが、その後は冷やす必要はありません。過度に目を冷やしすぎるとむくみが残りやすくなる可能性があるため、適度な冷却が大切です。</p>
 
-      <h1 class="text-xl font-bold pb-3 pt-5">目周りを軽く温める（術後72時間以降）</h1>
-      <p class="pb-3">72時間冷やした後は「正しく」温めましょう。</p>
-      <p class="pb-3">「温める」というよりは、手術から72時間以降「冷やさない」ことが最も大切です。</p>
-      <p class="pb-3">ホットアイマスクやホットタオルなどで、適度に目元を温めると効果的です。</p>
-      <p class="pb-3">熱すぎたり、長時間温めていると火傷の原因となるため、ほんのり温めるだけで十分です。</p>
+    <h1 class="text-xl font-bold pb-3 pt-5">目周りを軽く温める（術後72時間以降）</h1>
+    <p class="pb-3">72時間冷やした後は「正しく」温めましょう。</p>
+    <p class="pb-3">「温める」というよりは、手術から72時間以降「冷やさない」ことが最も大切です。</p>
+    <p class="pb-3">ホットアイマスクやホットタオルなどで、適度に目元を温めると効果的です。</p>
+    <p class="pb-3">熱すぎたり、長時間温めていると火傷の原因となるため、ほんのり温めるだけで十分です。</p>
 
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">アイテム</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <h1 class="text-xl font-bold">ビーズクッション</h1>
-      <a href="https://www.amazon.co.jp/Yogibo-%E3%83%A8%E3%82%AE%E3%83%9C%E3%83%BC-Max-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%B0%E3%83%AC%E3%83%BC-%E3%80%90%E5%8F%97%E6%B3%A8%E7%94%9F%E7%94%A3%E5%93%81%E3%80%91/dp/B00XXFFLPI/ref=zg_bs_g_5341886051_d_sccl_2/355-6087128-4752335?psc=1" style="text-decoration: underline;">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">アイテム</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-xl font-bold">ビーズクッション</h1>
+    <a href="https://www.amazon.co.jp/Yogibo-%E3%83%A8%E3%82%AE%E3%83%9C%E3%83%BC-Max-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%B0%E3%83%AC%E3%83%BC-%E3%80%90%E5%8F%97%E6%B3%A8%E7%94%9F%E7%94%A3%E5%93%81%E3%80%91/dp/B00XXFFLPI/ref=zg_bs_g_5341886051_d_sccl_2/355-6087128-4752335?psc=1" style="text-decoration: underline;">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">アイマスク（温冷両用）</h1>
-      <a href="https://www.amazon.co.jp/NEWGO-%E3%83%9B%E3%83%83%E3%83%88%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF%E3%82%B3%E3%83%BC%E3%83%89%E3%83%AC%E3%82%B9-%E3%82%B8%E3%82%A7%E3%83%AB%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF-%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%83%BD-%E6%B4%97%E6%BF%AF%E5%8F%AF%E8%83%BD-%E3%83%96%E3%83%AB%E3%83%BC/dp/B078TBSBRR/ref=sr_1_7?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3195OXLPPS7K0&dib=eyJ2IjoiMSJ9.h-obzwzjYQ1rBFdO3LAC-HYk2zbc7Fv_cihZIy_40V0RKemmyceUh5lTFfgzkSyzDAT7WHqH9dq1dleFjfDC-mAjYbOYVA2NZiiQzAGMIJcR7yVUiQNQRv2Di5s0ibSUEs7YqNAhQ5zqoT2dQmp2ZHazS-X5jZPzyTCF__DLkPIC_o4WFEuvwK3zGJUm4ijA0FPC6T9nZB4eiCrtgQ3koLcrpLvIafXqGsRzoWsVePEZydGgvopviTO4EqKdoGxcJyyeQ9QvYBpEdhhWc4NoW3r_hYW9Mw5BjDV-XrKJ2MI._P5AXqP1Rxu_vxyruox4donxgN08UCLhS1s_iBRWPfg&dib_tag=se&keywords=amazon+-%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF+%E4%BF%9D%E5%86%B7&qid=1719806370&sprefix=amazon+-%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF+%E6%B8%A9%E5%86%B7%2Caps%2C204&sr=8-7" style="text-decoration: underline;">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">アイマスク（温冷両用）</h1>
+    <a href="https://www.amazon.co.jp/NEWGO-%E3%83%9B%E3%83%83%E3%83%88%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF%E3%82%B3%E3%83%BC%E3%83%89%E3%83%AC%E3%82%B9-%E3%82%B8%E3%82%A7%E3%83%AB%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF-%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%83%BD-%E6%B4%97%E6%BF%AF%E5%8F%AF%E8%83%BD-%E3%83%96%E3%83%AB%E3%83%BC/dp/B078TBSBRR/ref=sr_1_7?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3195OXLPPS7K0&dib=eyJ2IjoiMSJ9.h-obzwzjYQ1rBFdO3LAC-HYk2zbc7Fv_cihZIy_40V0RKemmyceUh5lTFfgzkSyzDAT7WHqH9dq1dleFjfDC-mAjYbOYVA2NZiiQzAGMIJcR7yVUiQNQRv2Di5s0ibSUEs7YqNAhQ5zqoT2dQmp2ZHazS-X5jZPzyTCF__DLkPIC_o4WFEuvwK3zGJUm4ijA0FPC6T9nZB4eiCrtgQ3koLcrpLvIafXqGsRzoWsVePEZydGgvopviTO4EqKdoGxcJyyeQ9QvYBpEdhhWc4NoW3r_hYW9Mw5BjDV-XrKJ2MI._P5AXqP1Rxu_vxyruox4donxgN08UCLhS1s_iBRWPfg&dib_tag=se&keywords=amazon+-%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF+%E4%BF%9D%E5%86%B7&qid=1719806370&sprefix=amazon+-%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9%E3%82%AF+%E6%B8%A9%E5%86%B7%2Caps%2C204&sr=8-7" style="text-decoration: underline;">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">シャワーハット</h1>
-      <a href="https://www.amazon.co.jp/%E3%80%90%E7%9C%BC%E7%A7%91%E5%8C%BB%E6%8E%A8%E8%96%A6%E3%80%91%E3%80%90%E3%82%B4%E3%83%A0%E3%83%90%E3%83%B3%E3%83%89%E8%AA%BF%E6%95%B4%E3%80%91-PrimeCode-%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC%E3%83%8F%E3%83%83%E3%83%88-%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-%E3%83%94%E3%83%83%E3%82%BF%E3%83%AA%E3%83%95%E3%82%A3%E3%83%83%E3%83%88/dp/B0BMTDP5D3/ref=sr_1_1_sspa?adgrpid=71444320553&dib=eyJ2IjoiMSJ9.yV3A5Cbkkm1L87FVcMLw08ol2bg0ZUh0I7CKQTQogCIUarV95AvIYNnpM6RDKr48us6moogHDRFTcqN1t4XdHK6r6LtJaYNspljdxOT8B82yw3owphfzBLThpzSjihKIl6Qu08_plpJFORQwIxCK-6b4PJORFaeRzmQaMOWpp1HXMMcpKEtGTE6aD5mPLb6kaPUsKKb5MNHCHJku81hm40EGSj572zzNQfdWlo6RH13bY7CxIcNj5RqagcEk9QeNOWJI90rni0LHzf2-Dm3cvwv2lbPzYIHa_D8wtxByPaI.EqDNoa59Qn6M_uY4jyQmYJPOPeMPvpMmK0mQ0J2ttPg&dib_tag=se&hvadid=675296518050&hvdev=c&hvlocphy=1009120&hvnetw=g&hvqmt=e&hvrand=16138498015055996182&hvtargid=kwd-347112744476&hydadcr=26712_11786296&jp-ad-ap=0&keywords=%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC%E3%83%8F%E3%83%83%E3%83%88&qid=1719842311&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">シャワーハット</h1>
+    <a href="https://www.amazon.co.jp/%E3%80%90%E7%9C%BC%E7%A7%91%E5%8C%BB%E6%8E%A8%E8%96%A6%E3%80%91%E3%80%90%E3%82%B4%E3%83%A0%E3%83%90%E3%83%B3%E3%83%89%E8%AA%BF%E6%95%B4%E3%80%91-PrimeCode-%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC%E3%83%8F%E3%83%83%E3%83%88-%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-%E3%83%94%E3%83%83%E3%82%BF%E3%83%AA%E3%83%95%E3%82%A3%E3%83%83%E3%83%88/dp/B0BMTDP5D3/ref=sr_1_1_sspa?adgrpid=71444320553&dib=eyJ2IjoiMSJ9.yV3A5Cbkkm1L87FVcMLw08ol2bg0ZUh0I7CKQTQogCIUarV95AvIYNnpM6RDKr48us6moogHDRFTcqN1t4XdHK6r6LtJaYNspljdxOT8B82yw3owphfzBLThpzSjihKIl6Qu08_plpJFORQwIxCK-6b4PJORFaeRzmQaMOWpp1HXMMcpKEtGTE6aD5mPLb6kaPUsKKb5MNHCHJku81hm40EGSj572zzNQfdWlo6RH13bY7CxIcNj5RqagcEk9QeNOWJI90rni0LHzf2-Dm3cvwv2lbPzYIHa_D8wtxByPaI.EqDNoa59Qn6M_uY4jyQmYJPOPeMPvpMmK0mQ0J2ttPg&dib_tag=se&hvadid=675296518050&hvdev=c&hvlocphy=1009120&hvnetw=g&hvqmt=e&hvrand=16138498015055996182&hvtargid=kwd-347112744476&hydadcr=26712_11786296&jp-ad-ap=0&keywords=%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC%E3%83%8F%E3%83%83%E3%83%88&qid=1719842311&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">ストロー</h1>
-      <a href="https://www.amazon.co.jp/%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%BF%E3%83%BC-%E3%83%9A%E3%83%83%E3%83%88%E3%83%9C%E3%83%88%E3%83%AB%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-500ml-%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF-PSHC10/dp/B08R82MH7T/ref=sr_1_5?crid=VD4N9DPP53Z1&dib=eyJ2IjoiMSJ9.oTlQDQnyhlvz3n0QuU-aBz2oXVZutSUQwzvZdqopoMfqFuit6NAyZT3O0Ss_IW9Vfg9igDD-KZ-h6wGmarAqGMIsEydO21b5j6b6ca_sxGiKTSyZmUL62jNmH_Jh0p-7O17Tcy9Q7YyV4qhPZ_uTCo-1mZgMRan5n3_jOplZ_G_MPXyKloHf5P51bLekW2a8z308vZyHKjthdfTXGDYToFN93X1giC3xqhM160x9EbhC_M5_oH-94MF2KJ_NT9ql113TmgEuyWq_PFcAtXB4q1C8ZKEVddG7K37Bq1YIdE0.gSglQZQ7O5_VFIWzk9jvUtx6wtS4nyyXg8TyF0Yay0w&dib_tag=se&keywords=%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97&qid=1719842339&sprefix=%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%2Caps%2C179&sr=8-5&th=1">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">ストロー</h1>
+    <a href="https://www.amazon.co.jp/%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%BF%E3%83%BC-%E3%83%9A%E3%83%83%E3%83%88%E3%83%9C%E3%83%88%E3%83%AB%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-500ml-%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF-PSHC10/dp/B08R82MH7T/ref=sr_1_5?crid=VD4N9DPP53Z1&dib=eyJ2IjoiMSJ9.oTlQDQnyhlvz3n0QuU-aBz2oXVZutSUQwzvZdqopoMfqFuit6NAyZT3O0Ss_IW9Vfg9igDD-KZ-h6wGmarAqGMIsEydO21b5j6b6ca_sxGiKTSyZmUL62jNmH_Jh0p-7O17Tcy9Q7YyV4qhPZ_uTCo-1mZgMRan5n3_jOplZ_G_MPXyKloHf5P51bLekW2a8z308vZyHKjthdfTXGDYToFN93X1giC3xqhM160x9EbhC_M5_oH-94MF2KJ_NT9ql113TmgEuyWq_PFcAtXB4q1C8ZKEVddG7K37Bq1YIdE0.gSglQZQ7O5_VFIWzk9jvUtx6wtS4nyyXg8TyF0Yay0w&dib_tag=se&keywords=%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97&qid=1719842339&sprefix=%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%2Caps%2C179&sr=8-5&th=1">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">鼻整形専用メガネ</h1>
-      <a href="https://www.amazon.co.jp/Doctorco-eyewear-Dr003-Doctorco%E7%9C%BC%E9%8F%A1-%E9%BC%BB%E3%81%AE%E6%95%B4%E5%BD%A2%E5%BE%8C%E7%94%A8%E3%81%AE%E7%9C%BC%E9%8F%A1%E3%80%81%E9%BC%BB%E3%81%AB%E8%B7%A1%E3%81%8C%E6%AE%8B%E3%82%89%E3%81%AA%E3%81%84%E7%9C%BC%E9%8F%A1/dp/B07D667MQ4/ref=sr_1_1?crid=285UMUTDMVAIG&dib=eyJ2IjoiMSJ9.hJEr5sdXAgL026VisOvr4FICO87XgIR9mBECVkI0xTytTk_0m79HAkYTO2zEL2gNsEMmcC1kH3bZerMpxtz7lsdD9hDI56kmZH_r7IwPeBKlIw1i0M8PFTbEXFFQFy_fJIWIdcMBiR-T1jE_Ux8u6qMG-CXWRE9KnBQdytpgH9_iS54J0rhmLBbh3sfxdejewiUUAVI_0mtkh6BZlMzbtNdbbQ0aNmtmsnhYl2KH6rgFLHHshOXt8jpxJ_2AvQhRvAw9pX0FWIpUX5BfkfRTEYxG3irjBHgKVXq10KOvRmQ.TafVN5H1QTLcr8_YqD5nDSl278GR8wMwmoTTJSTsMJ8&dib_tag=se&keywords=%E9%BC%BB+%E6%95%B4%E5%BD%A2+%E7%9C%BC%E9%8F%A1&qid=1719842374&sprefix=%E9%BC%BB%E6%95%B4%E5%BD%A2%E3%80%80%2Caps%2C187&sr=8-1">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">鼻整形専用メガネ</h1>
+    <a href="https://www.amazon.co.jp/Doctorco-eyewear-Dr003-Doctorco%E7%9C%BC%E9%8F%A1-%E9%BC%BB%E3%81%AE%E6%95%B4%E5%BD%A2%E5%BE%8C%E7%94%A8%E3%81%AE%E7%9C%BC%E9%8F%A1%E3%80%81%E9%BC%BB%E3%81%AB%E8%B7%A1%E3%81%8C%E6%AE%8B%E3%82%89%E3%81%AA%E3%81%84%E7%9C%BC%E9%8F%A1/dp/B07D667MQ4/ref=sr_1_1?crid=285UMUTDMVAIG&dib=eyJ2IjoiMSJ9.hJEr5sdXAgL026VisOvr4FICO87XgIR9mBECVkI0xTytTk_0m79HAkYTO2zEL2gNsEMmcC1kH3bZerMpxtz7lsdD9hDI56kmZH_r7IwPeBKlIw1i0M8PFTbEXFFQFy_fJIWIdcMBiR-T1jE_Ux8u6qMG-CXWRE9KnBQdytpgH9_iS54J0rhmLBbh3sfxdejewiUUAVI_0mtkh6BZlMzbtNdbbQ0aNmtmsnhYl2KH6rgFLHHshOXt8jpxJ_2AvQhRvAw9pX0FWIpUX5BfkfRTEYxG3irjBHgKVXq10KOvRmQ.TafVN5H1QTLcr8_YqD5nDSl278GR8wMwmoTTJSTsMJ8&dib_tag=se&keywords=%E9%BC%BB+%E6%95%B4%E5%BD%A2+%E7%9C%BC%E9%8F%A1&qid=1719842374&sprefix=%E9%BC%BB%E6%95%B4%E5%BD%A2%E3%80%80%2Caps%2C187&sr=8-1">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">ネックピロー</h1>
-      <a href="https://www.amazon.co.jp/%E3%80%90%E3%81%82%E3%82%89%E3%82%86%E3%82%8B%E5%A7%BF%E5%8B%A2%E3%81%AB%E5%AF%BE%E5%BF%9C%EF%BD%98%E9%A6%96%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%E6%A7%8B%E9%80%A0%E3%80%91-%E3%80%90%E7%90%86%E5%AD%A6%E7%99%82%E6%B3%95%E5%A3%AB%E6%8E%A8%E5%A5%A8%EF%BD%98%E5%AF%9D%E5%85%B7%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E9%96%8B%E7%99%BA%EF%BD%98%E7%96%B2%E3%82%8C%E7%9F%A5%E3%82%89%E3%81%9A%E3%81%AE%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%80%91%E3%80%90%E8%BB%8A%EF%BD%98%E3%83%90%E3%82%B9%EF%BD%98%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%81%AB%E3%80%91%E6%97%85%E8%A1%8C%E7%94%A8-%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E3%82%B0%E3%83%83%E3%82%BA-MyComfort/dp/B0CRSX1MWY/ref=sr_1_1_sspa?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2XIB97SASTCJC&dib=eyJ2IjoiMSJ9.6YQz65qwQ44t0FQNGsSzFQpOaY3tTH1Gz-4VZj84UrHxWqHp9xXIDwIS3kqpairSNIkQe3Yq_WjWARwvIuIBRpa9jyTB6CP-hmCc-28VGL80yjeuSEsPYOtXlDvudUh1Z2sWTshU7RwkGVfpnCB8hSDiN83g-uipbWL-qaMy9m9hTUwa2bg_HFN5uL2g0oBwo89PNfO7WSX32OsVnsvaIOS-0s3qybAfI1ph_SM60fMfs6BezxDwzOpInkdNQvuKdNMzXpGu_Yn78spZENJbgouyKn-RQ7Y4XPCIme_VkoI.rt1WGIBsPvMrK3uJHTpV95ppivcH9bgS7UEu-I9SfI4&dib_tag=se&keywords=%E3%83%8D%E3%83%83%E3%82%AF%E3%83%94%E3%83%AD%E3%83%BC&qid=1719842411&sprefix=%E3%83%8D%E3%83%83%E3%82%AF%E3%83%94r%E3%83%BC%2Caps%2C171&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">ネックピロー</h1>
+    <a href="https://www.amazon.co.jp/%E3%80%90%E3%81%82%E3%82%89%E3%82%86%E3%82%8B%E5%A7%BF%E5%8B%A2%E3%81%AB%E5%AF%BE%E5%BF%9C%EF%BD%98%E9%A6%96%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%E6%A7%8B%E9%80%A0%E3%80%91-%E3%80%90%E7%90%86%E5%AD%A6%E7%99%82%E6%B3%95%E5%A3%AB%E6%8E%A8%E5%A5%A8%EF%BD%98%E5%AF%9D%E5%85%B7%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E9%96%8B%E7%99%BA%EF%BD%98%E7%96%B2%E3%82%8C%E7%9F%A5%E3%82%89%E3%81%9A%E3%81%AE%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%80%91%E3%80%90%E8%BB%8A%EF%BD%98%E3%83%90%E3%82%B9%EF%BD%98%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%81%AB%E3%80%91%E6%97%85%E8%A1%8C%E7%94%A8-%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E3%82%B0%E3%83%83%E3%82%BA-MyComfort/dp/B0CRSX1MWY/ref=sr_1_1_sspa?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2XIB97SASTCJC&dib=eyJ2IjoiMSJ9.6YQz65qwQ44t0FQNGsSzFQpOaY3tTH1Gz-4VZj84UrHxWqHp9xXIDwIS3kqpairSNIkQe3Yq_WjWARwvIuIBRpa9jyTB6CP-hmCc-28VGL80yjeuSEsPYOtXlDvudUh1Z2sWTshU7RwkGVfpnCB8hSDiN83g-uipbWL-qaMy9m9hTUwa2bg_HFN5uL2g0oBwo89PNfO7WSX32OsVnsvaIOS-0s3qybAfI1ph_SM60fMfs6BezxDwzOpInkdNQvuKdNMzXpGu_Yn78spZENJbgouyKn-RQ7Y4XPCIme_VkoI.rt1WGIBsPvMrK3uJHTpV95ppivcH9bgS7UEu-I9SfI4&dib_tag=se&keywords=%E3%83%8D%E3%83%83%E3%82%AF%E3%83%94%E3%83%AD%E3%83%BC&qid=1719842411&sprefix=%E3%83%8D%E3%83%83%E3%82%AF%E3%83%94r%E3%83%BC%2Caps%2C171&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">ぬれマスク</h1>
-      <a href="https://www.amazon.co.jp/%E3%81%AE%E3%81%A9%E3%81%AC%E3%83%BC%E3%82%8B-%E3%81%AC%E3%82%8C%E3%83%9E%E3%82%B9%E3%82%AF-%E3%82%86%E3%81%9A%E3%81%8B%E3%82%8A%E3%82%93-%E4%B9%BE%E7%87%A5%E3%81%8C%E4%B8%8D%E5%AE%89%E3%81%AA%E6%99%82%E3%81%AB-10%E6%99%82%E9%96%93%E5%8A%A0%E6%B9%BF%E5%96%89%E6%BD%A4%E3%81%99/dp/B0CRZBHK4T/ref=sr_1_1_sspa?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1VND9E6YBF0CB&dib=eyJ2IjoiMSJ9.25A1bcEgq5MBFbVZwMpBn333o7MP169mwtrxtSOqjBCMzyXTEuTkzM-hrpe5IhhKUhD4PQdBBxacrSgbmthNZ9HGI4_HCCWnD24GjQNKoVpPTPdp_ljB7jMJq0c6tW8eOzGAeORTuYF6EN8anymqOCFFmBg5bph4pZTxqAl7ZUKYVzRT4k5pKd_8zNfyCjB88lZ19VQLHEbgCYsQGgLsXSRXF81pJIeEC3boV1me12WnHTru-3ItBtHEm07_IKbZNTMPM3ovMzeneoA1bJZtodOVCI3dmMtOHgnYuoplQyI.PpwuRg6n5sd11IohZTgHW6S4oOhSyNVLVcPOawK5WZw&dib_tag=se&keywords=%E3%81%AC%E3%82%8C%E3%83%9E%E3%82%B9%E3%82%AF&qid=1719842440&sprefix=%E3%81%AC%E3%82%8C%E3%83%9E%E3%82%B9%E3%82%AF%2Caps%2C177&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">ぬれマスク</h1>
+    <a href="https://www.amazon.co.jp/%E3%81%AE%E3%81%A9%E3%81%AC%E3%83%BC%E3%82%8B-%E3%81%AC%E3%82%8C%E3%83%9E%E3%82%B9%E3%82%AF-%E3%82%86%E3%81%9A%E3%81%8B%E3%82%8A%E3%82%93-%E4%B9%BE%E7%87%A5%E3%81%8C%E4%B8%8D%E5%AE%89%E3%81%AA%E6%99%82%E3%81%AB-10%E6%99%82%E9%96%93%E5%8A%A0%E6%B9%BF%E5%96%89%E6%BD%A4%E3%81%99/dp/B0CRZBHK4T/ref=sr_1_1_sspa?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1VND9E6YBF0CB&dib=eyJ2IjoiMSJ9.25A1bcEgq5MBFbVZwMpBn333o7MP169mwtrxtSOqjBCMzyXTEuTkzM-hrpe5IhhKUhD4PQdBBxacrSgbmthNZ9HGI4_HCCWnD24GjQNKoVpPTPdp_ljB7jMJq0c6tW8eOzGAeORTuYF6EN8anymqOCFFmBg5bph4pZTxqAl7ZUKYVzRT4k5pKd_8zNfyCjB88lZ19VQLHEbgCYsQGgLsXSRXF81pJIeEC3boV1me12WnHTru-3ItBtHEm07_IKbZNTMPM3ovMzeneoA1bJZtodOVCI3dmMtOHgnYuoplQyI.PpwuRg6n5sd11IohZTgHW6S4oOhSyNVLVcPOawK5WZw&dib_tag=se&keywords=%E3%81%AC%E3%82%8C%E3%83%9E%E3%82%B9%E3%82%AF&qid=1719842440&sprefix=%E3%81%AC%E3%82%8C%E3%83%9E%E3%82%B9%E3%82%AF%2Caps%2C177&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">のどスプレー</h1>
-      <a href="https://www.amazon.co.jp/%E3%81%AE%E3%81%A9%E3%81%AC-%E3%82%8B-%E3%80%90%E7%AC%AC3%E9%A1%9E%E5%8C%BB%E8%96%AC%E5%93%81%E3%80%91%E3%81%AE%E3%81%A9%E3%81%AC%E3%83%BC%E3%82%8B%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BCB-15mL/dp/B000YZN4OK/ref=sr_1_4?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38JJKBM6ABWXO&dib=eyJ2IjoiMSJ9.2nrPy7s8DwAFjRAlyqCAwTvaKXkUgjdcCObREja-x96a3_-zznhUPiLwBB8ApmtOOXzZXqwKc8yyk7BAq6LuxxKstRxqY7RvsSyJQFBubVy63tr3HndPhhhPuXwTNxrkkRVZDh-m-Z1PSaBmX0wbk0Ot_TTPG-GvpBgsgx3QYAjhkVm8BLj6Dj6LY_vs-ZWRwPBE2bS5I9PamxIbMvoBdBUkP4BesMord-jzDLnrz8vPPg7D4cwMTf8RJbkHXCQRDGjPocDe4YHxIj0OaNUWJijkeNg44TIMO6ebXm1lNpE.O3B2ON9XRZJoxWnR2jZGJFsqRQEm8MvD_0YpEk2QUdA&dib_tag=se&keywords=%E5%96%89%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BC&qid=1719842461&sprefix=%E5%96%89%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BC%2Caps%2C184&sr=8-4">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">のどスプレー</h1>
+    <a href="https://www.amazon.co.jp/%E3%81%AE%E3%81%A9%E3%81%AC-%E3%82%8B-%E3%80%90%E7%AC%AC3%E9%A1%9E%E5%8C%BB%E8%96%AC%E5%93%81%E3%80%91%E3%81%AE%E3%81%A9%E3%81%AC%E3%83%BC%E3%82%8B%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BCB-15mL/dp/B000YZN4OK/ref=sr_1_4?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38JJKBM6ABWXO&dib=eyJ2IjoiMSJ9.2nrPy7s8DwAFjRAlyqCAwTvaKXkUgjdcCObREja-x96a3_-zznhUPiLwBB8ApmtOOXzZXqwKc8yyk7BAq6LuxxKstRxqY7RvsSyJQFBubVy63tr3HndPhhhPuXwTNxrkkRVZDh-m-Z1PSaBmX0wbk0Ot_TTPG-GvpBgsgx3QYAjhkVm8BLj6Dj6LY_vs-ZWRwPBE2bS5I9PamxIbMvoBdBUkP4BesMord-jzDLnrz8vPPg7D4cwMTf8RJbkHXCQRDGjPocDe4YHxIj0OaNUWJijkeNg44TIMO6ebXm1lNpE.O3B2ON9XRZJoxWnR2jZGJFsqRQEm8MvD_0YpEk2QUdA&dib_tag=se&keywords=%E5%96%89%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BC&qid=1719842461&sprefix=%E5%96%89%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BC%2Caps%2C184&sr=8-4">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">服装</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <ul class="list-disc pl-5">
-        <li>帽子</li>
-        <li>前開きの服</li>
-        <p>かぶるお洋服ですと鼻にぶつかる心配があります。</p>
-        <li>マスク</li>
-        <p>鼻を圧迫しないよう、ゆったりとしたサイズのマスクを着用することがおすすめです。</p>
-      </ul>
+    <h1 class="text-2xl font-bold pb-2 pt-10">服装</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <ul class="list-disc pl-5">
+      <li>帽子</li>
+      <li>前開きの服</li>
+      <p>かぶるお洋服ですと鼻にぶつかる心配があります。</p>
+      <li>マスク</li>
+      <p>鼻を圧迫しないよう、ゆったりとしたサイズのマスクを着用することがおすすめです。</p>
+    </ul>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">季節</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <p class="pb-3">「夏の手術は、汗で感染しやすいので避けた方がいいですか？」</p>
-      <p class="pb-3">暑い季節は汗をかきやすく、傷口の衛生が保ちにくいと思われがちですが、現代ではエアコンの普及により室内での快適な過ごし方が可能です。そのため、手術のタイミングはあなたの準備が整ったタイミングが最適です。ダウンタイムをしっかりと確保できる時期を選びましょう。</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">季節</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-3">「夏の手術は、汗で感染しやすいので避けた方がいいですか？」</p>
+    <p class="pb-3">暑い季節は汗をかきやすく、傷口の衛生が保ちにくいと思われがちですが、現代ではエアコンの普及により室内での快適な過ごし方が可能です。そのため、手術のタイミングはあなたの準備が整ったタイミングが最適です。ダウンタイムをしっかりと確保できる時期を選びましょう。</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">食べ物</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <p class="pb-3">手術後の回復を助ける食品には、たんぱく質、ビタミン、ミネラルが必要です。</p>
-      <ul class="list-disc pl-5">
-        <li>たんぱく質：肉、魚、豆腐など</li>
-        <li>ビタミン：A（肌の再生）、C（コラーゲン生成）が豊富な果物や野菜、肝臓</li>
-        <li>ほうれん草</li>
-        <li>ミネラル：亜鉛が豊富な肉、魚、全粒穀物</li>
-      </ul>
-      <p class="pb-3">これらの食品をバランス良く摂取することで、体の自然な治癒力を高め、手術後の回復を促進できます。</p>
-      <img src="/assets/protein.jpg" alt="protein" class="mt-5 w-1/2">
-    </div>
+    <h1 class="text-2xl font-bold pb-2 pt-10">食べ物</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-3">手術後の回復を助ける食品には、たんぱく質、ビタミン、ミネラルが必要です。</p>
+    <ul class="list-disc pl-5">
+      <li>たんぱく質：肉、魚、豆腐など</li>
+      <li>ビタミン：A（肌の再生）、C（コラーゲン生成）が豊富な果物や野菜、肝臓</li>
+      <li>ほうれん草</li>
+      <li>ミネラル：亜鉛が豊富な肉、魚、全粒穀物</li>
+    </ul>
+    <p class="pb-3">これらの食品をバランス良く摂取することで、体の自然な治癒力を高め、手術後の回復を促進できます。</p>
+    <img src="/assets/protein.jpg" alt="protein" class="mt-5 w-1/2">
+  </div>
 BODY
 
 AreaCategory.create!(
@@ -272,120 +272,120 @@ AreaCategory.create!(
   body: nose_description
   )
 
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # リフトアップの記事
-  lift_description = <<-BODY.strip_heredoc
-    <div class="flex flex-col justify-start p-6 text-gray-700">
-      <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">小顔にするには？ダウンタイムを徹底解説！</a>
-      <p href="#" class="text-sm pb-8">
-        Published on April 25th, 2024
-      </p>
-      <h1 class="text-2xl font-bold pb-2">リフトアップ・小顔の整形一覧</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <ul class="list-disc pl-5">
-        <li>糸リフト</li>
-        <li>切開リフト</li>
-        <li>ハイフ</li>
-        <li>バッカルファット除去</li>
-        <li>メーラーファット除去</li>
-        <li>ジョールファット除去</li>
-        <li>骨切り</li>
-        <li>骨削り</li>
-        <li>脂肪吸引注射</li>
-        <li>脂肪溶解注射</li>
-        <li>脂肪吸引</li>
-      </ul>
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# リフトアップの記事
+lift_description = <<-BODY.strip_heredoc
+  <div class="flex flex-col justify-start p-6 text-gray-700">
+    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">小顔にするには？ダウンタイムを徹底解説！</a>
+    <p href="#" class="text-sm pb-8">
+      Published on April 25th, 2024
+    </p>
+    <h1 class="text-2xl font-bold pb-2">リフトアップ・小顔の整形一覧</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <ul class="list-disc pl-5">
+      <li>糸リフト</li>
+      <li>切開リフト</li>
+      <li>ハイフ</li>
+      <li>バッカルファット除去</li>
+      <li>メーラーファット除去</li>
+      <li>ジョールファット除去</li>
+      <li>骨切り</li>
+      <li>骨削り</li>
+      <li>脂肪吸引注射</li>
+      <li>脂肪溶解注射</li>
+      <li>脂肪吸引</li>
+    </ul>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">糸リフトとHIFUどっちがいいの？</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <h3 class="text-lg font-bold pb-3">糸リフトは変化が欲しいとき</h3>
-      <h3 class="text-lg font-bold pb-3">HIFUは現状維持したい、今より悪化させたくないとき</h3>
-      <p class="pb-3">ご自身の目的に応じてカウンセリングで相談すると良いでしょう。</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">糸リフトとHIFUどっちがいいの？</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h3 class="text-lg font-bold pb-3">糸リフトは変化が欲しいとき</h3>
+    <h3 class="text-lg font-bold pb-3">HIFUは現状維持したい、今より悪化させたくないとき</h3>
+    <p class="pb-3">ご自身の目的に応じてカウンセリングで相談すると良いでしょう。</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">HIFUのダウンタイム</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <p class="pb-3">それぞれの肌状態や体質・施術部位・照射出力の違いにより、ダウンタイムの期間は前後することがあります。基本的には、HIFUは日常生活に支障がでるような傷は出来ないためダウンタイムは「ほとんどない」と言われています。</p>
-      <p class="pb-3">HIFUのダウンタイムは、数日～1週間で落ち着くことがほとんどです。赤みや腫れ感がある場合には、冷やしていただくとダウンタイムの軽減につながります。</p>
-      <p class="pb-3">以下にHIFUで起こりうる症状を示します。</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">HIFUのダウンタイム</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-3">それぞれの肌状態や体質・施術部位・照射出力の違いにより、ダウンタイムの期間は前後することがあります。基本的には、HIFUは日常生活に支障がでるような傷は出来ないためダウンタイムは「ほとんどない」と言われています。</p>
+    <p class="pb-3">HIFUのダウンタイムは、数日～1週間で落ち着くことがほとんどです。赤みや腫れ感がある場合には、冷やしていただくとダウンタイムの軽減につながります。</p>
+    <p class="pb-3">以下にHIFUで起こりうる症状を示します。</p>
 
-      <h3 class="text-xl font-bold pb-3">赤みや腫れ</h3>
-      <p class="pb-3">HIFU施術後は一時的に赤みや腫れが出現することがあります。</p>
-      <p class="pb-3">HIFUは、肌の内部に熱エネルギーを与えるため、一時的に炎症状態となります。そのため、赤みや腫れなどの症状が出現しますが、数日～1週間程度で落ち着きます。</p>
-      <p class="pb-3">これらは、血流が良くなる行為（入浴、飲酒、激しい運動など）を行うと増強する可能性があるため、数日は控えることをおすすめします。</p>
-      
-      <h3 class="text-xl font-bold pb-3">筋肉痛のような鈍い痛み</h3>
-      <p class="pb-3">ハイフ（HIFU）では、肌の内部にダメージを与えるため、施術後に筋肉痛のような痛みを感じることがあります。</p>
-      <p class="pb-3">筋肉痛のような痛みも、基本的には我慢できる程度であり、数日～1週間程度で落ち着くことがほとんどです。</p>
+    <h3 class="text-xl font-bold pb-3">赤みや腫れ</h3>
+    <p class="pb-3">HIFU施術後は一時的に赤みや腫れが出現することがあります。</p>
+    <p class="pb-3">HIFUは、肌の内部に熱エネルギーを与えるため、一時的に炎症状態となります。そのため、赤みや腫れなどの症状が出現しますが、数日～1週間程度で落ち着きます。</p>
+    <p class="pb-3">これらは、血流が良くなる行為（入浴、飲酒、激しい運動など）を行うと増強する可能性があるため、数日は控えることをおすすめします。</p>
+    
+    <h3 class="text-xl font-bold pb-3">筋肉痛のような鈍い痛み</h3>
+    <p class="pb-3">ハイフ（HIFU）では、肌の内部にダメージを与えるため、施術後に筋肉痛のような痛みを感じることがあります。</p>
+    <p class="pb-3">筋肉痛のような痛みも、基本的には我慢できる程度であり、数日～1週間程度で落ち着くことがほとんどです。</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">正しい過ごし方（HIFU以外）</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-2xl font-bold pb-2 pt-10">正しい過ごし方（HIFU以外）</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
 
-      <h3 class="text-xl font-bold pb-3">食事</h3>
-      <p class="pb-3">ダウンタイム期間中は、硬いものや大きく口を開ける必要がある食べ物は避けましょう。顎や頬を動かしすぎると患部に痛みや引きつれが生じることがあります。</p>
-      <p class="pb-3">糸が馴染むまでは、豆腐やゼリーなど柔らかい食べ物を細かくして食べるのがおすすめです。特にパックに入った吸うタイプのゼリー飲料が便利です。</p>
-      <p class="pb-3">また、飲酒は血行が良くなり腫れや内出血が悪化する可能性があるため、術後1～2週間は控えてください。その後もむくみや腫れ、傷の治りの遅れとなるため１ヶ月はなるべく控えましょう。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">安静に過ごす</h1>
-      <p class="pb-3">手術後1週間は安静にしましょう。日常生活は通常通り過ごしていただいて問題ありません。</p>
-      <p class="pb-3">軽めの運動は2週間目から可能です。糸リフト後のサウナ・エステ・ヨガ・激しいスポーツは1ヶ月控えましょう。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">頬や首を冷やす</h1>
-      <p class="pb-3">切開リフト、バッカルファット除去等は、腫れを予防するために顔用の固定バンドを数日着用します。</p>
-      <p class="pb-3">帰宅後は冷却ジェルで頬や首を冷やし、ゆっくり休みましょう。固定バンドはクリニックの指示に従って着用し、安静とクーリングを行なって腫れを軽減しましょう。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">頭を高く保つ</h1>
-      <p class="pb-3">頭を高くして寝るとむくみが軽減します。</p>
-      <p class="pb-3">傷口を圧迫するような横向きや下を向いたりする事は避けましょう。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">傷口に力を加えない</h1>
-      <p class="pb-3">施術直後は糸が馴染んでいないため、強い刺激を加えると糸の引っ掛かり（コグ）が外れてしまう可能性があります。強く押す、擦るなど、傷口に強い刺激を与える行動は避けましょう。</p>
-      <p class="pb-3">糸を挿入した部分を必要以上に動かさないようにすることも大切です。</p>
+    <h3 class="text-xl font-bold pb-3">食事</h3>
+    <p class="pb-3">ダウンタイム期間中は、硬いものや大きく口を開ける必要がある食べ物は避けましょう。顎や頬を動かしすぎると患部に痛みや引きつれが生じることがあります。</p>
+    <p class="pb-3">糸が馴染むまでは、豆腐やゼリーなど柔らかい食べ物を細かくして食べるのがおすすめです。特にパックに入った吸うタイプのゼリー飲料が便利です。</p>
+    <p class="pb-3">また、飲酒は血行が良くなり腫れや内出血が悪化する可能性があるため、術後1～2週間は控えてください。その後もむくみや腫れ、傷の治りの遅れとなるため１ヶ月はなるべく控えましょう。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">安静に過ごす</h1>
+    <p class="pb-3">手術後1週間は安静にしましょう。日常生活は通常通り過ごしていただいて問題ありません。</p>
+    <p class="pb-3">軽めの運動は2週間目から可能です。糸リフト後のサウナ・エステ・ヨガ・激しいスポーツは1ヶ月控えましょう。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">頬や首を冷やす</h1>
+    <p class="pb-3">切開リフト、バッカルファット除去等は、腫れを予防するために顔用の固定バンドを数日着用します。</p>
+    <p class="pb-3">帰宅後は冷却ジェルで頬や首を冷やし、ゆっくり休みましょう。固定バンドはクリニックの指示に従って着用し、安静とクーリングを行なって腫れを軽減しましょう。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">頭を高く保つ</h1>
+    <p class="pb-3">頭を高くして寝るとむくみが軽減します。</p>
+    <p class="pb-3">傷口を圧迫するような横向きや下を向いたりする事は避けましょう。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">傷口に力を加えない</h1>
+    <p class="pb-3">施術直後は糸が馴染んでいないため、強い刺激を加えると糸の引っ掛かり（コグ）が外れてしまう可能性があります。強く押す、擦るなど、傷口に強い刺激を与える行動は避けましょう。</p>
+    <p class="pb-3">糸を挿入した部分を必要以上に動かさないようにすることも大切です。</p>
 
-      <h1 class="text-xl font-bold pb-3 pt-5">禁煙</h1>
-      <p class="pb-3">タバコには血管を収縮させる作用があります。血管が収縮すると酸素や栄養素の循環が妨げられ、傷口の治りが遅れる可能性があります。さらに、細菌による感染症のリスクも高まります。</p>
-      <p class="pb-3">これらの理由から、できる限り禁煙しましょう。</p>
+    <h1 class="text-xl font-bold pb-3 pt-5">禁煙</h1>
+    <p class="pb-3">タバコには血管を収縮させる作用があります。血管が収縮すると酸素や栄養素の循環が妨げられ、傷口の治りが遅れる可能性があります。さらに、細菌による感染症のリスクも高まります。</p>
+    <p class="pb-3">これらの理由から、できる限り禁煙しましょう。</p>
 
-      <h1 class="text-xl font-bold pb-3 pt-5">マッサージ</h1>
-      <p class="pb-3">顔のマッサージは刺激となるため、傷口が安定するまでは行わないようにしましょう。傷口の炎症を防ぐため、できるだけ顔には触らないようにしてください。</p>
-      
-      <h1 class="text-xl font-bold pb-3 pt-5">歯の治療</h1>
-      <p class="pb-3">歯の治療は口を大きく開く必要があるため、術後2ヶ月は避けましょう。</p>
-      <p class="pb-3">糸リフトを行った場合は、糸が外れたり取れたりしてしまう可能性があります。</p>
+    <h1 class="text-xl font-bold pb-3 pt-5">マッサージ</h1>
+    <p class="pb-3">顔のマッサージは刺激となるため、傷口が安定するまでは行わないようにしましょう。傷口の炎症を防ぐため、できるだけ顔には触らないようにしてください。</p>
+    
+    <h1 class="text-xl font-bold pb-3 pt-5">歯の治療</h1>
+    <p class="pb-3">歯の治療は口を大きく開く必要があるため、術後2ヶ月は避けましょう。</p>
+    <p class="pb-3">糸リフトを行った場合は、糸が外れたり取れたりしてしまう可能性があります。</p>
 
-      <h1 class="text-xl font-bold pb-3 pt-5">パーマ・ヘアカラー</h1>
-      <p class="pb-3">糸リフトは頭皮やこめかみ付近から糸を入れることが多いため、パーマやヘアカラーは傷口が塞がるまでは避けましょう。</p>
-      <img src="/assets/hair.jpg" alt="hair-color" class="mt-5 w-1/2">
+    <h1 class="text-xl font-bold pb-3 pt-5">パーマ・ヘアカラー</h1>
+    <p class="pb-3">糸リフトは頭皮やこめかみ付近から糸を入れることが多いため、パーマやヘアカラーは傷口が塞がるまでは避けましょう。</p>
+    <img src="/assets/hair.jpg" alt="hair-color" class="mt-5 w-1/2">
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">アイテム</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <h1 class="text-xl font-bold">ビーズクッション</h1>
-      <a href="https://www.amazon.co.jp/Yogibo-%E3%83%A8%E3%82%AE%E3%83%9C%E3%83%BC-Max-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%B0%E3%83%AC%E3%83%BC-%E3%80%90%E5%8F%97%E6%B3%A8%E7%94%9F%E7%94%A3%E5%93%81%E3%80%91/dp/B00XXFFLPI/ref=zg_bs_g_5341886051_d_sccl_2/355-6087128-4752335?psc=1" style="text-decoration: underline;">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">アイテム</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-xl font-bold">ビーズクッション</h1>
+    <a href="https://www.amazon.co.jp/Yogibo-%E3%83%A8%E3%82%AE%E3%83%9C%E3%83%BC-Max-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%B0%E3%83%AC%E3%83%BC-%E3%80%90%E5%8F%97%E6%B3%A8%E7%94%9F%E7%94%A3%E5%93%81%E3%80%91/dp/B00XXFFLPI/ref=zg_bs_g_5341886051_d_sccl_2/355-6087128-4752335?psc=1" style="text-decoration: underline;">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">吸水シーツ</h1>
-      <p>耳のまわりの傷からにじむ程度の出血がみられることがあります。寝ているときにガーゼがずれて枕や枕カバーが汚れるのが心配なら枕を十分覆えるサイズの吸水シーツを用意しましょう。</p>
-      <a href="https://www.amazon.co.jp/%E5%90%B8%E6%B0%B4%E3%82%B7%E3%83%BC%E3%83%88-60x60cm-%E9%98%B2%E6%B0%B4%E3%82%B7%E3%83%BC%E3%83%88-%E6%8A%97%E8%8F%8C%E3%83%9D%E3%83%AA%E3%83%9E%E3%83%BC-%E3%81%8A%E3%82%80%E3%81%A4%E3%81%8B%E3%81%88%E3%82%B7%E3%83%BC%E3%83%88/dp/B0BY7QTB1T/ref=sr_1_2_sspa?dib=eyJ2IjoiMSJ9.oQW_sAqyt1o0QGCodFytYOJhI3b9oZC_SYotr54PqswBippjKOON_TqUsEik9NXHsLLIZvayGU3nI9_D8lj9NlRkBWKbKVrBkwAgEfR-WSk9r6ThSMgn94pEvg0H6ul88tET61Wj4Io5vPg1fWTunVoo0Jw87-uSRFIeShYu1YXV2YTQqhGp-gRZW01eWhVSNvCc2qDvOs2Za5o65KSQhD75sMxT8aJErZzVEDSINrryehTQPEqXch8adD9TW19wBJgHsgjQjVeYWw4K6RmbYdZz7BjGe1oBahI5j_VjsvE.-VEAcDfywKYi7flGzw1mvBQ7j59qKm6nBm6U8noRUzY&dib_tag=se&keywords=%E5%90%B8%E6%B0%B4%E3%82%B7%E3%83%BC%E3%83%88&qid=1719929966&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">吸水シーツ</h1>
+    <p>耳のまわりの傷からにじむ程度の出血がみられることがあります。寝ているときにガーゼがずれて枕や枕カバーが汚れるのが心配なら枕を十分覆えるサイズの吸水シーツを用意しましょう。</p>
+    <a href="https://www.amazon.co.jp/%E5%90%B8%E6%B0%B4%E3%82%B7%E3%83%BC%E3%83%88-60x60cm-%E9%98%B2%E6%B0%B4%E3%82%B7%E3%83%BC%E3%83%88-%E6%8A%97%E8%8F%8C%E3%83%9D%E3%83%AA%E3%83%9E%E3%83%BC-%E3%81%8A%E3%82%80%E3%81%A4%E3%81%8B%E3%81%88%E3%82%B7%E3%83%BC%E3%83%88/dp/B0BY7QTB1T/ref=sr_1_2_sspa?dib=eyJ2IjoiMSJ9.oQW_sAqyt1o0QGCodFytYOJhI3b9oZC_SYotr54PqswBippjKOON_TqUsEik9NXHsLLIZvayGU3nI9_D8lj9NlRkBWKbKVrBkwAgEfR-WSk9r6ThSMgn94pEvg0H6ul88tET61Wj4Io5vPg1fWTunVoo0Jw87-uSRFIeShYu1YXV2YTQqhGp-gRZW01eWhVSNvCc2qDvOs2Za5o65KSQhD75sMxT8aJErZzVEDSINrryehTQPEqXch8adD9TW19wBJgHsgjQjVeYWw4K6RmbYdZz7BjGe1oBahI5j_VjsvE.-VEAcDfywKYi7flGzw1mvBQ7j59qKm6nBm6U8noRUzY&dib_tag=se&keywords=%E5%90%B8%E6%B0%B4%E3%82%B7%E3%83%BC%E3%83%88&qid=1719929966&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">服装</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <ul class="list-disc pl-5">
-        <li>帽子</li>
-        <li>前開きの服</li>
-        <li>マスク</li>
-        <li>ハイネックの服、首元が隠せるスカーフ</li>
-        <p>頬や首に内出血がみられる時期は服装などで上手くカモフラージュしましょう。夏は暑苦しくならないような素材を選んでください。</p>
-        <img src="/assets/scarf.jpg" alt="scarf" class="mt-5 w-1/2">
-        <li>コンシーラー</li>
-        <p>頬や首の内出血をカバーします。クリームタイプよりもリキッド、パウダーなど広い範囲にもつけやすく、こすらなくても落としやすいものが良いでしょう。</p>
-      </ul>
+    <h1 class="text-2xl font-bold pb-2 pt-10">服装</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <ul class="list-disc pl-5">
+      <li>帽子</li>
+      <li>前開きの服</li>
+      <li>マスク</li>
+      <li>ハイネックの服、首元が隠せるスカーフ</li>
+      <p>頬や首に内出血がみられる時期は服装などで上手くカモフラージュしましょう。夏は暑苦しくならないような素材を選んでください。</p>
+      <img src="/assets/scarf.jpg" alt="scarf" class="mt-5 w-1/2">
+      <li>コンシーラー</li>
+      <p>頬や首の内出血をカバーします。クリームタイプよりもリキッド、パウダーなど広い範囲にもつけやすく、こすらなくても落としやすいものが良いでしょう。</p>
+    </ul>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">季節</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <p class="pb-3">「夏の手術は、汗で感染しやすいので避けた方がいいですか？」</p>
-      <p class="pb-3">暑い季節は汗をかきやすく、傷口の衛生が保ちにくいと思われがちですが、現代ではエアコンの普及により室内での快適な過ごし方が可能です。そのため、手術のタイミングはあなたの準備が整ったタイミングが最適です。ダウンタイムをしっかりと確保できる時期を選びましょう。</p>
-    </div>
+    <h1 class="text-2xl font-bold pb-2 pt-10">季節</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-3">「夏の手術は、汗で感染しやすいので避けた方がいいですか？」</p>
+    <p class="pb-3">暑い季節は汗をかきやすく、傷口の衛生が保ちにくいと思われがちですが、現代ではエアコンの普及により室内での快適な過ごし方が可能です。そのため、手術のタイミングはあなたの準備が整ったタイミングが最適です。ダウンタイムをしっかりと確保できる時期を選びましょう。</p>
+  </div>
 BODY
 
 AreaCategory.create!(
@@ -396,96 +396,96 @@ AreaCategory.create!(
   body: lift_description
   )
 
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # バストの記事
-  bust_description = <<-BODY.strip_heredoc
-    <div class="flex flex-col justify-start p-6 text-gray-700">
-      <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">ずっと悩んでいたバストの大きさ・形、これで解消！</a>
-      <p href="#" class="text-sm pb-8">
-        Published on April 25th, 2024
-      </p>
-      <h1 class="text-2xl font-bold pb-2">バストの整形一覧</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <ul class="list-disc pl-5">
-        <li>豊胸（シリコンバッグ）</li>
-        <li>豊胸（脂肪注入）</li>
-        <li>豊胸（ハイブリッド：シリコン＋脂肪）</li>
-        <li>モントゴメリー腺除去</li>
-        <li>陥没乳頭形成</li>
-        <li>乳輪・乳頭縮小</li>
-      </ul>
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# バストの記事
+bust_description = <<-BODY.strip_heredoc
+  <div class="flex flex-col justify-start p-6 text-gray-700">
+    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">ずっと悩んでいたバストの大きさ・形、これで解消！</a>
+    <p href="#" class="text-sm pb-8">
+      Published on April 25th, 2024
+    </p>
+    <h1 class="text-2xl font-bold pb-2">バストの整形一覧</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <ul class="list-disc pl-5">
+      <li>豊胸（シリコンバッグ）</li>
+      <li>豊胸（脂肪注入）</li>
+      <li>豊胸（ハイブリッド：シリコン＋脂肪）</li>
+      <li>モントゴメリー腺除去</li>
+      <li>陥没乳頭形成</li>
+      <li>乳輪・乳頭縮小</li>
+    </ul>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">豊胸のダウンタイムは？</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <p class="pb-3">豊胸の主なダウンタイム症状は胸の腫れ、むくみ、痛み、違和感などです。</p>
-      <p class="pb-3">シリコンバッグの豊胸の場合には、バッグを挿入する際にメスを入れて挿入部分を開くため、挿入部分の傷の痛みが強く出ることがあります。</p>
-      <p class="pb-3">ダウンタイムの症状には個人差がありますが、ひどい場合だと手術の翌日は痛みでベットから動くことができない、寝返りをうてない、少しの衝撃でも強い痛みが胸に走るというケースもあります。</p>
-      <p class="pb-3">シリコンバッグの豊胸の場合には、挿入するバッグの大きさや挿入部位によってダウンタイムの痛みの強さや期間なども変わってきます。中でも最も痛みが強いと言われているのが大胸筋下（だいきょうきんか）への挿入です。</p>
-      <p class="pb-3">痩せ型の方に多い挿入方法で、大胸筋を剥離して挿入する必要があり、手術も複雑であるためダウンタイムも大きくなります。</p>
-      <p class="pb-3">痛みで腕を上げることが難しいため、洗髪は手伝ってもらったり、美容院でやってもらうことをおすすめします。</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">豊胸のダウンタイムは？</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-3">豊胸の主なダウンタイム症状は胸の腫れ、むくみ、痛み、違和感などです。</p>
+    <p class="pb-3">シリコンバッグの豊胸の場合には、バッグを挿入する際にメスを入れて挿入部分を開くため、挿入部分の傷の痛みが強く出ることがあります。</p>
+    <p class="pb-3">ダウンタイムの症状には個人差がありますが、ひどい場合だと手術の翌日は痛みでベットから動くことができない、寝返りをうてない、少しの衝撃でも強い痛みが胸に走るというケースもあります。</p>
+    <p class="pb-3">シリコンバッグの豊胸の場合には、挿入するバッグの大きさや挿入部位によってダウンタイムの痛みの強さや期間なども変わってきます。中でも最も痛みが強いと言われているのが大胸筋下（だいきょうきんか）への挿入です。</p>
+    <p class="pb-3">痩せ型の方に多い挿入方法で、大胸筋を剥離して挿入する必要があり、手術も複雑であるためダウンタイムも大きくなります。</p>
+    <p class="pb-3">痛みで腕を上げることが難しいため、洗髪は手伝ってもらったり、美容院でやってもらうことをおすすめします。</p>
 
-      <h3 class="text-xl font-bold pb-3">シリコンバッグ豊胸のダウンタイム</h3>
-      <p class="pb-3">シリコンバッグ豊胸は、他の豊胸手術に比べてダウンタイムが少し長く、1カ月～2カ月と言われています。</p>
-      <p class="pb-3">痛み、腫れといった症状が出るのは術後1～2週間程度と言われており、まとまった休暇を取るのがおすすめです。</p>
-      <p class="pb-3">また、挿入したバッグが完璧に体に馴染むまでには半年以上の時間がかかります。</p>
-      <p class="pb-3">本記事では、主にシリコンバッグ豊胸について紹介していきます。</p>
-      <img src="/assets/bust_article2.png" alt="bust" class="mt-5 w-1/2">
+    <h3 class="text-xl font-bold pb-3">シリコンバッグ豊胸のダウンタイム</h3>
+    <p class="pb-3">シリコンバッグ豊胸は、他の豊胸手術に比べてダウンタイムが少し長く、1カ月～2カ月と言われています。</p>
+    <p class="pb-3">痛み、腫れといった症状が出るのは術後1～2週間程度と言われており、まとまった休暇を取るのがおすすめです。</p>
+    <p class="pb-3">また、挿入したバッグが完璧に体に馴染むまでには半年以上の時間がかかります。</p>
+    <p class="pb-3">本記事では、主にシリコンバッグ豊胸について紹介していきます。</p>
+    <img src="/assets/bust_article2.png" alt="bust" class="mt-5 w-1/2">
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">正しい過ごし方</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-2xl font-bold pb-2 pt-10">正しい過ごし方</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
 
-      <h3 class="text-xl font-bold pb-3">下着</h3>
-      <p class="pb-3">挿入したバッグは、施術後3か月～半年程度で安定します。それまでに胸を圧迫したり締め付けたりすると、位置がずれることがあるのでご注意ください。</p>
-      <p class="pb-3">自己判断でブラジャーを着用せず、医師の指示に従いましょう。</p>
-      <img src="/assets/bust_article.png" alt="bust" class="mt-5 w-1/2">
-      
-      <h3 class="text-xl font-bold pb-3">安静に過ごす</h3>
-      <p class="pb-3">痛みなどの症状がひどくなる可能性が高いため、安静にしましょう。</p>
-      <p class="pb-3">シリコンバッグ豊胸の手術後は挿入したバッグがずれてしまわないようバストバンドを使用して胸を固定します。固定が必要な期間はクリニックの指示に従うようにしてください。</p>
-      <p class="pb-3">重い荷物を持ったり、激しい運動をするのも避けましょう。</p>
-      <p class="pb-3">シリコンバッグ豊胸は、メスを用いて行うため傷口が大きくなる可能性が高く、安定するのにも時間がかかります。何かの拍子に出血してしまう可能性もあります。</p>
-      <p class="pb-3">ダウンタイムが治まるまでは、体にも大きな負担がかかっている状態です。ダウンタイムの症状が出ている間は無理をせず、ゆっくりとした動きを心がけましょう。</p>
+    <h3 class="text-xl font-bold pb-3">下着</h3>
+    <p class="pb-3">挿入したバッグは、施術後3か月～半年程度で安定します。それまでに胸を圧迫したり締め付けたりすると、位置がずれることがあるのでご注意ください。</p>
+    <p class="pb-3">自己判断でブラジャーを着用せず、医師の指示に従いましょう。</p>
+    <img src="/assets/bust_article.png" alt="bust" class="mt-5 w-1/2">
+    
+    <h3 class="text-xl font-bold pb-3">安静に過ごす</h3>
+    <p class="pb-3">痛みなどの症状がひどくなる可能性が高いため、安静にしましょう。</p>
+    <p class="pb-3">シリコンバッグ豊胸の手術後は挿入したバッグがずれてしまわないようバストバンドを使用して胸を固定します。固定が必要な期間はクリニックの指示に従うようにしてください。</p>
+    <p class="pb-3">重い荷物を持ったり、激しい運動をするのも避けましょう。</p>
+    <p class="pb-3">シリコンバッグ豊胸は、メスを用いて行うため傷口が大きくなる可能性が高く、安定するのにも時間がかかります。何かの拍子に出血してしまう可能性もあります。</p>
+    <p class="pb-3">ダウンタイムが治まるまでは、体にも大きな負担がかかっている状態です。ダウンタイムの症状が出ている間は無理をせず、ゆっくりとした動きを心がけましょう。</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">シリコンバッグ豊胸の手術後のトラブル</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <h3 class="text-xl font-bold pb-3">カプセル拘縮</h3>
-      <p class="pb-3">カプセル拘縮は、10人に一人は発症すると言われている代表的なトラブルの一つです。</p>
-      <p class="pb-3">挿入したシリコンバッグを体が異物だと認識し、豊胸バッグの周りに被膜が出来てしまいます。</p>
-      <p class="pb-3">それ自体は体の正常な動きですが、放置すると被膜がどんどん厚くなり、バッグが締め付けられます。カプセル拘縮は手術後2～3ヶ月で現れる場合もあれば、手術から10年後に現れる場合もあります。</p>
-      <p class="pb-3">症状としては、軽くちくちくする違和感、胸が不自然に盛り上がったり、炎症による痛みを伴う場合があります。カプセル拘縮が起こると硬くなるため、ご自身でも気付くと思います。</p>
-      <p class="pb-3">カプセル拘縮になる場合は体質の問題が大きく、手術が失敗したからカプセル拘縮になるというわけではありません。</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">シリコンバッグ豊胸の手術後のトラブル</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h3 class="text-xl font-bold pb-3">カプセル拘縮</h3>
+    <p class="pb-3">カプセル拘縮は、10人に一人は発症すると言われている代表的なトラブルの一つです。</p>
+    <p class="pb-3">挿入したシリコンバッグを体が異物だと認識し、豊胸バッグの周りに被膜が出来てしまいます。</p>
+    <p class="pb-3">それ自体は体の正常な動きですが、放置すると被膜がどんどん厚くなり、バッグが締め付けられます。カプセル拘縮は手術後2～3ヶ月で現れる場合もあれば、手術から10年後に現れる場合もあります。</p>
+    <p class="pb-3">症状としては、軽くちくちくする違和感、胸が不自然に盛り上がったり、炎症による痛みを伴う場合があります。カプセル拘縮が起こると硬くなるため、ご自身でも気付くと思います。</p>
+    <p class="pb-3">カプセル拘縮になる場合は体質の問題が大きく、手術が失敗したからカプセル拘縮になるというわけではありません。</p>
 
-      <h3 class="text-xl font-bold pb-3">石灰化</h3>
-      <p class="pb-3">石灰化とは、シリコンバッグの周りに出来た被膜にカルシウムの結晶が付着して固まってしまう現象のことです。</p>
-      <p class="pb-3">石灰化が起こるとエコー検査で内部を映すことができないため状況が確認できません。</p>
-      <p class="pb-3">バッグの破損の原因などになるわけではなく、20年、30年たって古くなると起こってしまう現象で、石に苔（こけ）が生えるようなイメージです。</p>
-      <p class="pb-3">石灰化したからといってバッグを抜く必要はありません。石灰化が起こってもバストの感触が硬くなるわけではありません。</p>
+    <h3 class="text-xl font-bold pb-3">石灰化</h3>
+    <p class="pb-3">石灰化とは、シリコンバッグの周りに出来た被膜にカルシウムの結晶が付着して固まってしまう現象のことです。</p>
+    <p class="pb-3">石灰化が起こるとエコー検査で内部を映すことができないため状況が確認できません。</p>
+    <p class="pb-3">バッグの破損の原因などになるわけではなく、20年、30年たって古くなると起こってしまう現象で、石に苔（こけ）が生えるようなイメージです。</p>
+    <p class="pb-3">石灰化したからといってバッグを抜く必要はありません。石灰化が起こってもバストの感触が硬くなるわけではありません。</p>
 
-      <h3 class="text-xl font-bold pb-3">傷跡</h3>
-      <p class="pb-3">脇を切開してシリコンバッグを挿入するため、手術後の数年間傷跡が残ります。</p>
-      <p class="pb-3">傷跡の経過としては、半年から1年は残りますが、1年たてばあまり気にならなくなる程度になるでしょう。</p>
-      <p class="pb-3">脇の下の体のシワに沿ってメスを入れるため、時間が経てば経つほど傷はシワと同化して傷跡は目立たなくなります。そして、2年～3年でほとんど気にならなくなるというケースが多いです。</p>
+    <h3 class="text-xl font-bold pb-3">傷跡</h3>
+    <p class="pb-3">脇を切開してシリコンバッグを挿入するため、手術後の数年間傷跡が残ります。</p>
+    <p class="pb-3">傷跡の経過としては、半年から1年は残りますが、1年たてばあまり気にならなくなる程度になるでしょう。</p>
+    <p class="pb-3">脇の下の体のシワに沿ってメスを入れるため、時間が経てば経つほど傷はシワと同化して傷跡は目立たなくなります。そして、2年～3年でほとんど気にならなくなるというケースが多いです。</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">アイテム</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <h1 class="text-xl font-bold">ビーズクッション</h1>
-      <p>起き上がる時に胸に力が加わるため、なるべく仰向けを避けると楽に過ごすことが出来ます。</p>
-      <a href="https://www.amazon.co.jp/Yogibo-%E3%83%A8%E3%82%AE%E3%83%9C%E3%83%BC-Max-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%B0%E3%83%AC%E3%83%BC-%E3%80%90%E5%8F%97%E6%B3%A8%E7%94%9F%E7%94%A3%E5%93%81%E3%80%91/dp/B00XXFFLPI/ref=zg_bs_g_5341886051_d_sccl_2/355-6087128-4752335?psc=1" style="text-decoration: underline;">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-2xl font-bold pb-2 pt-10">アイテム</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-xl font-bold">ビーズクッション</h1>
+    <p>起き上がる時に胸に力が加わるため、なるべく仰向けを避けると楽に過ごすことが出来ます。</p>
+    <a href="https://www.amazon.co.jp/Yogibo-%E3%83%A8%E3%82%AE%E3%83%9C%E3%83%BC-Max-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%B0%E3%83%AC%E3%83%BC-%E3%80%90%E5%8F%97%E6%B3%A8%E7%94%9F%E7%94%A3%E5%93%81%E3%80%91/dp/B00XXFFLPI/ref=zg_bs_g_5341886051_d_sccl_2/355-6087128-4752335?psc=1" style="text-decoration: underline;">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-xl font-bold pt-5">サポーター</h1>
-      <a href="https://www.amazon.co.jp/KASFDBMO-%E4%B9%B3%E6%88%BF%E3%82%B9%E3%82%BF%E3%83%93%E3%83%A9%E3%82%A4%E3%82%B6%E3%83%BC%E3%83%90%E3%83%B3%E3%83%89-%E7%B8%AE%E5%B0%8F%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97-%E8%83%B8%E3%83%99%E3%83%AB%E3%83%88-%E4%B9%B3%E6%88%BF%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88/dp/B0D8DNF2XJ/ref=sr_1_33?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1NPFUN2DXAUCM&dib=eyJ2IjoiMSJ9.NgVhu92wn1zWTzswKLwogZoyLwzJZMLmU_P3wjoEawkGL9_eQF0-w7Qpinfd3Q-kwA4uAlHcl3waUcc3ujtHydrZGVtdXRTvgf50AHUT7-PkCtqejCbl0F3FUFSDz4kOuChu58pUPO5veloYBGJztcuct8c97b0tGFG3XkpPUXTnShPiQBKMmaG0d6nQJYFHKVtZNC7RT5n54y4cL438jIJ8RUvzBzxEVN6KlXgTBk9LiwBb0lk8sVtA-szZZaZ_yBCk-zyqd8H-LcTvWsVZJGJlUgwsShHnw6JN8KskFyc.sK18-qI_khwzVuYZkCUOl6MHrlh8EnuPhf7mgU9VnJQ&dib_tag=se&keywords=%E8%83%B8+%E6%89%8B%E8%A1%93%E5%BE%8C&qid=1719979486&sprefix=%E8%83%B8+%E6%89%8B%E8%A1%93%E5%BE%8C%2Caps%2C229&sr=8-33">Amazonで詳細を見る</a>
-      <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
+    <h1 class="text-xl font-bold pt-5">サポーター</h1>
+    <a href="https://www.amazon.co.jp/KASFDBMO-%E4%B9%B3%E6%88%BF%E3%82%B9%E3%82%BF%E3%83%93%E3%83%A9%E3%82%A4%E3%82%B6%E3%83%BC%E3%83%90%E3%83%B3%E3%83%89-%E7%B8%AE%E5%B0%8F%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97-%E8%83%B8%E3%83%99%E3%83%AB%E3%83%88-%E4%B9%B3%E6%88%BF%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88/dp/B0D8DNF2XJ/ref=sr_1_33?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1NPFUN2DXAUCM&dib=eyJ2IjoiMSJ9.NgVhu92wn1zWTzswKLwogZoyLwzJZMLmU_P3wjoEawkGL9_eQF0-w7Qpinfd3Q-kwA4uAlHcl3waUcc3ujtHydrZGVtdXRTvgf50AHUT7-PkCtqejCbl0F3FUFSDz4kOuChu58pUPO5veloYBGJztcuct8c97b0tGFG3XkpPUXTnShPiQBKMmaG0d6nQJYFHKVtZNC7RT5n54y4cL438jIJ8RUvzBzxEVN6KlXgTBk9LiwBb0lk8sVtA-szZZaZ_yBCk-zyqd8H-LcTvWsVZJGJlUgwsShHnw6JN8KskFyc.sK18-qI_khwzVuYZkCUOl6MHrlh8EnuPhf7mgU9VnJQ&dib_tag=se&keywords=%E8%83%B8+%E6%89%8B%E8%A1%93%E5%BE%8C&qid=1719979486&sprefix=%E8%83%B8+%E6%89%8B%E8%A1%93%E5%BE%8C%2Caps%2C229&sr=8-33">Amazonで詳細を見る</a>
+    <p>Coming soon..URLをクリックしなくても商品ページが表示される予定です</p>
 
-      <h1 class="text-2xl font-bold pb-2 pt-10">服装</h1>
-      <hr class="border-t-1 border-gray-300 pb-3">
-      <ul class="list-disc pl-5">
-        <li>前開きの服</li>
-        <p>1週間程度は着脱しやすい前開きのゆったりとした洋服がおすすめです。</p>
-        <p>ニップレスに緩めのキャミソールなども良いでしょう。</p>
-      </ul>
-    </div>
+    <h1 class="text-2xl font-bold pb-2 pt-10">服装</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <ul class="list-disc pl-5">
+      <li>前開きの服</li>
+      <p>1週間程度は着脱しやすい前開きのゆったりとした洋服がおすすめです。</p>
+      <p>ニップレスに緩めのキャミソールなども良いでしょう。</p>
+    </ul>
+  </div>
 BODY
 
 AreaCategory.create!(
@@ -496,11 +496,11 @@ AreaCategory.create!(
   body: bust_description
   )
 
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # 肌の記事
-  skin_description = <<-BODY.strip_heredoc
-    <div class="flex flex-col justify-start p-6 text-gray-700">
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# 肌の記事
+skin_description = <<-BODY.strip_heredoc
+  <div class="flex flex-col justify-start p-6 text-gray-700">
     <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">これであなたも美しい陶器肌に</a>
     <p href="#" class="text-sm pb-8">
       Published on April 25th, 2024
@@ -651,11 +651,11 @@ AreaCategory.create!(
   body: skin_description
   )
 
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  # フィラーの記事
-  filler_description = <<-BODY.strip_heredoc
-    <div class="flex flex-col justify-start p-6 text-gray-700">
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# フィラーの記事
+filler_description = <<-BODY.strip_heredoc
+  <div class="flex flex-col justify-start p-6 text-gray-700">
     <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">まずはヒアルロン酸で気軽に美しく</a>
     <p href="#" class="text-sm pb-8">
       Published on April 25th, 2024
@@ -742,4 +742,120 @@ AreaCategory.create!(
   area_image: "/assets/filler1.png",
   body_image: "/assets/filler_body.jpg",
   body: filler_description
+  )
+
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# 脂肪の記事
+fat_description = <<-BODY.strip_heredoc
+  <div class="flex flex-col justify-start p-6 text-gray-700">
+    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">痩せたいけど食事制限はつらい！痩身施術を知ろう</a>
+    <p href="#" class="text-sm pb-8">
+      Published on April 25th, 2024
+    </p>
+    <h1 class="text-2xl font-bold pb-2">脂肪に関する施術一覧</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-xl font-bold pb-2">切らない脂肪吸引</h1>
+    <ul class="list-disc pl-5">
+      <li>脂肪冷却</li>
+      <li>脂肪溶解注射</li>
+      <li>インディバ</li>
+      <li>HIFU</li>
+    </ul>
+
+    <h1 class="text-xl font-bold pb-2 pt-10">切る脂肪吸引</h1>
+    <ul class="list-disc pl-5">
+      <li>脂肪吸引</li>
+    </ul>
+
+    <h1 class="text-2xl font-bold pb-2 pt-10">脂肪冷却</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-5">脂肪冷却は、脂肪細胞を凍らせて死滅させることで、体外に脂肪を排出させる痩身施術です。脂肪は4℃で凍結します。凍結した脂肪は老廃物と化し、３〜４カ月かけて体外に排出されます。</p>
+    <img src="/assets/ice.jpg" alt="ice" class="mt-5 w-1/2">
+
+    <h1 class="text-2xl font-bold pb-2 pt-10">脂肪溶解注射</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-5">脂肪溶解注射とは、脂肪細胞自体を溶解し破壊することでダイエット効果を期待することができる痩身施術です。 皮下脂肪へ注射することで効果を発揮し、破壊された脂肪細胞は代謝によってそのまま汗や尿とともに、老廃物として体外へ排出されます。 ヒアルロン酸などと比べると持続期間は約2倍以上と言われていますが、その分使用できる箇所が限られています。</p>
+
+    <h1 class="text-2xl font-bold pb-2 pt-10">超音波による痩身</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-xl font-bold pb-2">インディバ</h1>
+    <p class="pb-2">インディバはスペインで生まれた高周波温熱機器のことで、電磁波エネルギーによって体を芯からムラなく温めることが出来ます。</p>
+    <p class="pb-2">インディバによって血行が促進されると、リンパの流れも改善され、基礎代謝が高まります。代謝がアップすれば脂肪が燃焼されやすくなるので、痩せやすい体を目指せます。老廃物も排出されやすくなるため、むくみ改善にも効果的です。</p>
+    <p class="pb-2">痩身目的でインディバの施術を受ける方は多いですが、インディバは短期間で痩せられる施術ではありません。</p>
+    <p class="pb-2">インディバで得られる代謝アップや脂肪燃焼などの効果は体質改善に近いため短期間での痩身には向いておらず、体に変化が現れるまではある程度施術を受ける必要があります。</p>
+
+    <h1 class="text-xl font-bold pb-2 pt-5">HIFU</h1>
+    <p class="pb-5">皮膚の外側から高密度焦点式超音波・レーザー・高周波を当てる事により、部分的に脂肪を溶解することが出来ます。医療HIFUはリフトアップ効果のほか脂肪溶解機能の付いたものもあります。</p>
+
+    <h1 class="text-2xl font-bold pb-2 pt-10">脂肪吸引</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <p class="pb-5">脂肪吸引は、太さ数mmのカニューレを使って、余分な皮下脂肪を取り除く痩身手術です。ダイエットでは難しい部分痩せを確実に叶え、ボディラインを美しく整えることを目的としています。</p>
+
+    <h1 class="text-2xl font-bold pb-2 pt-10">切らない脂肪吸引について</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-xl font-bold pb-2">ダウンタイム</h1>
+    <p class="pb-5">腫れやむくみ、内出血などが起こるリスクがありますが、数日〜1週間程度で軽快することがほとんどです。ダウンタイムはほとんどなく、施術当日から大きな負担なく生活が可能となります。</p>
+
+    <h1 class="text-xl font-bold pb-2 pt-5">施術当日の注意点</h1>
+    <ul class="list-disc pl-5">
+      <li>効果を高めるために、水分を摂取するようにしましょう。適度な水分補給により代謝を上げることで、老廃物（脂肪）を早く排出させることにつながります。</li>
+      <li>施術当日は過度な運動や飲酒を避けましょう。血行や代謝が良くなると施術部位に赤みや痛みが出てくる可能性があります。</li>
+      <li>適度な運動を心がけましょう。ウォーキングなどの有酸素運動が効果的です。</li>
+    </ul>
+
+    <h1 class="text-2xl font-bold pb-2 pt-10">切る脂肪吸引について</h1>
+    <hr class="border-t-1 border-gray-300 pb-3">
+    <h1 class="text-xl font-bold pb-2">＜ダウンタイム＞</h1>
+    <h1 class="text-lg font-bold pb-2">痛み</h1>
+    <ul class="list-disc pl-5">
+      <li>強い筋肉痛のような痛みが出現します。太ももがもっとも強く出やすいです。</li>
+      <li>ピークは術後３日間程度です。違和感は１～２週間ほどで消失します。</li>
+    </ul>
+
+    <h1 class="text-lg font-bold pb-2 pt-10">内出血</h1>
+    <ul class="list-disc pl-5">
+      <li>術後４～５日ほどがピークです。赤黒いあざから１週間前後で黄色くなり、２～３週間で消失します。</li>
+    </ul>
+
+    <h1 class="text-lg font-bold pb-2 pt-10">むくみ</h1>
+    <ul class="list-disc pl-5">
+      <li>むくみでの影響で一時的に太って見えることもあります。重力の関係で下半身は広範囲に現れやすいです。</li>
+      <li>ピークは１週間前後で、２週間～１ヵ月ほどで徐々に軽減していきます。</li>
+    </ul>
+
+    <h1 class="text-lg font-bold pb-2 pt-10">硬縮</h1>
+    <ul class="list-disc pl-5">
+      <li>施術部位に違和感（つっぱる感じ・硬い・でこぼこ感など）が現れることもあります。</li>
+      <li>１～２週間後から出現、３～６ヵ月ほどで気にならなくなっていきます。</li>
+    </ul>
+
+    <h1 class="text-xl font-bold pb-2 pt-11">＜施術後の注意点＞</h1>
+    <h1 class="text-lg font-bold pb-2">入浴やサウナや激しい運動を控える</h1>
+    <p class="pb-1">血行が良くなると、腫れが悪化するおそれがあります。一方、腫れが引いて拘縮やむくみが残っている場合は入浴で血行を良くしましょう。</p>
+    <p class="pb-1">拘縮が残っている段階で軽くストレッチをして皮膚を伸ばすことは問題ありませんが、腫れや内出血がみられる時期は安静に過ごしましょう。</p>
+
+    <h1 class="text-lg font-bold pb-2 pt-5">冷やす</h1>
+    <p class="pb-1">施術部位を冷やすことで腫れが引きやすくなります。凍傷のおそれがあるため冷やし過ぎには注意しましょう。</p>
+
+    <h1 class="text-lg font-bold pb-2 pt-5">適切な圧迫固定を行う</h1>
+    <p class="pb-1">圧迫固定を行うことで腫れやむくみを抑えることができますが、強く圧迫すると内出血が生じたりかゆくなったりする可能性があります。圧迫がきついと感じたらサポーターを緩めましょう。</p>
+
+    <h1 class="text-lg font-bold pb-2 pt-5">マッサージで拘縮部分をほぐす</h1>
+    <p class="pb-1">腫れが治まって拘縮が現れた場合はマッサージをしましょう。毎日行うと皮膚が滑らかな状態に戻りやすくなります。</p>
+    <img src="/assets/massage.jpg" alt="massage" class="mt-5 w-1/2">
+
+    <h1 class="text-xl font-bold pb-2 pt-11">＜服装＞</h1>
+    <p class="pb-1">脂肪吸引当日の服装は「どこの部位の脂肪吸引を受けるか」によって異なりますが、体を締め付けず、着脱しやすいものを選ぶと良いです。</p>
+    <p class="pb-1">脂肪吸引の後は圧迫固定が必要になります。施術部位にもよりますが、袖口から下着が見えてしまうこともあるため、これらを隠せる服装を選びましょう。夏場でも、薄手の長袖を選ぶことをおすすめします。また、靴もサンダルのように履きやすく脱ぎやすいものを選びましょう。</p>
+    <p class="pb-1">顔の脂肪吸引の場合も圧迫が必要になります。体と違って目立つため、帽子やマスクなどを用意することをおすすめします。</p>
+  </div>
+BODY
+
+AreaCategory.create!(
+  title: "脂肪",
+  body_title: "痩身治療で憧れの美ボディを手に入れましょう",
+  area_image: "/assets/stmache.png",
+  body_image: "/assets/fat_body.jpg",
+  body: fat_description
   )
