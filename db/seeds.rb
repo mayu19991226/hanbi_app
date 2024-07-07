@@ -118,7 +118,7 @@ BODY
 AreaCategory.create!(
   title: "目",
   body_title: "目元の整形、ダウンタイムはどうやって過ごすの？",
-  area_image: "/assets/eye3.jpg",
+  area_image: "/assets/eye_main.png",
   body_image: "/assets/eye_body.jpg",
   body: eye_description
   )
@@ -267,7 +267,7 @@ BODY
 AreaCategory.create!(
   title: "鼻",
   body_title: "鼻の整形、ダウンタイム中にあると便利なもの",
-  area_image: "/assets/nose.png",
+  area_image: "/assets/nose_main.png",
   body_image: "/assets/nose_body.png",
   body: nose_description
   )
@@ -391,7 +391,7 @@ BODY
 AreaCategory.create!(
   title: "リフトアップ",
   body_title: "小顔になりたい！そんなあなたへ",
-  area_image: "/assets/lift2.jpg",
+  area_image: "/assets/lift_main.png",
   body_image: "/assets/liftup_body.jpg",
   body: lift_description
   )
@@ -646,7 +646,7 @@ BODY
 AreaCategory.create!(
   title: "肌",
   body_title: "お肌の治療ってダウンタイムあるの？",
-  area_image: "/assets/skin.png",
+  area_image: "/assets/skin_main.png",
   body_image: "/assets/skin_body.png",
   body: skin_description
   )
@@ -739,7 +739,7 @@ BODY
 AreaCategory.create!(
   title: "フィラー",
   body_title: "ヒアルロン酸を注入した後に気を付けることは？",
-  area_image: "/assets/filler1.png",
+  area_image: "/assets/filler_main.png",
   body_image: "/assets/filler_body.jpg",
   body: filler_description
   )
@@ -858,4 +858,24 @@ AreaCategory.create!(
   area_image: "/assets/stmache.png",
   body_image: "/assets/fat_body.jpg",
   body: fat_description
+  )
+
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+# その他の記事
+others_description = <<-BODY.strip_heredoc
+  <div class="flex flex-col justify-start p-6 text-gray-700">
+    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">その他の施術</a>
+    <p href="#" class="text-sm pb-8">
+      Published on April 25th, 2024
+    </p>
+  </div>
+BODY
+
+AreaCategory.create!(
+  title: "その他",
+  body_title: "　　　　　　　　　　　　　　　　",
+  area_image: "/assets/others.png",
+  body_image: "/assets/others_body.png",
+  body: others_description
   )

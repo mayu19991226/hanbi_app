@@ -46,7 +46,7 @@
       <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row lg:border-l-2 lg:pl-2">
         <a class="px-4 py-2 mt-2 text-sm text-gray-500 md:mt-0 hover:text-gray-400 focus:outline-none focus:shadow-outline" href="/users/sign_in">ログイン</a>
         <a class="px-4 py-2 mt-2 text-sm text-gray-500 md:mt-0 hover:text-gray-400 focus:outline-none focus:shadow-outline" href="/users/sign_up">会員登録</a>
-        <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-gray-500 hover:underline" %>
+        <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-gray-500 text-sm hover:underline" %>
       </nav>
     </div>
   </div>
