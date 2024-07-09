@@ -3,16 +3,16 @@
     <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl p-5 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
       <div class="flex flex-row items-center justify-between lg:justify-start">
         <%# ロゴアイコン %>
-        <div class="flex items-center justify-center md:justify-between w-full">
+        <div class="flex items-center justify-start md:justify-start w-full">
           <a href="/">
             <%= image_tag 'logo.PNG', alt: 'MyApp Logo', class: 'h-14 mr-4' %>
           </a>
         </div>
         <!-- 検索フォーム -->
-          <div class="hidden sm:block">
-            <form class="w-full" onsubmit="return false;">
+          <div class="block">
+            <form class="w-full md:w-96" onsubmit="return false;">
               <div class="relative w-full">
-                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center text-neutral-500">
+                <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center justify-center text-neutral-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -25,7 +25,7 @@
                   </svg>
                 </div>
                 <input
-                  class="block w-full rounded border-none py-4 pl-10 pr-4 leading-5 focus:border-neutral-600 focus:ring focus:ring-neutral-600/25"
+                  class="block w-full rounded  border border-gray-300 py-4 pl-10 pr-4 leading-5 focus:border-gray-600 focus:ring focus:ring-gray-600/25 focus:outline-none"
                   type="text"
                   id="search"
                   name="search"
