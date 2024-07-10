@@ -5,6 +5,7 @@ set -o errexit
 bundle install
 yarn install
 yarn build # jsファイルをesbuildでバンドルしているため
+yarn build:css
 bundle exec rake assets:precompile # cssはsprocketsを使っているため
 bundle exec rake assets:clean
 bundle exec rake db:migrate
