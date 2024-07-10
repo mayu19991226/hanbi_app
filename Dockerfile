@@ -25,6 +25,11 @@ ADD . /myapp
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 
+# プリコンパイルするためのコマンド
+# 下記エラー対策
+# ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+RUN /app/bin/rails assets:precompile
+
 # コンテナが外部に公開するポート番号を指定
 EXPOSE 3000
 
