@@ -9,7 +9,9 @@ services:
       - postgres_volume:/var/lib/postgresql/data
     restart: always
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     command: bash -c "rm -f tmp/pids/server.pid && bin/dev"
     environment:
       POSTGRES_USER: postgres
