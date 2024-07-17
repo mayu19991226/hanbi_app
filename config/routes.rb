@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  # ユーザーのプロフィールページのルーティング
+  resources :users, only: [:show]
+  
   # エリアカテゴリのルーティング
   resources :area_categories, only: [:show]
   
