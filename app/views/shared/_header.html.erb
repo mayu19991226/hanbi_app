@@ -1,70 +1,78 @@
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.0/dist/alpine.min.js" defer></script>
+<header class="fixed flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white bg-opacity-90 text-sm py-2 sm:py-0">
+  <nav class="mt-2 relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
+    <div class="flex items-center justify-between">
+      <%# ロゴアイコン %>
+      <a class="flex-none" href="/" aria-label="Brand">
+        <%= image_tag 'logo.PNG', alt: 'MyApp Logo', class: 'h-11 md:h-14 mr-4' %>
+      </a>
 
-<header>
-  <div class="fixed z-10 w-full max-w-7xl">
-    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl p-5 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-      <div class="flex flex-row items-center justify-between lg:justify-start">
-        <%# ロゴアイコン %>
-        <div class="flex items-center justify-start md:justify-start ">
-          <a href="/">
-            <%= image_tag 'logo.PNG', alt: 'MyApp Logo', class: 'h-11 md:h-14 mr-4' %>
-          </a>
-        </div>
-        <!-- 検索フォーム -->
-          <div class="block">
-            <form class="w-full md:w-96" onsubmit="return false;">
-              <div class="relative w-full">
-                <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center justify-center text-neutral-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="hi-solid hi-magnifying-glass h-5 w-5">
-                    <path
-                      fill-rule="evenodd"
-                      d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                      clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <input
-                  class="block w-full rounded  border border-gray-300 py-4 pl-10 pr-4 leading-5 focus:border-gray-600 focus:ring focus:ring-gray-600/25 focus:outline-none"
-                  type="text"
-                  id="search"
-                  name="search"
-                  placeholder="Search.."/>
-              </div>
-            </form>
+      <!-- 検索フォーム -->
+      <div class="block">
+        <form class="w-full md:w-96" onsubmit="return false;">
+          <div class="relative w-full">
+            <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center justify-center text-neutral-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="hi-solid hi-magnifying-glass h-5 w-5">
+                <path
+                  fill-rule="evenodd"
+                  d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                  clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <input
+              class="block w-full rounded  border border-gray-300 py-4 pl-10 pr-4 leading-5 focus:border-gray-600 focus:ring focus:ring-gray-600/25 focus:outline-none"
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search.."/>
           </div>
-        <%# 検索フォーム終了 %>
-        
-        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-          <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
-            <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-            <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none"></path>
+        </form>
+      </div>
+      <%# 検索フォーム終了 %>
+
+      <div class="sm:hidden">
+        <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-300 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+          <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          <svg class="hs-collapse-open:block flex-shrink-0 hidden size-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
           </svg>
         </button>
       </div>
-
-      <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row lg:border-l-2 lg:pl-2">
-        <a class="px-4 py-2 mt-2 text-sm text-gray-500 md:mt-0 hover:text-gray-400 focus:outline-none focus:shadow-outline" href="/users/sign_in">ログイン</a>
-        <a class="px-4 py-2 mt-2 text-sm text-gray-500 md:mt-0 hover:text-gray-400 focus:outline-none focus:shadow-outline" href="/users/sign_up">会員登録</a>
-        <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-gray-500 text-sm hover:underline" %>
-      </nav>
-
-      <!-- マイページアイコン右上に固定 -->
-      <% if user_signed_in? %>
-        <div class="fixed top-4 right-4 z-50">
-          <%= link_to user_path(current_user) do %>
-            <button id="hs-dropdown-with-header" type="button" class="inline-flex justify-center items-center gap-x-2 font-semibold rounded-md border border-transparent">
-              <% if current_user.avatar.present? %>
-                <%= image_tag current_user.avatar.url, class: 'inline-block w-[50px] h-[50px] rounded-md ring-2 ring-white', alt: "Image Description" %>
-              <% else %>
-                <%= image_tag "default.png", class: 'inline-block w-[50px] h-[50px] rounded-md ring-2 ring-white', alt: "Image Description" %>
-              <% end %>
-            </button>
-          <% end %>
-        </div>
-      <% end %>
     </div>
-  </div>
+    <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block text-lg">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end py-2 md:py-0 sm:ps-7 text-center">
+        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="/users/sign_up">Sign up</a>
+        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a>
+        <%= form_with url: destroy_user_session_path, method: :delete, local: true, id: 'logout-form' do %>
+        <% end %>
+
+        <%# ログインしている場合はアイコンを表示 %>
+        <% if user_signed_in? %>
+          <%# アイコンをクリックするとプロフィール画面へ飛ぶ %>
+          <%= link_to user_path(current_user), class: 'text-center' do %>
+            <div id="hs-dropdown-with-header" class="inline-flex flex-col items-center gap-x-2 font-semibold rounded-md border border-transparent">
+              <button type="button" class="inline-flex justify-center items-center gap-x-2 font-semibold rounded-md border border-transparent">
+                <% if current_user.avatar.present? %>
+                  <%= image_tag current_user.avatar.url, class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Profile Image" %>
+                <% else %>
+                  <%= image_tag "default.png", class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Default Image" %>
+                <% end %>
+              </button>
+              <span class="mb-3 font-medium text-base text-gray-500 hover:text-gray-400">My page</span>
+            </div>
+          <% end %>
+        <% else %>
+          <a class="flex items-center justify-center gap-x-2 font-semibold text-gray-500 hover:text-gray-400 sm:border-s sm:border-gray-300 py-2 sm:py-0 sm:my-6 sm:ps-6 text-center" href="/users/sign_in">
+            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Log in
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </nav>
 </header>
