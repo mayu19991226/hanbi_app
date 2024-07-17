@@ -48,6 +48,19 @@
         <a class="px-4 py-2 mt-2 text-sm text-gray-500 md:mt-0 hover:text-gray-400 focus:outline-none focus:shadow-outline" href="/users/sign_up">会員登録</a>
         <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-gray-500 text-sm hover:underline" %>
       </nav>
+
+      <!-- マイページアイコン右上に固定 -->
+      <% if @user.present? %>
+        <div class="fixed top-4 right-4 z-50">
+          <button id="hs-dropdown-with-header" type="button" class="inline-flex justify-center items-center gap-x-2 font-semibold rounded-md border border-transparent">
+            <% if @user.avatar.present? %>
+              <%= image_tag @user.avatar.url, class: 'inline-block w-[50px] h-[50px] rounded-md ring-2 ring-white', alt: "Image Description" %>
+            <% else %>
+              <%= image_tag "default.png", class: 'inline-block w-[50px] h-[50px] rounded-md ring-2 ring-white', alt: "Image Description" %>
+            <% end %>
+          </button>
+        </div>
+      <% end %>
     </div>
   </div>
 </header>
