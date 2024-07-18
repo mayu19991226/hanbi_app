@@ -4,9 +4,10 @@ FROM ruby:3.2.3
 # 必要なパッケージのインストール
 RUN apt-get update -qq \
   && apt-get install -y nodejs postgresql-client npm vim \
-  && rm -rf /var/lib/apt/lists/* \
-  && npm install --global yarn \
-  && npm install preline
+  && rm -rf /var/lib/apt/lists/*
+
+# Install yarn globally
+RUN npm install --global yarn
 
 # コンテナの作業ディレクトリを指定
 RUN mkdir /myapp
@@ -22,13 +23,15 @@ RUN bundle install
 # カレントディレクトリのファイルをコンテナにコピー
 ADD . /myapp
 
+# パッケージのインストール
+RUN yarn install
+RUN npm install preline
+
 # コンテナ起動時に実行されるスクリプトをコピーして実行可能にする
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 
 # プリコンパイルするためのコマンド
-# 下記エラー対策
-# ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 # コンテナが外部に公開するポート番号を指定
