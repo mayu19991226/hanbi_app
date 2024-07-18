@@ -5,7 +5,8 @@ FROM ruby:3.2.3
 RUN apt-get update -qq \
   && apt-get install -y nodejs postgresql-client npm vim \
   && rm -rf /var/lib/apt/lists/* \
-  && npm install --global yarn
+  && npm install --global yarn \
+  && npm install preline
 
 # コンテナの作業ディレクトリを指定
 RUN mkdir /myapp
