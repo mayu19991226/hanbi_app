@@ -22,7 +22,7 @@
           <img class="w-full" src=<%= @area_category.body_image %>>
         </a>
         <%# 記事の内容 %>
-        <%= raw @area_category.body %>
+        <%= render partial: "shared/area_categories/#{@area_category.body}" %>
       </article>
     </section>
     <!-- 投稿のサイドバー:パーシャル -->
