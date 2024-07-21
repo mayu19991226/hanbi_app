@@ -25,9 +25,11 @@
 
       <%# プロフィールの編集ボタン ログインユーザーと一致している場合のみ編集ボタンを表示 %>
       <% if current_user == @user %>
-        <button type="button" class="mt-5 py-2 px-4 btn-custom text-white w-1/6 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none">
-          Edit
-        </button>
+        <%= link_to edit_user_path(@user), class: 'block' do %>
+          <button type="button" class="mt-5 py-2 px-4 btn-custom text-white w-1/6 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none">
+            Edit
+          </button>
+        <% end %>
       <% end %>
 
       <p class="py-4 mx-auto font-light text-gray-500 text-md w-60">
