@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   # ユーザーのプロフィールページのルーティング
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update] do
+    member do
+      delete 'remove_avatar'  # 画像削除用のアクション
+    end
+  end
   
   # エリアカテゴリのルーティング
   resources :area_categories, only: [:show]
