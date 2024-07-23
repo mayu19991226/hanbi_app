@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'please-change-password@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -178,6 +178,8 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
+  
+  # パスワードの最低文字数
   config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
