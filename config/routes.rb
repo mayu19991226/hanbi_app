@@ -15,4 +15,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "static_pages#top"
+
+  # letter_openerのルート設定
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end
