@@ -1,6 +1,8 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  # 許可するホストを設定
+  config.hosts << "hanbi-app.onrender.com"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -28,12 +30,11 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
-  # 許可するホストを設定
-  config.hosts << "hanbi-app.onrender.com"
+  
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
@@ -103,5 +104,5 @@ Rails.application.configure do
     enable_starttls_auto: true 
   }
   config.action_mailer.default_url_options = { host: 'hanbi-app.onrender.com', protocol: 'https' }
-  
+
 end
