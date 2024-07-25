@@ -105,17 +105,30 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: 'hanbi-app.onrender.com' }  # Renderのドメイン名
 
   # Action Mailerの設定 修正ver.
-  host = 'hanbi-app.onrender.com'
-  config.action_mailer.default_url_options = { protocol: 'https', host: host }
-  config.action_mailer.raise_delivery_errors = true
+  # host = 'hanbi-app.onrender.com'
+  # config.action_mailer.default_url_options = { protocol: 'https', host: host }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :port => 587,
+  #   :domain => 'gmail.com',
+  #   :address => "smtp.gmail.com",
+  #   :user_name => ENV["GMAIL_USERNAME"] ,
+  #   :password => ENV["GMAIL_PASSWORD"] ,
+  #   :authentication => :plain,
+  #   :enable_starttls_auto => true
+  # }
+
+  # Action Mailerの設定 再修正ver.
+  config.action_mailer.default_url_options = { host: 'hanbi-app.onrender.com' } # 本番環境のURLを入れてください。
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :port => 587,
-    :domain => 'gmail.com',
-    :address => "smtp.gmail.com",
-    :user_name => ENV["GMAIL_USERNAME"] ,
-    :password => ENV["GMAIL_PASSWORD"] ,
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'hanbi-app.onrender.com', #自分のアプリのドメイン
+    user_name:            ENV['GMAIL_USERNAME'],
+    password:             ENV['GMAIL_PASSWORD'],
+    authentication:       'plain',
+    enable_starttls_auto: true 
   }
 end
