@@ -63,6 +63,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :letter_opener_web
   config.action_mailer.perform_deliveries = true
 
+  # 開発環境のURL
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # 本番のURLにしてみる
   # config.action_mailer.default_url_options = { host: 'hanbi-app.onrender.com', protocol: 'https' }
