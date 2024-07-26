@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   
   # エリアカテゴリのルーティング
   resources :area_categories, only: [:show]
+
+  # 投稿のルーティング(7つ全て)
+  resources :posts
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
