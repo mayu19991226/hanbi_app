@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   def new
     # 新しいPostインスタンスを作成
     @post = Post.new
+    @area_categories = AreaCategory.all
   end
 
   def create
