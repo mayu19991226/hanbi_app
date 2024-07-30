@@ -1,40 +1,56 @@
-<div class="mt-20 back-color-custom py-6 sm:py-8 lg:py-12">
-  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-    <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-600 md:mb-6 lg:text-4xl">Post a beauty review</h2>
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">口コミを投稿しましょう！</p>
+<section class="mt-24 min-h-screen bg-cover" style="background-image: url('<%= asset_path('flower6.jpg') %>')">
+  <div class="flex flex-col min-h-screen bg-black/60">
+    <div class="container flex flex-col flex-1 px-6 py-12 mx-auto">
+      <div class="flex-1 flex items-center justify-center flex-col text-white">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-center font-semibold">Post a beauty review</h1>
+        <p class="max-w-xl mt-6 text-center">
+          レビューを投稿する
+        </p>
+      </div>
+      <div class="mt-8">
+        <div class="w-full lg:w-[80%] px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-md">
+          <h1 class="text-2xl font-medium text-gray-700 text-center">投稿フォーム</h1>
+          <%# <p class="mt-2 text-gray-500 text-sm text-center">
+            下記のフォームに沿って投稿してください。
+          </p> %>
+          <%= form_with(model: @post, local: true, html: { class: 'mt-10' }) do |form| %>
+            <div class="flex-1">
+              <label class="block mb-2 text-sm text-gray-600">投稿のカテゴリを選択してください*</label>
+              <%= render partial: 'shared/post/post_pulldown' %>
+            </div>
+
+            <div class="flex-1 mt-6">
+              <label class="block mb-2 text-sm text-gray-600">施術日を選択してください*</label>
+              <%# 日付をカレンダー表示 %>
+              <%= form.date_field :sample_at, class: "block px-3 py-2 text-gray-600 bg-white border border-gray-200 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" %>
+            </div>
+
+            <div class="flex-1 mt-6">
+              <label class="block mb-2 text-sm text-gray-600">施術のカテゴリを選択してください*</label>
+              <%= render partial: 'shared/post/area_pulldown' %>
+            </div>
+
+            <div class="flex-1 mt-6">
+              <label class="block mb-2 text-sm text-gray-600">施術名を記入してください*</label>
+              <%= form.text_field :title, placeholder: "二重埋没法", class: "block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" %>
+            </div>
+
+            <div class="flex-1 mt-6">
+              <label class="block mb-2 text-sm text-gray-600">満足度を選択してください*</label>
+              <%= form.text_field :title, placeholder: "二重埋没法", class: "block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" %>
+            </div>
+
+            <div class="w-full mt-6">
+              <label class="block mb-2 text-sm text-gray-600">内容</label>
+              <%= form.text_area :body, class: "block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring", placeholder: "ダウンタイム１日目です。昨日より腫れが強くなってきました。今日は目元を冷やして安静にします。" %>
+            </div>
+            
+            <span class="text-sm text-gray-500">*必須</span>
+            <%= form.submit "投稿する", class: "btn-custom w-full px-6 py-3 mt-12 text-sm font-medium tracking-wide text-white rounded-sm" %>
+          <% end %>
+        </div>
+      </div>
     </div>
-
-    <%# フォーム %>
-    <form class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2">
-      <div class="sm:col-span-2">
-        <label class="mb-2 inline-block text-sm text-gray-800 sm:text-base">投稿のカテゴリを選択してください*</label>
-        <%# 投稿のプルダウンのパーシャル %>
-        <%= render partial: 'shared/post/post_pulldown' %>
-      </div>
-
-      <div class="sm:col-span-2">
-        <label class="mb-2 inline-block text-sm text-gray-800 sm:text-base">施術のカテゴリを選択してください*</label>
-        <%# 施術部位のプルダウンのパーシャル %>
-        <%= render partial: 'shared/post/area_pulldown' %>
-      </div>
-
-      <div class="sm:col-span-2">
-        <label for="title" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">施術名を記入してください*</label>
-        <input name="title" placeholder="二重埋没法" class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" />
-      </div>
-
-      <div class="sm:col-span-2">
-        <label for="body" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">内容*</label>
-        <textarea name="body" placeholder="ダウンタイム1日目です。昨日より腫れが強くなってきました。目元を冷やして安静にしています！" class="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"></textarea>
-      </div>
-
-      <div class="flex items-center justify-between sm:col-span-2">
-        <button class="btn-custom inline-block rounded-sm px-8 py-3 text-center text-sm font-semibold text-white outline-none md:text-base">Send</button>
-
-        <span class="text-sm text-gray-500">*必須</span>
-      </div>
-
-    </form>
   </div>
-</div>
+</section>
+
