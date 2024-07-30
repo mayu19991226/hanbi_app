@@ -12,7 +12,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
+    @area_categories = AreaCategory.all
+    if @post.save!
       redirect_to @post, notice: '投稿しました'
     else
       render :new
