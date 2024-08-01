@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_25_124057) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_31_025001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_25_124057) do
     t.string "procedure_image", null: false
     t.string "post_category", null: false
     t.date "procedure_date", null: false
-    t.integer "satisfaction_rating", null: false
+    t.bigint "satisfaction_rating", default: 1, null: false
     t.bigint "user_id", null: false
     t.bigint "area_category_id", null: false
     t.datetime "created_at", null: false

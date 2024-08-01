@@ -27,3 +27,14 @@
 .back-color-custom {
   background-color: rgb(246,244,234)
 }
+
+/* stars-container クラスを使用して横に並べる */
+.stars-container {
+  display: flex; /* フレックスボックスで横に並べる */
+  gap: 5px; /* 星の間隔を調整 */
+}
+
+/* 必要に応じて調整する */
+.stars-container img {
+  display: block; /* 画像の縦のスペースを削減 */
+}
