@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params) # ログインしているユーザーが作成した投稿を新規作成
     @area_categories = AreaCategory.all
     if @post.save!
       redirect_to @post, notice: '投稿しました'

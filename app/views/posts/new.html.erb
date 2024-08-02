@@ -18,13 +18,18 @@
           <%= form_with(model: @post, local: true, html: { class: 'mt-10' }) do |form| %>
             <div class="flex-1">
               <label class="block mb-2 text-sm text-gray-600">投稿のカテゴリを選択してください*</label>
-              <%= render partial: 'shared/post/post_pulldown' %>
+              <%# 投稿のプルダウン %>
+              <%= form.select :post_category, options_for_select([
+                ['選択', ''],
+                ['経過', '経過'],
+                ['アイテム', 'アイテム']
+              ]), {}, class: 'block px-3 py-2 text-gray-600 bg-white border border-gray-200 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500' %>
             </div>
 
             <div class="flex-1 mt-6">
               <label class="block mb-2 text-sm text-gray-600">施術日を選択してください*</label>
               <%# 日付をカレンダー表示 %>
-              <%= form.date_field :sample_at, class: "block px-3 py-2 text-gray-600 bg-white border border-gray-200 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" %>
+              <%= form.date_field :procedure_date, class: "block px-3 py-2 text-gray-600 bg-white border border-gray-200 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" %>
             </div>
 
             <div class="flex-1 mt-6">
@@ -40,6 +45,7 @@
             <div class="flex-1 mt-6">
               <label class="block mb-2 text-sm text-gray-600">満足度を選択してください*</label>
               <div id="stars_<%= @post.id %>" class="stars-container"></div>
+              <%= form.hidden_field :satisfaction_rating, id: 'satisfaction_rating' %>
             </div>
 
             <div class="w-full mt-6">
@@ -56,12 +62,15 @@
   </div>
 </section>
 
-
 <script>
-  // #stars_<%= @post.id %> に評価機能を追加するスクリプト
-  $('#stars_<%= @post.id %>').raty({
+  $(document).ready(function() {
+    $('#stars_<%= @post.id %>').raty({
       path: '/assets',
-      scoreName: 'post[stars]',
-      score: 1
+      scoreName: 'post[satisfaction_rating]',
+      score: 1,
+      click: function(score, evt) {
+        $('#satisfaction_rating').val(score);
+      }
+    });
   });
 </script>
