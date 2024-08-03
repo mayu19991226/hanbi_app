@@ -7,4 +7,7 @@ class Post < ApplicationRecord
   validates :post_category, presence: true
   validates :procedure_date, presence: true
   validates :satisfaction_rating, presence: true
+
+  # postモデルとuploaderを紐付け
+  mount_uploader :procedure_image, PostImageUploader
 end
