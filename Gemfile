@@ -56,7 +56,7 @@ gem 'devise'
 
 # 画像関連
 gem 'carrierwave'
-gem 'mini_magick'
+gem 'mini_magick', '~> 4.11'
 
 # 環境変数の設定（パスワード再設定）
 gem 'dotenv-rails'
