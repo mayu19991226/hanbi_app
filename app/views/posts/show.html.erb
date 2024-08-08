@@ -4,6 +4,7 @@
 
   <p>
     <strong>Image:</strong>
-    <%= image_tag @post.procedure_image.url %>
+    <%# <%= image_tag @post.procedure_image.url %> %>
+    <%= image_tag @post.procedure_image.url, size: "300x250", class: "w-[300px] h-[250px] object-cover" %>
   </p>
 </div>

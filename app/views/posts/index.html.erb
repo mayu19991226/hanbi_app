@@ -19,7 +19,6 @@
     <div class="col">
       <div class="card h-100">
           <%= image_tag post.procedure_image.thumb.url, size: '300x230', class: 'card-img-top object-fit-cover' %>
-          <%# <%= image_tag post.procedure_image.url, size: '300x230', class:'card-img-top object-fit-cover' %> %>
         <div class="card-body">
           <small class="muted-text"><%= l(post.created_at, format: :long) %></small>
           <h5 class="card-title mt-3"><%= link_to post.title, post %></h5>
