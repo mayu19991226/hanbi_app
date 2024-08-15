@@ -1,10 +1,49 @@
-<div class="mt-24">
-  <h1>Posts#show</h1>
-  <p>Find me in app/views/posts/show.html.erb</p>
-
-  <p>
-    <strong>Image:</strong>
-    <%# <%= image_tag @post.procedure_image.url %> %>
-    <%= image_tag @post.procedure_image.url, size: "300x250", class: "w-[300px] h-[250px] object-cover" %>
-  </p>
+<div class="mt-20 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="back-color-custom max-w-xl mb-6">
+        <%# 施術名 %>
+        <h3 class="m-3 max-w-lg mb-6 text-lg font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none">施術名　<%= @post.title %></h3>
+        
+        <div class="mb-6 flex items-center space-x-6">
+          <%# 満足度 %>
+          <h3 class="m-3 text-lg font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none">満足度</h3>
+          <div class="flex">
+            <% 1.upto(5) do |i| %>
+              <i class="fas fa-star <%= 'text-yellow-500' if i <= @post.satisfaction_rating %> text-2xl"></i>
+            <% end %>
+          </div>
+        </div>
+        
+        <%# 施術日 %>
+        <h3 class="m-3 max-w-lg text-lg font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none">
+          施術日　<%= @post.procedure_date.strftime("%Y年%m月%d日") %>
+        </h3>
+        
+        <%# 投稿のカテゴリ %>
+        <h3 class="m-3 max-w-lg text-lg font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none">
+          カテゴリ
+          <span class="m-3 inline-block px-4 py-2 font-bold text-sm text-white login-btn-custom rounded-2xl shadow-md">
+            <%= @post.post_category.presence || 'カテゴリが選択されていません' %>
+          </span>
+        </h3>
+      </div>
+      <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
+        <div class="bg-white border-l-4 shadow-sm border-yellow-500">
+          <div class="h-full w-144 p-5 border border-l-0 rounded-r">
+            <h6 class="text-lg mb-2 font-semibold leading-5">
+              内容
+            </h6>
+            <p class="text-base text-gray-900">
+              <%= @post.body %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <%= image_tag @post.procedure_image.url, class: "object-cover w-full h-56 rounded shadow-lg sm:h-96" %>
+    </div>
+  </div>
 </div>
+
