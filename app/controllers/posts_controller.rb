@@ -1,17 +1,19 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_user!, only: [:edit, :update, :destroy]
+
   def index
-    # 投稿順(最新順)にデータを表示させる
     @posts = Post.order(created_at: :desc)
   end
 
   def new
-    # 新しいPostインスタンスを作成
     @post = Post.new
     @area_categories = AreaCategory.all
   end
 
   def create
-    @post = current_user.posts.new(post_params) # ログインしているユーザーが作成した投稿を新規作成
+    @post = current_user.posts.new(post_params)
     @area_categories = AreaCategory.all
     if @post.save
       redirect_to @post, notice: '投稿しました'
@@ -25,11 +27,10 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    # @post は before_action で設定されるので、ここでは必要ありません
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to @post, notice: '投稿を更新しました'
     else
@@ -38,12 +39,19 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_url, notice: '投稿を削除しました'
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def authorize_user!
+    redirect_to(root_path, alert: 'この投稿を編集する権限がありません。') unless @post.user == current_user
+  end
 
   def post_params
     params.require(:post).permit(:title, :body, :area_category_id, :procedure_image, :post_category, :procedure_date, :satisfaction_rating)
