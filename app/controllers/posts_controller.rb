@@ -28,6 +28,7 @@ class PostsController < ApplicationController
 
   def edit
     # @post は before_action で設定されるので、ここでは必要ありません
+    @area_categories = AreaCategory.all
   end
 
   def update
