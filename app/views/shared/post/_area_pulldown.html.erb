@@ -1,15 +1,13 @@
-<%# 施術のプルダウン %>
-<label class="text-gray-600">
-  <select id="area_categories" class="block px-3 py-2 bg-white border border-gray-200 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="post[area_category_id]">
-    <option value="">
-      選択
-    </option>
+<label class="block mb-2 text-sm text-gray-600">施術のカテゴリを選択してください*</label>
+<select name="post[area_category_id]" class="block px-3 py-2 text-gray-600 bg-white border border-gray-200 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500">
+  <option value="">選択</option>
+  <% if @area_categories.present? %>
     <% @area_categories.each do |category| %>
-      <option value="<%= category.id %>">
+      <option value="<%= category.id %>" <%= 'selected' if category.id.to_s == @post.area_category_id.to_s %>>
         <%= category.title %>
       </option>
     <% end %>
-  </select>
-</label>
-
-
+  <% else %>
+    <option value="">カテゴリがありません</option>
+  <% end %>
+</select>
