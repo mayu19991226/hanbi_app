@@ -11,7 +11,7 @@
       </div>
       <div class="mt-8">
         <div class="w-full lg:w-[80%] px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-md">
-          <h1 class="text-2xl font-medium text-gray-700 text-center">編集フォーム</h1>
+          <h1 class="text-2xl font-medium text-gray-700 text-center">編集画面</h1>
           <%= form_with(model: @post, local: true, html: { class: 'mt-10' }) do |form| %>
             <div class="flex-1">
               <label class="block mb-2 text-sm text-gray-600">投稿のカテゴリを選択してください*</label>
@@ -62,13 +62,13 @@
             </div>
             
             <span class="text-sm text-gray-500">*必須</span>
-            <div class="mt-6 flex justify-center">
-              <%= form.submit "更新する", class: "btn-custom  px-6 py-3 mt-12 text-sm font-bold tracking-wide text-white rounded-sm" %>
+            <div class="flex justify-center">
+              <%= form.submit "更新する", class: "w-full btn-custom  px-6 py-3 mt-12 text-sm font-bold tracking-wide text-white rounded-sm" %>
             </div>
           <% end %>
-          <div class="mt-6">
-            <%= link_to @post, method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'inline-flex items-center px-6 py-3 font-bold text-sm text-white bg-red-600 rounded-sm shadow-md hover:bg-red-700' do %>
-              投稿削除
+          <div class="mt-5 text-center">
+            <%= link_to @post, method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'inline-flex items-center px-4 py-2 text-sm text-white bg-red-500 rounded-sm shadow-md hover:bg-red-600' do %>
+              削除
             <% end %>
           </div>
         </div>

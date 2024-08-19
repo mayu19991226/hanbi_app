@@ -33,7 +33,6 @@
             </div>
 
             <div class="flex-1 mt-6">
-              <label class="block mb-2 text-sm text-gray-600">施術のカテゴリを選択してください*</label>
               <%= render partial: 'shared/post/area_pulldown' %>
             </div>
 
@@ -62,7 +61,7 @@
 
             <div class="form-group mt-3 mb-3">
                 <% if @post.procedure_image.present? %>
-                  <%= image_tag @post.procedure_image, class: 'w-[300px] h-[250px] object-cover' %>
+                  <%= image_tag @post.procedure_image.url, class: 'w-[300px] h-[250px] object-cover' %>
                 <% else %>
                   <%= image_tag 'post_default1.png', id: 'preview-target', class: 'w-[300px] h-[250px] object-cover' %>
                 <% end %>
