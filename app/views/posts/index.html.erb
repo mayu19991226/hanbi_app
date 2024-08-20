@@ -1,39 +1,45 @@
 <%# 投稿の一覧 %>
-<div class="mt-24">
-  <h1>Posts#index</h1>
-  <p>Find me in app/views/posts/index.html.erb</p>
-
-  <% if user_signed_in? %>
-    <%= button_to "投稿", {controller: 'posts', action: 'new'}, {method: :get} %>
-  <% end %>
-
-
-  <% @posts.each do |post| %>
-    <span>投稿者：</span><%= post.user.name %>
-    <%= post.body %>
-  <% end %>
-</div>
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <% @posts.each do |post| %>
-    <div class="col">
-      <div class="card h-100">
-          <%= image_tag post.procedure_image.thumb.url, size: '300x230', class: 'card-img-top object-fit-cover' %>
-        <div class="card-body">
-          <small class="muted-text"><%= l(post.created_at, format: :long) %></small>
-          <h5 class="card-title mt-3"><%= link_to post.title, post %></h5>
-          <p class="card-text"><%= post.body %></p>
-          <p class="text-end"><small><%= post.user.name %></small></p>
-          <div class="card-footer text-end">
-            <%= link_to "Show", post_path(post), class: 'btn btn-secondary' %>
-            <% if user_signed_in? && current_user.id == post.user_id %>
-              <%= link_to "Edit", edit_post_path(post), class: 'btn btn-primary' %>
-              <%= link_to "Delete", post_path(post),
-          method: :delete, data: { confirm: t('defaults.message.delete_confirm'), item: Post.model_name.human }, class: 'btn btn-danger' %>
-            <% end %>
-          </div>
-        </div>
+<section class="mt-20 text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-full mb-20">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-1 text-gray-900">POST LIST</h1>
+        <div class="h-1 w-20 bg-yellow-500 rounded"></div>
       </div>
     </div>
-  <% end %>
-</div>
+    <div class="flex flex-wrap -m-4">
+      <% @posts.each do |post| %>
+        <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
+          <%= link_to post_path(post), class: 'block' do %>
+            <div class="back-color-custom p-6 rounded-lg">
+              <!-- 投稿画像の表示 -->
+              <div class="relative w-full mb-6" style="aspect-ratio: 3/2;">
+                <img class="absolute inset-0 w-full h-full object-cover" 
+                    src="<%= post.procedure_image.present? ? post.procedure_image.url : asset_path('post_default1.png') %>" 
+                    alt="content">
+              </div>
+              <!-- ユーザーアイコンと名前の表示 -->
+              <div class="flex items-center mb-4">
+                <%= link_to user_path(post.user), class: "inline-block" do %>
+                  <img class="h-10 w-10 rounded-full mr-4" src="<%= post.user.avatar.url %>" alt="<%= post.user.name %>'s avatar">
+                <% end %>
+                <%= link_to post.user.name, user_path(post.user), class: "tracking-widest text-gray-500 text-md title-font inline-block" %>
+              </div>
+
+              <!-- 投稿タイトル -->
+              <div class="text-sm">施術名
+                <h2 class="font-bold text-lg mb-4"><%= post.title %></h2>
+              </div>
+
+              <!-- 投稿内容（2行に制限） -->
+              <p class="leading-relaxed text-base line-clamp-2">
+                <%= truncate(post.body, length: 28, omission: '') %>
+                <%= link_to '...', post_path(post), class: 'text-blue-500' %>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
