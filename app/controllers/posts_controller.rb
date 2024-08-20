@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
+  # ユーザーがログインしているかを確認
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  # 指定されたアクションが実行される前に、該当する投稿 (@post) をデータベースから取得
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  # 現在ログインしているユーザーが投稿の所有者であるかどうかを確認
   before_action :authorize_user!, only: [:edit, :update, :destroy]
 
   def index
