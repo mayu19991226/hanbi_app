@@ -1,7 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
   belongs_to :area_category
-  has_one_attached :procedure_image
 
   validates :title, presence: true, length: { maximum: 50 } # エラーメッセージを表示させるためにはビューで表示する必要があることを忘れないように
   validates :body, presence: true, length: { maximum: 65000 }

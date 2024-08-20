@@ -29,7 +29,7 @@
         </h3>
       </div>
       <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
-        <div class="bg-white border-l-4 shadow-sm border-yellow-600">
+        <div class="bg-white border-l-4 shadow-sm border-yellow-600 border-opacity-50">
           <div class="h-full w-144 p-5 border border-l-0 rounded-r">
             <h6 class="text-lg mb-2 font-semibold leading-5">
               内容
@@ -44,7 +44,8 @@
       <%# 編集ボタンをここに配置 %>
       <% if user_signed_in? && current_user == @post.user %>
         <div class="mt-8">
-          <%= link_to 'Edit', edit_post_path(@post), class: 'py-3 px-5 btn-custom text-white text-center text-base shadow-md' %>
+          <%= link_to '編集', edit_post_path(@post), class: 'ml-3 text-gray-500' %>
+          <%= link_to '投稿一覧へ', posts_path, class: 'ml-8 text-gray-500' %>
         </div>
       <% end %>
     </div>
