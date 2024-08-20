@@ -67,7 +67,7 @@
             </div>
           <% end %>
           <div class="mt-5 text-center">
-            <%= link_to @post, method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'inline-flex items-center px-4 py-2 text-sm text-white bg-red-500 rounded-sm shadow-md hover:bg-red-600' do %>
+            <%= link_to post_path(@post), data: { turbo_method: :delete, confirm: '本当に削除しますか？' }, class: 'inline-flex items-center px-4 py-2 text-sm text-white bg-red-500 rounded-sm shadow-md hover:bg-red-600' do %>
               削除
             <% end %>
           </div>
