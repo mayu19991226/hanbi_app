@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # 投稿のルーティング(7つ全て) postsリソースの中でネストされたcommentsリソースを設定
   resources :posts do
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy, :edit, :update]
   end
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
