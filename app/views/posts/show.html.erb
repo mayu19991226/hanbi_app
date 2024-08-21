@@ -1,6 +1,7 @@
 <div class="mt-20 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-  <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
-    <div class="flex flex-col justify-center">
+  <div class="grid gap-5 row-gap-8 lg:grid-cols-2 lg:gap-10">
+    <!-- 左側のコンテンツ -->
+    <div class="flex flex-col justify-start">
       <div class="back-color-custom max-w-xl mb-6">
         <!-- 施術名 -->
         <h3 class="m-3 max-w-lg mb-6 text-lg font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none">施術名　<%= @post.title %></h3>
@@ -41,16 +42,35 @@
         </div>
       </div>
 
-      <%# 編集ボタンをここに配置 %>
-      <% if user_signed_in? && current_user == @post.user %>
-        <div class="mt-8">
+      <div class="mt-8">
+        <%# 編集ボタンを条件付きで表示 %>
+        <% if user_signed_in? && current_user == @post.user %>
           <%= link_to '編集', edit_post_path(@post), class: 'ml-3 text-gray-500' %>
-          <%= link_to '投稿一覧へ', posts_path, class: 'ml-8 text-gray-500' %>
-        </div>
-      <% end %>
+        <% end %>
+        
+        <%# 投稿一覧リンクは常に表示 %>
+        <%= link_to '投稿一覧へ', posts_path, class: 'ml-8 text-gray-500' %>
+      </div>
     </div>
-    <div>
-      <%= image_tag @post.procedure_image.url, class: "object-cover w-full h-56 rounded shadow-lg sm:h-96" %>
+
+    <!-- 右側のコンテンツ -->
+    <div class="flex flex-col">
+      <!-- 投稿画像 -->
+      <div class="mb-8">
+        <%= image_tag @post.procedure_image.url, class: "object-cover w-full h-56 rounded shadow-lg sm:h-96" %>
+      </div>
+
+      <!-- コメント入力フォームとコメント表示 -->
+      <div class="flex flex-col gap-4">
+        <!-- コメント入力フォーム -->
+        <%= render 'comments/form', post: @post, comment: @comment %>
+        <!-- コメントのビュー -->
+        <div class="flex flex-col gap-4">
+          <% @post.comments.order(created_at: :desc).each do |comment| %>
+            <%= render 'comments/comment', comment: comment %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

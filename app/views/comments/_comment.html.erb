@@ -1,0 +1,16 @@
+<%# コメントのビュー %>
+<div class="bg-white border-t border-b py-4">
+  <div class="flex flex-col gap-3 py-4">
+    <!-- ユーザーアイコンと名前の表示 -->
+    <div class="flex items-center mb-4">
+      <%= link_to user_path(comment.user), class: "inline-block" do %>
+        <img class="h-10 w-10 rounded-full mr-4" src="<%= comment.user.avatar.url %>" alt="<%= comment.user.name %>'s avatar">
+      <% end %>
+      <%= link_to comment.user.name, user_path(comment.user), class: "tracking-widest text-sm font-bold inline-block" %>
+    </div>
+    <span class="block text-sm text-gray-500">
+      <%= comment.created_at.strftime("%Y年%m月%d日 %H:%M") %>
+    </span>
+    <p class="text-gray-600"><%= comment.body %></p>
+  </div>
+</div>
