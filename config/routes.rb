@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'bookmarks/create'
+  get 'bookmarks/index'
+  get 'bookmarks/destroy'
   devise_for :users
 
   # ユーザーのプロフィールページのルーティング
@@ -14,7 +17,10 @@ Rails.application.routes.draw do
   # 投稿のルーティング(7つ全て) postsリソースの中でネストされたcommentsリソースを設定
   resources :posts do
     resources :comments, only: [:create, :destroy, :edit, :update]
+    resources :bookmarks, only: [:create, :destroy]
   end
+  # ブックマーク一覧は特定の投稿に紐付くものではないためpostsにネストは不要
+  resources :bookmarks, only: [:index]
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
