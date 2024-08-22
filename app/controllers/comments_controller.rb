@@ -16,6 +16,8 @@ class CommentsController < ApplicationController
 
   def edit
     # 編集用のビューを表示するためのアクション
+    @post = Post.find(params[:post_id]) # ここで @post を設定
+    @comment = @post.comments.find(params[:id])
   end
 
   def update

@@ -1,0 +1,28 @@
+<%# コメント編集画面 %>
+<div class="mt-28 max-w-2xl mx-auto p-6 bg-white shadow-md rounded-md">
+  <h2 class="text-2xl  mb-4">Comment Edit</h2>
+
+  <%= form_with(model: @comment, url: post_comment_path(@post, @comment), local: true) do |form| %>
+    <% if @comment.errors.any? %>
+      <div id="error_explanation" class="mb-4">
+        <h3 class="text-red-600 font-bold"><%= pluralize(@comment.errors.count, "エラー") %> が発生しました:</h3>
+        <ul class="list-disc pl-5 text-red-500">
+          <% @comment.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-4">
+      <%= form.label :body, "コメント内容", class: "block text-sm font-bold text-gray-700" %>
+      <%= form.text_area :body, rows: 5, class: "p-2 mt-3 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md" %>
+    </div>
+
+    <div class="flex justify-between">
+      <%= link_to 'キャンセル', post_path(@post), class: "inline-flex items-center px-4 py-2 bg-gray-200 border border-transparent rounded-md text-xs text-gray-700 uppercase tracking-widest hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring focus:ring-gray-200 disabled:opacity-25 transition" %>
+
+      <%= form.submit '更新', class: "inline-flex items-center px-4 py-2 btn-custom border border-transparent rounded-md text-xs text-white uppercase tracking-widest" %>
+    </div>
+  <% end %>
+</div>
