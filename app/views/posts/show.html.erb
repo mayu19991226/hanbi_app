@@ -29,42 +29,51 @@
           </span>
         </h3>
       </div>
-      <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
-        <div class="bg-white border-l-4 shadow-sm border-yellow-600 border-opacity-50">
-          <div class="h-full w-144 p-5 border border-l-0 rounded-r">
-            <h6 class="text-lg mb-2 font-semibold leading-5">
-              内容
-            </h6>
+
+      <!-- 「内容」とブックマークボタンを同じ枠内に配置 -->
+      <div class="bg-white border-l-4 shadow-sm border-yellow-600 border-opacity-50 relative">
+        <div class="flex p-5 border border-l-0 rounded-r">
+          <div class="flex-grow">
+            <h6 class="text-lg mb-2 font-semibold leading-5">内容</h6>
             <p class="text-base text-gray-900">
               <%= @post.body %>
             </p>
           </div>
+          
+          <%# ブックマーク %>
+          <% if user_signed_in? %>
+            <% if current_user.bookmarks.exists?(post_id: @post.id) %>
+              <!-- ブックマーク解除ボタン（塗りつぶされたアイコン） -->
+              <%= button_to post_bookmark_path(@post, current_user.bookmarks.find_by(post_id: @post.id)), method: :delete, class: 'text-yellow-500 ml-4' do %>
+                <i class="fas fa-bookmark text-2xl"></i>
+              <% end %>
+            <% else %>
+              <!-- ブックマーク追加ボタン（アウトラインアイコン） -->
+              <%= button_to post_bookmarks_path(@post), method: :post, class: 'text-yellow-500 hover:text-yellow-400 ml-4' do %>
+                <i class="far fa-bookmark text-2xl"></i>
+              <% end %>
+            <% end %>
+          <% end %>
         </div>
       </div>
 
       <div class="mt-8">
-        <%# 編集ボタンを条件付きで表示 %>
         <% if user_signed_in? && current_user == @post.user %>
           <%= link_to '編集', edit_post_path(@post), class: 'ml-3 text-gray-500' %>
         <% end %>
         
-        <%# 投稿一覧リンクは常に表示 %>
         <%= link_to '投稿一覧へ', posts_path, class: 'ml-8 text-gray-500' %>
       </div>
     </div>
 
     <!-- 右側のコンテンツ -->
     <div class="flex flex-col">
-      <!-- 投稿画像 -->
       <div class="mb-8">
         <%= image_tag @post.procedure_image.url, class: "object-cover w-full h-56 rounded shadow-lg sm:h-96" %>
       </div>
 
-      <!-- コメント入力フォームとコメント表示 -->
       <div class="flex flex-col gap-4">
-        <!-- コメント入力フォーム -->
         <%= render 'comments/form', post: @post, comment: @comment %>
-        <!-- コメントのビュー -->
         <div class="flex flex-col gap-4">
           <% @post.comments.order(created_at: :desc).each do |comment| %>
             <%= render 'comments/comment', comment: comment %>
