@@ -208,9 +208,11 @@ erDiagram
       bigint id PK
       references post FK
       references user FK
-      string type
-      string message
-      boolean is_read "既読かどうか"
+      integer visiter_id "通知を送ったユーザー"
+      integer visited_id "通知を受け取ったユーザー"
+      integer post_id "関連する投稿"
+      string action "通知のアクション"
+      boolean is_checked "既読かどうか"
       timestamp created_at "作成日"
       timestamp updated_at "更新日"
   }

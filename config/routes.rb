@@ -21,6 +21,11 @@ Rails.application.routes.draw do
   end
   # ブックマーク一覧は特定の投稿に紐付くものではないためpostsにネストは不要
   resources :bookmarks, only: [:index]
+
+  # 通知のルーティング
+  namespace :public do
+    resources :notifications, only: [:index, :destroy]
+  end  
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

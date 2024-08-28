@@ -13,4 +13,15 @@ class Post < ApplicationRecord
 
   # postモデルとuploaderを紐付け
   mount_uploader :procedure_image, PostImageUploader
+
+  def create_notification_by(current_user)
+    notification = Notification.new(
+      visited_id: self.user_id,  # 通知を受け取るユーザー（postの所有者）
+      visiter_id: current_user.id,  # 通知を送るユーザー（コメントを投稿したユーザー）
+      post_id: self.id,
+      action: 'comment'
+    )
+    notification.save if notification.valid?
+  end
+  
 end
