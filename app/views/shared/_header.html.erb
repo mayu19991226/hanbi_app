@@ -74,5 +74,22 @@
         <% end %>
       </div>
     </div>
+
+    <% if unchecked_notifications.any? %>
+      <li>
+        <div class="flex items-center space-x-3">
+          <%= link_to public_notifications_path, class: "flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50" do %>
+            <i class="fa-solid fa-bell mr-2"></i> 通知
+          <% end %>
+          <i class="fa-solid fa-circle text-red-600"></i>
+        </div>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to public_notifications_path, class: "flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50" do %>
+          <i class="fa-solid fa-bell mr-2"></i> 通知
+        <% end %>
+      </li>
+    <% end %>
   </nav>
 </header>

@@ -13,4 +13,23 @@ class User < ApplicationRecord
   # ユーザーが削除されたら関連付いたブックマークも削除される
   has_many :bookmarks, dependent: :destroy
   has_many :bookmarked_posts, through: :bookmarks, source: :post
+
+  # 通知
+  has_many :active_notifications, class_name: 'Notification', foreign_key: 'visiter_id', dependent: :destroy
+  has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
+  
+    # 通知作成
+  def create_notification_by(current_user)
+    notification = current_user.active_notifications.new(
+      post_id: id,
+      visited_id: user_id,
+      action: "comment"
+    )
+
+  if notification.visiter_id == notification.visited_id
+    notification.is_checked = true
+  end
+
+    notification.save if notification.valid?
+  end
 end
