@@ -44,28 +44,46 @@
         </button>
       </div>
     </div>
+    
     <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block text-lg">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end py-2 md:py-0 sm:ps-7 text-center">
-        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="/users/sign_up">Sign up</a>
-        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a>
-        <%= form_with url: destroy_user_session_path, method: :delete, local: true, id: 'logout-form' do %>
-        <% end %>
-
-        <%# ログインしている場合はアイコンを表示 %>
         <% if user_signed_in? %>
-          <%# アイコンをクリックするとプロフィール画面へ飛ぶ %>
-          <%= link_to user_path(current_user), class: 'text-center' do %>
-            <div id="hs-dropdown-with-header" class="inline-flex flex-col items-center gap-x-2 font-semibold rounded-md border border-transparent">
-              <button type="button" class="inline-flex justify-center items-center gap-x-2 font-semibold rounded-md border border-transparent">
-                <% if current_user.avatar.present? %>
-                  <%= image_tag current_user.avatar.url, class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Profile Image" %>
-                <% else %>
-                  <%= image_tag "default.png", class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Default Image" %>
+          <div class="flex items-center">
+            <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a>
+            <%= form_with url: destroy_user_session_path, method: :delete, local: true, id: 'logout-form' do %>
+            <% end %>
+
+            <%# 通知開始 %>
+            <div class="relative flex items-center justify-center w-10 h-10 border border-gray-300 rounded-md ml-1">
+              <% if unchecked_notifications.any? %>
+                <%= link_to public_notifications_path, class: "flex items-center text-gray-500 hover:text-gray-600" do %>
+                  <i class="fa-solid fa-bell fa-lg"></i>
                 <% end %>
-              </button>
-              <span class="mb-3 font-medium text-base text-gray-500 hover:text-gray-400">My page</span>
+                  <i class="fa-solid fa-circle text-white absolute top-2 right-1 text-sm"></i>
+                  <i class="fa-solid fa-circle text-red-400 absolute top-2 right-1 text-xs"></i>
+              <% else %>
+                <%= link_to public_notifications_path, class: "flex items-center text-gray-500 hover:text-gray-600" do %>
+                  <i class="fa-solid fa-bell fa-lg"></i>
+                <% end %>
+              <% end %>
             </div>
-          <% end %>
+            <%# 通知終了 %>
+
+            <%# アイコンをクリックするとプロフィール画面へ飛ぶ %>
+            <%= link_to user_path(current_user), class: 'text-center ml-4' do %>
+              <div id="hs-dropdown-with-header" class="inline-flex flex-col items-center gap-x-2 font-semibold rounded-md border border-transparent">
+                <button type="button" class="inline-flex justify-center items-center gap-x-2 font-semibold rounded-md border border-transparent">
+                  <% if current_user.avatar.present? %>
+                    <%= image_tag current_user.avatar.url, class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Profile Image" %>
+                  <% else %>
+                    <%= image_tag "default.png", class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Default Image" %>
+                  <% end %>
+                </button>
+                <span class="mb-3 font-medium text-base text-gray-500 hover:text-gray-400"></span>
+              </div>
+            <% end %>
+          </div>
+
         <% else %>
           <a class="flex items-center justify-center gap-x-2 font-semibold text-gray-500 hover:text-gray-400 sm:border-s sm:border-gray-300 py-2 sm:py-0 sm:my-6 sm:ps-6 text-center" href="/users/sign_in">
             <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -74,22 +92,5 @@
         <% end %>
       </div>
     </div>
-
-    <% if unchecked_notifications.any? %>
-      <li>
-        <div class="flex items-center space-x-3">
-          <%= link_to public_notifications_path, class: "flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50" do %>
-            <i class="fa-solid fa-bell mr-2"></i> 通知
-          <% end %>
-          <i class="fa-solid fa-circle text-red-600"></i>
-        </div>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to public_notifications_path, class: "flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50" do %>
-          <i class="fa-solid fa-bell mr-2"></i> 通知
-        <% end %>
-      </li>
-    <% end %>
   </nav>
 </header>
