@@ -8,8 +8,7 @@
       <div style="width: 200px">
         <% if @user.avatar? %>
           <div style="width: 100%">
-            <%= image_tag @user.avatar.url.sub('/public', ''), class: 'mx-auto object-cover rounded-lg h-40 w-40 border-2 border-white' %>
-            <%# <%= image_tag @user.avatar.url, class: 'mx-auto object-cover rounded-lg h-40 w-40 border-2 border-white' %>
+            <%= image_tag @user.avatar.url, class: 'mx-auto object-cover rounded-lg h-40 w-40 border-2 border-white' %>
           </div>
         <% else %>
           <%= image_tag("default.png", class: 'mx-auto object-cover rounded-lg h-40 w-40 border-2 border-white') %>
