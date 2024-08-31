@@ -1,12 +1,21 @@
 class Public::NotificationsController < ApplicationController
   def index
-    @notifications = current_user.passive_notifications.page(params[:page]).per(20)
-    @notifications.where(is_checked: false).update_all(is_checked: true)
-    render template: 'public/notifications/index' # 明示的にテンプレートを指定
-  end  
+    @notifications = Notification.where(visited_id: current_user.id).order(created_at: :desc)
+  end
 
   def destroy
-    @notifications = current_user.passive_notifications.destroy_all
+    @notification = Notification.find(params[:id])
+    @notification.destroy
+    redirect_to notifications_path, notice: 'Notification was successfully deleted.'
+  end
+
+  def bulk_delete
+    if params[:notification_ids]
+      Notification.where(id: params[:notification_ids]).destroy_all
+      flash[:notice] = 'Selected notifications were successfully deleted.'
+    else
+      flash[:alert] = 'No notifications were selected for deletion.'
+    end
     redirect_to public_notifications_path
-  end  
+  end
 end
