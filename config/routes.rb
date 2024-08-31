@@ -24,8 +24,12 @@ Rails.application.routes.draw do
 
   # 通知のルーティング
   namespace :public do
-    resources :notifications, only: [:index, :destroy]
-  end  
+    resources :notifications do
+      collection do
+        delete :bulk_delete
+      end
+    end
+  end 
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

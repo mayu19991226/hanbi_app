@@ -6,10 +6,39 @@
         <span class="translatable-text">通知</span>
       </h5>
       <% if @notifications.exists? %>
-        <p class="text-right mb-4">
-          <%= link_to "通知削除", public_notifications_path, method: :delete, class: "btn-custom text-white py-2 px-4 rounded transition" %>
-        </p>
-        <%= render @notifications %>
+        <%= form_with url: bulk_delete_public_notifications_path, method: :delete, local: true do |form| %>
+          <table class="w-full">
+            
+            <tbody>
+              <% @notifications.each do |notification| %>
+                <tr>
+                  <td>
+                    <%= check_box_tag 'notification_ids[]', notification.id %>
+                  </td>
+                  <td>
+                    <% visiter = notification.visiter %>
+                    <% post = notification.post %>
+
+                    <ul class="list-none pl-0">
+                      <li class="text-gray-700">
+                        <%= visiter.name %>さんが
+                        <% if post %>
+                          <%= link_to "あなたの投稿", post_path(post), class: "text-blue-700 hover:text-blue-500 underline" %>にコメントしました。
+                        <% else %>
+                          投稿が削除されたか、存在しません。
+                        <% end %>
+                        <%= " (#{time_ago_in_words(notification.created_at)}前)" %>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <div class="text-right mt-4">
+            <%= form.submit '削除', class: 'text-white py-2 px-4 rounded transition bg-red-500 hover:bg-red-600' %>
+          </div>
+        <% end %>
       <% else %>
         <p class="text-center text-gray-500">通知はありません</p>
       <% end %>
