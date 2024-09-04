@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'search/index'
   get 'bookmarks/create'
   get 'bookmarks/index'
   get 'bookmarks/destroy'

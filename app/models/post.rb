@@ -23,5 +23,14 @@ class Post < ApplicationRecord
     )
     notification.save if notification.valid?
   end
-  
+
+  # ransack
+  def self.ransackable_attributes(auth_object = nil)
+    %w[title body]
+  end
+
+  # Ransackが検索可能な関連付けを指定
+  def self.ransackable_associations(auth_object = nil)
+    %w[comments area_categories] # ここに関連付けの名前を追加
+  end
 end
