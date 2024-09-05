@@ -1,35 +1,79 @@
-<h1>検索結果</h1>
-
-<h2>Posts</h2>
+<!-- Posts -->
 <% if @posts.any? %>
-  <% @posts.each do |post| %>
-    <div>
-      <h3><%= post.title %></h3>
-      <p><%= post.body %></p>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-10">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-1 text-gray-900">投稿の検索結果</h1>
+          <div class="h-1 w-20 bg-yellow-500 rounded"></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <% @posts.each do |post| %>
+          <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
+            <%= link_to post_path(post), class: 'block' do %>
+              <div class="back-color-custom p-6 rounded-lg">
+                <!-- 投稿画像の表示 -->
+                <div class="relative w-full mb-6" style="aspect-ratio: 3/2;">
+                  <img class="absolute inset-0 w-full h-full object-cover"
+                       src="<%= post.procedure_image.present? ? post.procedure_image.url : asset_path('post_default1.png') %>"
+                       alt="content">
+                </div>
+                <!-- ユーザーアイコンと名前の表示 -->
+                <div class="flex items-center mb-4">
+                  <%= link_to user_path(post.user), class: "inline-block" do %>
+                    <img class="h-10 w-10 rounded-full mr-4" src="<%= post.user.avatar.url %>" alt="<%= post.user.name %>'s avatar">
+                  <% end %>
+                  <%= link_to highlight(post.user.name, params[:search], highlighter: '<mark>\1</mark>'), user_path(post.user), class: "tracking-widest text-gray-500 text-md title-font inline-block" %>
+                </div>
+                <!-- 投稿タイトル -->
+                <div class="text-sm">施術名
+                  <h2 class="font-bold text-lg mb-4"><%= highlight(post.title, params[:search], highlighter: '<mark>\1</mark>') %></h2>
+                </div>
+                <!-- 投稿内容（検索結果に応じたハイライト表示） -->
+                <p class="leading-relaxed text-base">
+                  <%= raw excerpt_highlight(post.body, params[:search]) %>
+                  <%= link_to '...', post_path(post), class: 'text-blue-500' %>
+                </p>
+
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
+  </section>
 <% else %>
-  <p>No posts found.</p>
+  <div class="mt-20"></div>
 <% end %>
 
-<h2>Comments</h2>
+
+
+<!-- Comments -->
 <% if @comments.any? %>
-  <% @comments.each do |comment| %>
-    <div>
-      <p><%= comment.body %></p>
-    </div>
-  <% end %>
-<% else %>
-  <p>No comments found.</p>
-<% end %>
+  <section class="py-6">
+    <div class="container mx-auto px-4">
+      <!-- SEARCH RESULTS タイトル -->
+      <div class="flex flex-wrap w-full mb-4">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-1 text-gray-900">コメントの検索結果</h1>
+          <div class="h-1 w-20 bg-yellow-500 rounded"></div>
+        </div>
+      </div>
 
-<h2>Area Categories</h2>
-<% if @area_categories.any? %>
-  <% @area_categories.each do |area_category| %>
-    <div>
-      <h3><%= area_category.title %></h3>
+      <% @comments.each do |comment| %>
+        <!-- コメントの詳細ページに飛ぶリンクを設定 -->
+        <%= link_to post_path(comment.post), class: 'block bg-white p-6 rounded-lg shadow-md mb-4' do %>
+          <div class="flex items-center mb-4">
+            <img class="h-10 w-10 rounded-full mr-4" src="<%= comment.user.avatar.url %>" alt="<%= comment.user.name %>'s avatar">
+            <div class="text-sm">
+              <p class="text-gray-900 leading-none"><%= highlight(comment.user.name, params[:search], highlighter: '<mark>\1</mark>') %></p>
+              <p class="text-gray-600"><%= comment.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+            </div>
+          </div>
+          <p class="text-gray-700"><%= highlight(comment.body, params[:search], highlighter: '<mark>\1</mark>') %></p>
+        <% end %>
+      <% end %>
     </div>
-  <% end %>
-<% else %>
-  <p>No area categories found.</p>
+  </section>
 <% end %>
