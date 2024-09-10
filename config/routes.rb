@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'bookmarks/create'
   get 'bookmarks/index'
   get 'bookmarks/destroy'
+  # オートコンプリート用のルート
+  get 'search_autocomplete', to: 'search_autocomplete#index'
   devise_for :users
 
   # ユーザーのプロフィールページのルーティング
