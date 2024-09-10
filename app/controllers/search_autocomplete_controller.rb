@@ -8,19 +8,22 @@ class SearchAutocompleteController < ApplicationController
     posts = Post.where("title LIKE ? OR body LIKE ?", "%#{query}%", "%#{query}%")
 
     # Postモデルの結果を処理する
-    post_results = posts.map do |post|
-      if post.body.include?(query)
-        truncated_body = truncate(post.body, length: 20)
-        truncated_body
-      elsif post.title.include?(query)
-        post.title
+    post_results = posts.flat_map do |post|
+      results = []
+      if post.title.include?(query)
+        results << post.title
       end
-    end.compact.uniq
+      if post.body.include?(query)
+        truncated_body = truncate(post.body, length: 20, query: query)
+        results << truncated_body
+      end
+      results
+    end
 
     # コメントの検索結果
     comment_results = Comment.ransack(body_cont: query).result(distinct: true).pluck(:body)
     # コメントも20文字に制限する
-    comment_results = comment_results.map { |body| truncate(body, length: 20) }
+    comment_results = comment_results.map { |body| truncate(body, length: 20, query: query) }
 
     # 検索結果をマージして返す
     results = (post_results + comment_results).uniq.first(10) # 表示件数を制限
@@ -29,7 +32,11 @@ class SearchAutocompleteController < ApplicationController
 
   private
 
-  def truncate(text, length:)
-    text.length > length ? "#{text[0, length]}..." : text
+  def truncate(text, length:, query:)
+    start_index = [text.downcase.index(query.downcase) - (length / 2), 0].max
+    end_index = [start_index + length, text.length].min
+    snippet = text[start_index...end_index]
+    snippet += "..." if end_index < text.length
+    snippet
   end
 end
