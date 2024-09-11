@@ -19,6 +19,9 @@ Rails.application.routes.draw do
 
   # 投稿のルーティング(7つ全て) postsリソースの中でネストされたcommentsリソースを設定
   resources :posts do
+    collection do
+      get 'my_posts', to: 'posts#my_posts'  # ログイン中ユーザーの投稿一覧
+    end
     resources :comments, only: [:create, :destroy, :edit, :update]
     resources :bookmarks, only: [:create, :destroy]
   end
