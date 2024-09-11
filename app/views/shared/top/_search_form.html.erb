@@ -18,7 +18,7 @@
       <%= text_field_tag :search, params[:search], class: 'block w-full rounded border border-gray-300 py-4 pl-10 pr-4 leading-5 focus:border-gray-600 focus:ring focus:ring-gray-600/25 focus:outline-none', placeholder: 'Search..', data: { action: 'input->search-autocomplete#search', target: 'search-autocomplete.input' } %>
 
       <!-- オートコンプリートの結果表示 -->
-      <ul data-search-autocomplete-target="results" class="absolute z-10 bg-white w-full border border-gray-300 rounded shadow-lg">
+      <ul data-search-autocomplete-target="results" class="absolute z-10 bg-white w-full border border-white rounded shadow-lg">
       </ul>
     </div>
   <% end %>
