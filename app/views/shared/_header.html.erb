@@ -24,6 +24,9 @@
     
     <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block text-lg">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end py-2 md:py-0 sm:ps-7 text-center">
+        <!-- 投稿一覧リンクは全ユーザーに表示される -->
+        <a class="py-3 ps-px sm:px-3 text-base font-medium text-gray-500 hover:text-gray-400 sm:mr-1" href="/posts">投稿を見る</a>
+
         <% if user_signed_in? %>
           <div class="flex items-center">
             <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a>
