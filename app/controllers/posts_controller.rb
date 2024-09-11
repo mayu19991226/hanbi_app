@@ -10,6 +10,11 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc)
   end
 
+  def my_posts
+    @posts = current_user.posts.order(created_at: :desc)
+    render :index  # indexビューを再利用する場合
+  end
+
   def new
     @post = Post.new
     @area_categories = AreaCategory.all

@@ -61,9 +61,11 @@
 <%# 設定関連 ログインユーザーと一致している場合のみ表示 %>
 <% if current_user == @user %>
   <div class="container flex flex-col items-center justify-center w-full mx-auto">
-    <ul class="flex flex-col">
-      <li class="flex flex-row mb-8 mt-4 border-gray-400">
-        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-8">
+    <ul class="flex flex-col w-full">
+      
+      <!-- Bookmark -->
+      <li class="flex justify-center mb-8 mt-4 border-gray-400 w-full">
+        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex items-center p-8" style="flex-basis: 50.33%; max-width: 50.33%;">
           <div class="flex flex-col items-center justify-center w-10 h-10 mr-4">
             <a href="#" class="relative block">
               <img alt="profil" src="/assets/bookmark-icon.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
@@ -77,87 +79,86 @@
               お気に入り
             </div>
           </a>
-
-          <div class="text-xs text-gray-600">
-            　　　　　　　　　　　　　
-          </div>
-          <button class="flex justify-end w-24 text-right">
-            <svg width="12" fill="currentColor" height="12" class="text-gray-500 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
-              </path>
+          <a href="<%= bookmarks_path %>" class="flex justify-end w-24 text-right">
+            <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-800" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </li>
-      <li class="flex flex-row mb-8 border-gray-400">
-        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-8">
+
+      <!-- Post -->
+      <li class="flex justify-center mb-8 border-gray-400 w-full">
+        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex items-center p-8" style="flex-basis: 50.33%; max-width: 50.33%;">
           <div class="flex flex-col items-center justify-center w-10 h-10 mr-4">
             <a href="#" class="relative block">
               <img alt="profil" src="/assets/post-icon.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
             </a>
           </div>
-          <div class="flex-1 pl-1 md:mr-16">
-            <a href="/posts/new" class="block font-medium text-xl text-gray-900 hover:text-gray-700">
+          <a href="/posts/new" class="flex-1 pl-1 md:mr-16">
+            <div class="font-medium text-xl text-gray-900">
               Post
-            </a>
+            </div>
             <div class="text-xs text-gray-600">
               投稿
             </div>
-          </div>
-          <button class="flex justify-end w-24 text-right">
-            <svg width="12" fill="currentColor" height="12" class="text-gray-500 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
-              </path>
+          </a>
+          <a href="/posts/new" class="flex justify-end w-24 text-right">
+            <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-800" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </li>
-      <li class="flex flex-row mb-8 border-gray-400">
-        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-8">
+
+      <!-- Posts list -->
+      <li class="flex justify-center mb-8 border-gray-400 w-full">
+        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex items-center p-8" style="flex-basis: 50.33%; max-width: 50.33%;">
           <div class="flex flex-col items-center justify-center w-10 h-10 mr-4">
-            <a href="#" class="relative block">
-              <img alt="profil" src="/assets/notification-icon.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
+            <a href="/posts" class="relative block">
+              <img alt="profil" src="/assets/post_index.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
             </a>
           </div>
-          <div class="flex-1 pl-1 md:mr-16">
+          <a href="/posts/my_posts" class="flex-1 pl-1 md:mr-16">
             <div class="font-medium text-xl text-gray-900">
-              Notification
+              My posts list
             </div>
             <div class="text-xs text-gray-600">
-              通知設定
+              投稿一覧
             </div>
-          </div>
-          <button class="flex justify-end w-24 text-right">
-            <svg width="12" fill="currentColor" height="12" class="text-gray-500 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
-              </path>
+          </a>
+          <a href="/posts" class="flex justify-end w-24 text-right">
+            <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-800" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </li>
-      <li class="flex flex-row mb-8 border-gray-400">
-        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex flex-1 items-center p-8">
+
+      <!-- Setting -->
+      <li class="flex justify-center mb-8 border-gray-400 w-full">
+        <div class="transition duration-500 shadow-lg ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white rounded-md flex items-center p-8" style="flex-basis: 50.33%; max-width: 50.33%;">
           <div class="flex flex-col items-center justify-center w-10 h-10 mr-4">
             <a href="#" class="relative block">
               <img alt="profil" src="/assets/setting-icon.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
             </a>
           </div>
-          <div class="flex-1 pl-1 md:mr-16">
+          <a href="#" class="flex-1 pl-1 md:mr-16">
             <div class="font-medium text-xl text-gray-900">
               Setting
             </div>
             <div class="text-xs text-gray-600">
               設定
             </div>
-          </div>
-          <button class="flex justify-end w-24 text-right">
-            <svg width="12" fill="currentColor" height="12" class="text-gray-500 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
-              </path>
+          </a>
+          <a href="#" class="flex justify-end w-24 text-right">
+            <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-800" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </li>
+
     </ul>
   </div>
 <% end %>
