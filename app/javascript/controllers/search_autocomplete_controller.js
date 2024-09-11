@@ -4,12 +4,23 @@ export default class extends Controller {
   static targets = ["input", "results"];
 
   connect() {
-    // 初期化処理（必要に応じて）
+    // 検索結果のリストに対して1回だけクリックイベントを設定
+    this.resultsTarget.addEventListener('click', (event) => {
+      const item = event.target.closest('li');
+      if (item) {
+        this.inputTarget.value = item.dataset.fullText; // フルテキストを入力フィールドにセット
+        this.element.querySelector('form').submit();    // フォーム送信
+      }
+    });
   }
 
   search(event) {
-    // 入力された値に基づいて検索を実行
-    const query = this.inputTarget.value;
+    const query = this.inputTarget.value.trim();
+    if (query === "") {
+      this.clearResults();  // クエリが空なら結果をクリア
+      return;
+    }
+
     fetch(`/search_autocomplete?query=${encodeURIComponent(query)}`)
       .then(response => response.json())
       .then(data => {
@@ -18,17 +29,13 @@ export default class extends Controller {
   }
 
   renderResults(results) {
-    // 検索結果をリストとして表示
+    // 検索結果をリスト形式で表示
     this.resultsTarget.innerHTML = results.map(result => `
-      <li class="cursor-pointer p-2 hover:bg-gray-100">${result}</li>
+      <li class="cursor-pointer p-2 hover:bg-gray-100" data-full-text="${result.fullText}">${result.displayText}</li>
     `).join('');
+  }
 
-    // ドロップダウンメニューの項目にクリックイベントを追加
-    this.resultsTarget.querySelectorAll('li').forEach(item => {
-      item.addEventListener('click', () => {
-        this.inputTarget.value = item.textContent;
-        this.element.querySelector('form').submit();
-      });
-    });
+  clearResults() {
+    this.resultsTarget.innerHTML = "";  // 結果をクリア
   }
 }
