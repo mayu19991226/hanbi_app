@@ -2,7 +2,18 @@
   <div class="grid gap-5 row-gap-8 lg:grid-cols-2 lg:gap-10">
     <!-- 左側のコンテンツ -->
     <div class="flex flex-col justify-start">
-      <div class="back-color-custom max-w-xl mb-6">
+      <div class="shadow-md rounded-md back-color-custom max-w-xl mb-6">
+        <!-- ユーザーのプロフィール -->
+        <div class="flex items-center mb-6 ml-3 mt-3">
+          <%= link_to user_path(@post.user), class: "inline-block" do %>
+            <% if @post.user.avatar.present? %>
+              <%= image_tag @post.user.avatar.url, class: "h-12 w-12 rounded-full mr-4", alt: "#{@post.user.name}'s avatar" %>
+            <% else %>
+              <%= image_tag 'post_default1.png', class: "h-12 w-12 rounded-full mr-4", alt: "Default avatar" %>
+            <% end %>
+          <% end %>
+          <%= link_to @post.user.name, user_path(@post.user), class: "text-lg font-bold tracking-widest" %>
+        </div>
         <!-- 施術名 -->
         <h3 class="m-3 max-w-lg mb-6 text-lg font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none">施術名　<%= @post.title %></h3>
 
@@ -31,7 +42,7 @@
       </div>
 
       <!-- 「内容」とブックマークボタンを同じ枠内に配置 -->
-      <div class="bg-white border-l-4 shadow-sm border-yellow-600 border-opacity-50 relative">
+      <div class="bg-white border-l-4 shadow-md border-yellow-600 border-opacity-50 relative">
         <div class="flex p-5 border border-l-0 rounded-r">
           <div class="flex-grow">
             <h6 class="text-lg mb-2 font-semibold leading-5">内容</h6>
