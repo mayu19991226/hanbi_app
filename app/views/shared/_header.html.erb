@@ -1,17 +1,17 @@
 <header class="fixed flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white bg-opacity-90 text-sm py-2 sm:py-0">
   <nav class="mt-2 relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
-    <div class="flex items-center justify-between">
-      <%# ロゴアイコン %>
+    <div class="flex items-center justify-between w-full">
+      <!-- ロゴアイコン -->
       <a class="flex-none" href="/" aria-label="Brand">
         <%= image_tag 'logo.PNG', alt: 'MyApp Logo', class: 'h-11 md:h-14 mr-4' %>
       </a>
 
       <!-- 検索フォーム -->
-      <%= render 'shared/top/search_form' %>      
-      <%# 検索フォーム終了 %>
+      <%= render 'shared/top/search_form' %>
 
+      <!-- ハンバーガーメニューのトグルボタン -->
       <div class="sm:hidden">
-        <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-300 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+        <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-300 hover:bg-gray-100" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
           <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
           </svg>
@@ -21,50 +21,47 @@
         </button>
       </div>
     </div>
-    
-    <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block text-lg">
+
+    <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block text-lg sm:justify-end">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end py-2 md:py-0 sm:ps-7 text-center">
-        <!-- 投稿一覧リンクは全ユーザーに表示される -->
-        <a class="py-3 ps-px sm:px-3 text-base font-medium text-gray-500 hover:text-gray-400 sm:mr-1" href="/posts">投稿を見る</a>
+        <!-- 投稿一覧リンク -->
+        <a class="py-3 sm:px-3 text-base font-medium text-gray-500 hover:text-gray-400 sm:mr-1" href="/posts">投稿を見る</a>
 
         <% if user_signed_in? %>
-          <div class="flex items-center">
-            <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a>
-            <%= form_with url: destroy_user_session_path, method: :delete, local: true, id: 'logout-form' do %>
-            <% end %>
+          <!-- ログアウトリンク -->
+          <a class="py-3 sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a>
+          <%= form_with url: destroy_user_session_path, method: :delete, local: true, id: 'logout-form' do %>
+          <% end %>
 
-            <%# 通知開始 %>
-            <div class="relative flex items-center justify-center w-10 h-10 border border-gray-300 rounded-md ml-1">
-              <% if unchecked_notifications.any? %>
-                <%= link_to public_notifications_path, class: "flex items-center text-gray-500 hover:text-gray-600" do %>
-                  <i class="fa-solid fa-bell fa-lg"></i>
-                <% end %>
-                  <i class="fa-solid fa-circle text-white absolute top-2 right-1 text-sm"></i>
-                  <i class="fa-solid fa-circle text-red-400 absolute top-2 right-1 text-xs"></i>
-              <% else %>
-                <%= link_to public_notifications_path, class: "flex items-center text-gray-500 hover:text-gray-600" do %>
-                  <i class="fa-solid fa-bell fa-lg"></i>
-                <% end %>
+          <!-- 通知アイコン -->
+          <div class="relative flex items-center justify-center w-10 h-10 mx-auto my-3 sm:mx-1">
+            <% if unchecked_notifications.any? %>
+              <%= link_to public_notifications_path, class: "flex items-center text-gray-500 hover:text-gray-600" do %>
+                <i class="fa-solid fa-bell fa-lg"></i>
               <% end %>
-            </div>
-            <%# 通知終了 %>
-
-            <%# アイコンをクリックするとプロフィール画面へ飛ぶ %>
-            <%= link_to user_path(current_user), class: 'text-center ml-4' do %>
-              <div id="hs-dropdown-with-header" class="inline-flex flex-col items-center gap-x-2 font-semibold rounded-md border border-transparent">
-                <button type="button" class="inline-flex justify-center items-center gap-x-2 font-semibold rounded-md border border-transparent">
-                  <% if current_user.avatar.present? %>
-                    <%= image_tag current_user.avatar.url, class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Profile Image" %>
-                  <% else %>
-                    <%= image_tag "default.png", class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Default Image" %>
-                  <% end %>
-                </button>
-                <span class="mb-3 font-medium text-base text-gray-500 hover:text-gray-400"></span>
-              </div>
+                <i class="fa-solid fa-circle text-white absolute top-2 right-1 text-sm"></i>
+                <i class="fa-solid fa-circle text-red-400 absolute top-2 right-1 text-xs"></i>
+            <% else %>
+              <%= link_to public_notifications_path, class: "flex items-center text-gray-500 hover:text-gray-600" do %>
+                <i class="fa-solid fa-bell fa-lg"></i>
+              <% end %>
             <% end %>
           </div>
 
+          <!-- ユーザーアイコン -->
+          <%= link_to user_path(current_user), class: 'text-center sm:ml-4' do %>
+            <div class="inline-flex flex-col items-center gap-x-2 font-semibold rounded-md border border-transparent">
+              <button type="button" class="inline-flex justify-center items-center gap-x-2 font-semibold rounded-sm border border-transparent">
+                <% if current_user.avatar.present? %>
+                  <%= image_tag current_user.avatar.url, class: 'inline-block w-[50px] h-[50px] rounded-sm border-2', alt: "Profile Image" %>
+                <% else %>
+                  <%= image_tag "default.png", class: 'inline-block w-[50px] h-[50px] rounded-md border-2', alt: "Default Image" %>
+                <% end %>
+              </button>
+            </div>
+          <% end %>
         <% else %>
+          <!-- ログインリンク -->
           <a class="flex items-center justify-center gap-x-2 font-semibold text-gray-500 hover:text-gray-400 sm:border-s sm:border-gray-300 py-2 sm:py-0 sm:my-6 sm:ps-6 text-center" href="/users/sign_in">
             <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             Log in
