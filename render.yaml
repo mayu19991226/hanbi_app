@@ -1,7 +1,7 @@
 databases:
   - name: hanbi2
     databaseName: hanbi2
-    user: mayu2
+    user: mayu
     region: singapore
 
 services:

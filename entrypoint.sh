@@ -7,6 +7,9 @@ rm -f /myapp/tmp/pids/server.pid
 # Run migrations
 bundle exec rails db:migrate RAILS_ENV=production
 
+# db作り直したら以下コメントアウト外す
+bundle exec rails db:seed RAILS_ENV=production
+
 # Seed the database (optional)
 # bundle exec rails db:seed RAILS_ENV=production
 
