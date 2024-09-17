@@ -1,0 +1,50 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    total_pages:   total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+-%>
+<div class="bg-white p-4 flex items-center flex-wrap">
+  <nav aria-label="Page navigation">
+    <ul class="inline-flex">
+      <%# Prev Button %>
+      <% if @posts.prev_page %>
+        <li>
+          <%= link_to "Prev", url_for(page: @posts.prev_page), class: "px-4 py-2 text-yellow-600 transition-colors duration-150 bg-white rounded-l-lg focus:shadow-outline hover:bg-yellow-600 hover:bg-opacity-25" %>
+        </li>
+      <% else %>
+        <li>
+          <button disabled class="px-4 py-2 text-gray-400 bg-white rounded-l-lg cursor-not-allowed">Prev</button>
+        </li>
+      <% end %>
+
+      <%# Page Numbers %>
+      <% @posts.total_pages.times do |i| %>
+        <% page_number = i + 1 %>
+        <% if page_number == @posts.current_page %>
+          <li>
+            <%= link_to page_number, "#", class: "px-4 py-2 text-white transition-colors duration-150 bg-yellow-700 bg-opacity-40 focus:shadow-outline" %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to page_number, url_for(page: page_number), class: "px-4 py-2 text-yellow-600 transition-colors duration-150 bg-white focus:shadow-outline hover:bg-yellow-600 hover:bg-opacity-25" %>
+          </li>
+        <% end %>
+      <% end %>
+
+      <%# Next Button %>
+      <% if @posts.next_page %>
+        <li>
+          <%= link_to "Next", url_for(page: @posts.next_page), class: "px-4 py-2 text-yellow-600 transition-colors duration-150 bg-white rounded-r-lg focus:shadow-outline hover:bg-yellow-600 hover:bg-opacity-25" %>
+        </li>
+      <% else %>
+        <li>
+          <button disabled class="px-4 py-2 text-gray-400 bg-white rounded-r-lg cursor-not-allowed">Next</button>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+
