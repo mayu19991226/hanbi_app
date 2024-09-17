@@ -19,11 +19,9 @@
         <% end %>
       </div>
 
-      <% if @posts.count >= 6 %>
-        <a href="#" class="w-full btn-custom text-white font-bold text-sm uppercase rounded  flex items-center justify-center px-2 py-3 mt-6">
-          <i class="fab fa-instagram mr-2"></i> more..
-        </a>
-      <% end %>
+      <div class="mt-6">
+        <%= paginate @posts %>
+      </div>
     <% else %>
       <p class="text-center text-gray-600">投稿がありません</p>
     <% end %>
